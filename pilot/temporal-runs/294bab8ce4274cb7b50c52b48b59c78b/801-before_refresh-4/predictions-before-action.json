@@ -1,0 +1,84 @@
+{
+  "predictions": {
+    "cached": {
+      "decision": "approve"
+    },
+    "refresh_before_wait": {
+      "decision": "abstain"
+    },
+    "last_moment_refresh": {
+      "decision": "abstain"
+    }
+  },
+  "evidence": {
+    "cached": {
+      "timeline_redis": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 225.71189999871422,
+        "executed": true
+      },
+      "timeline_mongo": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 347.2410999966087,
+        "executed": true
+      },
+      "post_storage": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 358.1609999964712,
+        "executed": true
+      }
+    },
+    "refresh": {
+      "timeline_redis": {
+        "verified": false,
+        "returncode": 1,
+        "elapsed_ms": 225.46770000190008,
+        "executed": true
+      },
+      "timeline_mongo": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 269.0382000000682,
+        "executed": true
+      },
+      "post_storage": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 324.93370000156574,
+        "executed": true
+      }
+    },
+    "last": {
+      "timeline_redis": {
+        "verified": false,
+        "returncode": 1,
+        "elapsed_ms": 244.53989999892656,
+        "executed": true
+      },
+      "timeline_mongo": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 261.1525999964215,
+        "executed": true
+      },
+      "post_storage": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 323.78390000667423,
+        "executed": true
+      }
+    }
+  },
+  "timings": {
+    "cached_end": 85820.0485351,
+    "fault_command_start": 85820.0485363,
+    "fault_verified_stopped": 85821.0052672,
+    "refresh_start": 85821.0058073,
+    "refresh_end": 85821.8252696,
+    "last_check_start": 85825.8257965,
+    "last_check_end": 85826.6553148
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "archive": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\Race-verification-evidence-v0.1.zip",
+  "payload_files": 116,
+  "bytes": 582811,
+  "sha256": "a48f47abec56e7fe34be692187e179fbeaf13016a128d71fdc8cca891c245ffe",
+  "manifest_verified": true,
+  "isolated_replay_identical": true,
+  "replay_directory": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\archive-replay\\race-c56d4030fb2c4b48ad7e7a9c49374ccd"
+}

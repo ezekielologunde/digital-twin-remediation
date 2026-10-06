@@ -1,0 +1,9 @@
+{
+  "archive": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\Sequential-verification-evidence-v0.1.zip",
+  "sha256": "73d2b8e031a2375f5b1fbd1a3c1cec1018022b344343e364b2f3b6f200bc52eb",
+  "payload_files": 526,
+  "bytes": 4517381,
+  "manifest_verified": true,
+  "isolated_replay_identical": true,
+  "replay_directory": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\archive-replay\\sequential-7a81a43f4eb042d8a03a5c2bdb7b12d2"
+}

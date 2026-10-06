@@ -1,0 +1,44 @@
+{
+  "checked_utc": "2026-10-05T05:19:12.555926+00:00",
+  "projects": [
+    {
+      "project": "dtrem-race-94942509-901-none",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    },
+    {
+      "project": "dtrem-race-94942509-902-during_final",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    },
+    {
+      "project": "dtrem-race-94942509-901-during_final",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    },
+    {
+      "project": "dtrem-race-94942509-902-after_final",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    },
+    {
+      "project": "dtrem-race-94942509-901-after_final",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    },
+    {
+      "project": "dtrem-race-94942509-902-none",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    }
+  ],
+  "original_pilot_running_containers": 27,
+  "distinct_new_volumes": 78,
+  "disjoint_from_prior_direct_sequential_temporal_batches": true
+}

@@ -1,0 +1,109 @@
+{
+  "arms": [
+    [
+      501,
+      "mongo_down_short",
+      "start"
+    ],
+    [
+      503,
+      "unrelated_down",
+      "start"
+    ],
+    [
+      502,
+      "mongo_down_short",
+      "start"
+    ],
+    [
+      502,
+      "unrelated_down",
+      "start"
+    ],
+    [
+      502,
+      "process_suspended",
+      "start"
+    ],
+    [
+      503,
+      "mongo_down_short",
+      "start"
+    ],
+    [
+      501,
+      "up",
+      "start"
+    ],
+    [
+      502,
+      "up",
+      "start"
+    ],
+    [
+      502,
+      "timeline_mongo_down",
+      "start"
+    ],
+    [
+      503,
+      "up",
+      "start"
+    ],
+    [
+      503,
+      "timeline_redis_down",
+      "start"
+    ],
+    [
+      503,
+      "timeline_mongo_down",
+      "start"
+    ],
+    [
+      501,
+      "timeline_mongo_down",
+      "start"
+    ],
+    [
+      501,
+      "process_suspended",
+      "start"
+    ],
+    [
+      501,
+      "timeline_redis_down",
+      "start"
+    ],
+    [
+      503,
+      "process_suspended",
+      "start"
+    ],
+    [
+      501,
+      "unrelated_down",
+      "start"
+    ],
+    [
+      502,
+      "timeline_redis_down",
+      "start"
+    ]
+  ],
+  "development_only": true,
+  "horizon_s": 8,
+  "action_scope": "docker start verified target container ID only",
+  "supersedes_aborted_batch": "b7f6534f0418437094f9a0e4052935a6",
+  "matched_approval_count": 6,
+  "selection_salt": "direct-v1-before-outcomes",
+  "contract": "Last two scheduled target reads verify content and creator within eight seconds; no observed creator mismatch.",
+  "probe_order": [
+    "alternate_route",
+    "timeline_redis",
+    "timeline_mongo",
+    "post_storage"
+  ],
+  "design": "Eighteen fresh start-action trials. All shadow policies share outcomes and receive the same probe interventions. Direct probes verify a known record from peer containers. MongoDB checked for startup as well as read-path obligations.",
+  "budgets": "Six approvals of eighteen opportunities; uniform label-blind thinning with exact conditional distribution. Fewer than six eligible means infeasible."
+}

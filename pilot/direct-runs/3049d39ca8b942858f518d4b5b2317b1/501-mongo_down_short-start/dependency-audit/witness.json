@@ -1,0 +1,21 @@
+{
+  "source_commit": "6ecb09706140f8730b5385c08f1386c654c3c526",
+  "source_path": "socialNetwork/src/UserTimelineService/UserTimelineHandler.h",
+  "source_git_blob": "a1e8f34d8e421e82996b8540424f3c4b88554714",
+  "source_sha256": "e703f56659bfc62c75bfced86681931e6e2ace069a6e3080138e5ea883062478",
+  "url": "https://github.com/delimitrou/DeathStarBench/blob/6ecb09706140f8730b5385c08f1386c654c3c526/socialNetwork/src/UserTimelineService/UserTimelineHandler.h",
+  "read_posts_call_line": 315,
+  "supported_edges": [
+    [
+      "user-timeline-service",
+      "post-storage-service"
+    ]
+  ],
+  "method": "Manual operation-level source audit corroborating a runtime-observed edge, not automatic discovery or independent ground truth.",
+  "scope": "Nonempty valid-range read-user-timeline; only the explicitly audited service edge is added.",
+  "limitations": [
+    "Container binary provenance is not verified against this source commit.",
+    "Redis and conditional MongoDB calls exist; the witness is not a complete dependency model.",
+    "The audit is motivated by previously observed pilot errors, not a blinded discovery."
+  ]
+}

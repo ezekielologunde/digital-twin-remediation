@@ -1,0 +1,9 @@
+{
+  "archive": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\Temporal-verification-evidence-v0.1.zip",
+  "payload_files": 122,
+  "bytes": 588162,
+  "sha256": "e15b90a3ca729f762bcea1e5135388edb931d716b127a1f774450669b487105b",
+  "manifest_verified": true,
+  "isolated_replay_identical": true,
+  "replay_directory": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\archive-replay\\temporal-56582d7069f94086b0007db9d48ebee0"
+}

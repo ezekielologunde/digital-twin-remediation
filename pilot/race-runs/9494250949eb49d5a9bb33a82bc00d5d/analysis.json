@@ -1,0 +1,109 @@
+{
+  "batch": "9494250949eb49d5a9bb33a82bc00d5d",
+  "integrity_verified": true,
+  "distinct_volume_ids": 78,
+  "metrics": [
+    {
+      "condition": "none",
+      "trials": 2,
+      "approvals": 2,
+      "incorrect_approvals": 0,
+      "recoveries": 2
+    },
+    {
+      "condition": "during_final",
+      "trials": 2,
+      "approvals": 2,
+      "incorrect_approvals": 2,
+      "recoveries": 0
+    },
+    {
+      "condition": "after_final",
+      "trials": 2,
+      "approvals": 2,
+      "incorrect_approvals": 2,
+      "recoveries": 0
+    }
+  ],
+  "details": [
+    {
+      "seed": 901,
+      "condition": "none",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": true,
+      "probe_age_at_action_s": {
+        "timeline_redis": 0.601462899998296,
+        "timeline_mongo": 0.3416834000090603,
+        "post_storage": 0.007258700003148988
+      },
+      "collection_end_age_s": 0.006892600009450689
+    },
+    {
+      "seed": 902,
+      "condition": "during_final",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": false,
+      "probe_age_at_action_s": {
+        "timeline_redis": 1.6213977999868803,
+        "timeline_mongo": 0.43279519998759497,
+        "post_storage": 0.009158699991530739
+      },
+      "collection_end_age_s": 0.008677699996042065
+    },
+    {
+      "seed": 901,
+      "condition": "during_final",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": false,
+      "probe_age_at_action_s": {
+        "timeline_redis": 1.52587090000452,
+        "timeline_mongo": 0.3352924999926472,
+        "post_storage": 0.009291599999414757
+      },
+      "collection_end_age_s": 0.00892599999497179
+    },
+    {
+      "seed": 902,
+      "condition": "after_final",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": false,
+      "probe_age_at_action_s": {
+        "timeline_redis": 1.631799900002079,
+        "timeline_mongo": 1.3456063000048744,
+        "post_storage": 0.9947243000060553
+      },
+      "collection_end_age_s": 0.9942778999975417
+    },
+    {
+      "seed": 901,
+      "condition": "after_final",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": false,
+      "probe_age_at_action_s": {
+        "timeline_redis": 1.676540299988119,
+        "timeline_mongo": 1.3867177999927662,
+        "post_storage": 1.055994099995587
+      },
+      "collection_end_age_s": 1.0555612999887671
+    },
+    {
+      "seed": 902,
+      "condition": "none",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": true,
+      "probe_age_at_action_s": {
+        "timeline_redis": 0.600666900005308,
+        "timeline_mongo": 0.33400970000366215,
+        "post_storage": 0.007228300004499033
+      },
+      "collection_end_age_s": 0.00665169999410864
+    }
+  ],
+  "limitations": "Deterministic fault scheduling with a blocking hook, two synthetic account blocks, known Redis stop, fixed order. Not natural race incidence, a novel algorithm, a coherence proof, or a test of concurrency control."
+}

@@ -1,0 +1,11 @@
+Python standard library; these commands do not launch Docker.
+Run from the extracted root:
+python pilot/analyze_direct.py 3049d39ca8b942858f518d4b5b2317b1
+python pilot/analyze_sequential.py pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5
+python pilot/analyze_temporal.py pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b
+python pilot/analyze_race.py pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d
+python pilot/analyze_aligned_event.py pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70
+python publication/build_manuscript.py
+Author-review draft, not submitted. No verified PDF build.
+Excluded attempts are retained at their original paths; do not pool their results.
+Live reruns require separate pinned runtime assets/images and host-path adaptation.

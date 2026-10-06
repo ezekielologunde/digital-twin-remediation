@@ -1,0 +1,176 @@
+{
+  "project": "dtrem-direct-3049d39c-501-up-start",
+  "seed": 501,
+  "arm": "start",
+  "backend_condition": "up",
+  "status": "COMPLETE",
+  "scenario_sha256": "63b970904f71e0b0ff4003eab491ea760b4587bda378bdad2e7fc982b8fefa82",
+  "compose_sha256": "f3287c85a2e1482bb19bb204cf47ded559d63c87ca85932fe0773e4f390a6151",
+  "volume_names": [
+    "18a4cc8ed7a09f5f545d0150129b48930fea366d3fc573ae8606eda7bd42d941",
+    "26ca3b08ceb74cfa83b7153a5876a5997bdca37215a6181988cc9075ff043075",
+    "2ddd940a84445d259c8e7a3ed5d071f2b60d590aad9b95ce13eb521392663676",
+    "36d1fcc6d201790c1b7485c88fc9326180a18c710bbb18aaf65879a084cb8917",
+    "4dca249b63263038dc3c61b11b1eae20feae5bc05854d53f3fb54ad66a59bb45",
+    "7d0a7c058d19f363b14084356a4b4d85c96fa0bcb6bd40a58fb639d80715a53d",
+    "87e7dad9ea63e84d0dcfc16c96abe722e3d16ac6548d9da5d614e400194ca05f",
+    "a7b4d3884045cca2c189695206a2143cd269acce6bb83987df2dd23105e75193",
+    "de5d886f37cffea37265e68ab4bef998add023444d6ad748f09aeddd1a349c3e",
+    "e2a611a5f5fda6ac62891225091c650be72c0ca8f64b0c6ac4fa3d18886d4c4b",
+    "e7ec4562c6373bedb5535218a53c5c61f594a8ce09b12b5192d361c3618ca1e4",
+    "f8b6682aa90418f65b9b719e760738ab86c1b1244cf23bbf53acda8aa5004503",
+    "fb09e398db91fe26a888ede7b3eb26c7714c875f2dfb32302017c7c26ce21ed5"
+  ],
+  "fresh_volume_ids": true,
+  "empty_before_initialization": true,
+  "baseline_markers_verified": 3,
+  "fault_detected": true,
+  "target_container_id": "895470cf8714184709b5200a56c37d33ad1363a55f024753fc2a79e64f895e41",
+  "functional_baseline_verified": true,
+  "direct_baseline": {
+    "timeline_redis": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 231.61529999924824
+    },
+    "timeline_mongo": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 272.8430999995908
+    },
+    "post_storage": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 340.58160000131465
+    }
+  },
+  "functional_probe": {
+    "classification": "verified_readback",
+    "elapsed_ms": 26.4337
+  },
+  "direct_probes": {
+    "timeline_redis": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 254.43249999079853
+    },
+    "timeline_mongo": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 287.08900000492577
+    },
+    "post_storage": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 372.4912000034237
+    }
+  },
+  "predictions": {
+    "alternate_route": {
+      "decision": "approve"
+    },
+    "alternate_plus_redis": {
+      "decision": "approve"
+    },
+    "direct_dependencies": {
+      "decision": "approve"
+    }
+  },
+  "post_action_states": {
+    "compose-post-service": true,
+    "home-timeline-redis": true,
+    "home-timeline-service": true,
+    "jaeger-agent": true,
+    "media-frontend": true,
+    "media-memcached": true,
+    "media-mongodb": true,
+    "media-service": true,
+    "nginx-thrift": true,
+    "post-storage-memcached": true,
+    "post-storage-mongodb": true,
+    "post-storage-service": true,
+    "social-graph-mongodb": true,
+    "social-graph-redis": true,
+    "social-graph-service": true,
+    "text-service": true,
+    "unique-id-service": true,
+    "url-shorten-memcached": true,
+    "url-shorten-mongodb": true,
+    "url-shorten-service": true,
+    "user-memcached": true,
+    "user-mention-service": true,
+    "user-mongodb": true,
+    "user-service": true,
+    "user-timeline-mongodb": true,
+    "user-timeline-redis": true,
+    "user-timeline-service": true
+  },
+  "recovered_by_8s": true,
+  "first_verified_read_from_decision_s": 1.028047500003595,
+  "outcome_observations": [
+    {
+      "elapsed_s": 1.0166190000018105,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 1.028047500003595,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 1.5346906000049785,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 2.040270199999213,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 2.5398562000045786,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 3.0428014999924926,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 3.5363349999970524,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 4.043808899994474,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 4.530166099997587,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 5.029123700005584,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 5.524875499992049,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 6.03133600000001,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 6.52384069999971,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 7.024899500000174,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 7.523195500005386,
+      "classification": "verified_readback"
+    }
+  ],
+  "contract_met": true,
+  "note": "Development-only false-recovery-approval diagnostic; predictions shadow-scored, actions not gated",
+  "cleanup_returncode": 0,
+  "ledger_sha256": "ab1c3307ea93267d1056add83ecab5e53f6e5bf90e310a8859332af1a1bd713f"
+}

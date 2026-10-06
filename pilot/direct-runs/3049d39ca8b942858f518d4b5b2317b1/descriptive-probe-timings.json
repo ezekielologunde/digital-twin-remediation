@@ -1,0 +1,20 @@
+{
+  "values": {
+    "timeline_redis": {
+      "median_ms": 229.7434499996598,
+      "min_ms": 206.97679999284446,
+      "max_ms": 272.3276999895461
+    },
+    "timeline_mongo": {
+      "median_ms": 278.63254999829223,
+      "min_ms": 253.6338999925647,
+      "max_ms": 363.12000000907574
+    },
+    "post_storage": {
+      "median_ms": 362.16034999961266,
+      "min_ms": 303.3235000038985,
+      "max_ms": 1357.444300010684
+    }
+  },
+  "scope": "Direct client command timings include Docker overhead; not a production-policy latency comparison."
+}

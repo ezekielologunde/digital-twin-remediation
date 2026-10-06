@@ -1,0 +1,136 @@
+{
+  "batch": "3049d39ca8b942858f518d4b5b2317b1",
+  "arms": 18,
+  "contract_met": 6,
+  "integrity_verified": true,
+  "distinct_volume_ids": 234,
+  "metrics": [
+    {
+      "policy": "alternate_route",
+      "eligible": 15,
+      "false_approvals": 9,
+      "matched_k": 6,
+      "matched_feasible": true,
+      "expected_false_approvals": 3.6,
+      "thinning_distribution": {
+        "0": 0.0001998001998001998,
+        "1": 0.01078921078921079,
+        "2": 0.10789210789210789,
+        "3": 0.3356643356643357,
+        "4": 0.3776223776223776,
+        "5": 0.15104895104895105,
+        "6": 0.016783216783216783
+      },
+      "fixed_rank_false_approvals": 3,
+      "selected": [
+        {
+          "seed": 502,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 503,
+          "condition": "mongo_down_short"
+        },
+        {
+          "seed": 501,
+          "condition": "timeline_redis_down"
+        },
+        {
+          "seed": 501,
+          "condition": "up"
+        },
+        {
+          "seed": 503,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 502,
+          "condition": "timeline_mongo_down"
+        }
+      ]
+    },
+    {
+      "policy": "alternate_plus_redis",
+      "eligible": 12,
+      "false_approvals": 6,
+      "matched_k": 6,
+      "matched_feasible": true,
+      "expected_false_approvals": 3.0,
+      "thinning_distribution": {
+        "0": 0.0010822510822510823,
+        "1": 0.03896103896103896,
+        "2": 0.2435064935064935,
+        "3": 0.4329004329004329,
+        "4": 0.2435064935064935,
+        "5": 0.03896103896103896,
+        "6": 0.0010822510822510823
+      },
+      "fixed_rank_false_approvals": 2,
+      "selected": [
+        {
+          "seed": 502,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 503,
+          "condition": "mongo_down_short"
+        },
+        {
+          "seed": 501,
+          "condition": "up"
+        },
+        {
+          "seed": 503,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 502,
+          "condition": "timeline_mongo_down"
+        },
+        {
+          "seed": 503,
+          "condition": "up"
+        }
+      ]
+    },
+    {
+      "policy": "direct_dependencies",
+      "eligible": 6,
+      "false_approvals": 0,
+      "matched_k": 6,
+      "matched_feasible": true,
+      "expected_false_approvals": 0.0,
+      "thinning_distribution": {
+        "0": 1.0
+      },
+      "fixed_rank_false_approvals": 0,
+      "selected": [
+        {
+          "seed": 502,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 501,
+          "condition": "up"
+        },
+        {
+          "seed": 503,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 503,
+          "condition": "up"
+        },
+        {
+          "seed": 501,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 502,
+          "condition": "up"
+        }
+      ]
+    }
+  ],
+  "boundary": "Hand-specified verification obligations; descriptive cohort comparison, not a novel method or general safety result."
+}

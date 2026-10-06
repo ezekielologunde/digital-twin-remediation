@@ -1,0 +1,19 @@
+{
+  "excluded_entire_batch": true,
+  "completed_arms": 2,
+  "reason": "Daemon-event list reused the ledger buffer name; later log records mutated event_inputs after prediction sealing. Inputs cannot pass immutable-snapshot audit. Stop marker halted further arms. No event-policy effectiveness claims retained.",
+  "cleanup": [
+    {
+      "project": "dtrem-event-7825aa3b-1001-unrelated_stop",
+      "containers": [],
+      "networks": [],
+      "volumes": []
+    },
+    {
+      "project": "dtrem-event-7825aa3b-1001-storage_suspend",
+      "containers": [],
+      "networks": [],
+      "volumes": []
+    }
+  ]
+}

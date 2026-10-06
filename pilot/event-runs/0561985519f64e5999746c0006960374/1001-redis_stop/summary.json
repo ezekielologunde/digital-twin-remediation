@@ -1,0 +1,2800 @@
+{
+  "project": "dtrem-event-05619855-1001-redis_stop",
+  "seed": 1001,
+  "arm": "start",
+  "backend_condition": "redis_stop",
+  "status": "COMPLETE",
+  "scenario_sha256": "09b22fd67d38e2c810258a9e76b1990211300f82b1be4a10ae4456dd7945404c",
+  "compose_sha256": "817733a1e9d8446ca663ee92b9159f857617e4ae4566e4ca4c17fcd6ed24833f",
+  "volume_names": [
+    "17e366c9a48b11c5cf8c0bd346da3deac2bf25751c8839114eb8791e9940543e",
+    "1db80c9b44c972a2cf19f0da12bfd8500e728f5d7d70e94420880b3ba2ed667f",
+    "24f193f9df681c54f4921de5523284cad1c3b1fc47f959e1ecc35d0388412c60",
+    "60cdbff0dfcead242b46bfb20112e86dcfa8b9579d247526a46c120079741dfc",
+    "6a60679d7f26527b8c4bf703e8b49b051d55a5d9f9483c09fb1c41d2c8093de2",
+    "9efcd44c48c847df8cb345b8ab0ff4fdddad7f45c03f01e0077fcc76fb15b9c6",
+    "a738d5685d446dd8d8281464a55418a72edcc2db643cfa23d139fbc54cb2511d",
+    "d08973c8d766be05b9a966035979fa56a8d176d03a9f891712c484bc9fe24e53",
+    "ec3fe4f9349ae0144af6b81d02eb7bec718824be73201dea46ae5250b1fbdf9e",
+    "efaf1d68328361d5c82988f6d392a80b67142ada76620a831c235e1aa3e90f4d",
+    "f5509e18f2740077c5a336789e4bb20e10d3e60f267559d7c71d9a830cf84656",
+    "fac3b2ab6496d29da47750d4132654ae1653dfc0193fa4456ddc525e439e2b93",
+    "fc7e6c5d75623fb37d4d6cc246dd93d6507223194c3b72b3cb7437b0ef71fde1"
+  ],
+  "fresh_volume_ids": true,
+  "empty_before_initialization": true,
+  "baseline_markers_verified": 3,
+  "fault_detected": true,
+  "target_container_id": "90fdb30c7d07f6ab6927d2f96705a761254df6800b87225d50d376bb4b944012",
+  "functional_baseline_verified": true,
+  "direct_baseline": {
+    "timeline_redis": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 285.6259999971371,
+      "executed": true,
+      "started_monotonic": 87671.6427708,
+      "completed_monotonic": 87671.9283979
+    },
+    "timeline_mongo": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 378.52169999678154,
+      "executed": true,
+      "started_monotonic": 87671.9284001,
+      "completed_monotonic": 87672.3069223
+    },
+    "post_storage": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 420.70229999080766,
+      "executed": true,
+      "started_monotonic": 87672.3069238,
+      "completed_monotonic": 87672.727627
+    }
+  },
+  "final_evidence": {
+    "timeline_redis": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 241.4881000004243,
+      "executed": true,
+      "started_monotonic": 87672.9327671,
+      "completed_monotonic": 87673.1742558
+    },
+    "timeline_mongo": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 305.2278000104707,
+      "executed": true,
+      "started_monotonic": 87673.1742573,
+      "completed_monotonic": 87673.4794862
+    },
+    "post_storage": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 392.9286999918986,
+      "executed": true,
+      "started_monotonic": 87673.4794891,
+      "completed_monotonic": 87673.8724192
+    }
+  },
+  "timings": {
+    "final_start": 87672.9327397,
+    "final_end": 87673.8724259,
+    "action_decision": 87675.3408136
+  },
+  "predictions": {
+    "final_checks": {
+      "decision": "approve"
+    },
+    "fresh_running_state": {
+      "decision": "abstain"
+    },
+    "events_available": {
+      "decision": "abstain"
+    },
+    "events_delayed": {
+      "decision": "approve"
+    },
+    "events_silently_dropped": {
+      "decision": "approve"
+    }
+  },
+  "event_inputs": {
+    "events": [
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "5eeaa95483b89dad73857f1ff12b5567fb5ad72a68b1b933c1fcc4ec384f02d2",
+          "Attributes": {
+            "com.docker.compose.config-hash": "ac4a1cb8c859408bcfa6430ee2142bc04eac13fb28ecd68ae8352d41d7fe814a",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "social-graph-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-social-graph-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152324218607
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "28cca485beea4863deda0ba7777c8f3af7195f9d8570b0c93f3fbe29e2b9c120",
+          "Attributes": {
+            "com.docker.compose.config-hash": "d8aeb818876110151ad6ebbc88418c2a78ed22d5a8625344fdb392ac318c06f1",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152392959111
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "5943f5e014c787b1e7c55ab53c67f57bece3b37bb2a22d3f291c18aa6dfc7cdc",
+          "Attributes": {
+            "com.docker.compose.config-hash": "78e37f2ac8c0a14bfffc456efda88e39c214ec8f754cbb4e0156b7bd2209fdd8",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152503246999
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "e23c95095e2500024a8f97b9f63bfcc81e61bd6bcea01435f60e6d41721ef378",
+          "Attributes": {
+            "com.docker.compose.config-hash": "dbc6cda3529f6748e6ebecfed50753d86724f8ec0dad0f2f3af4445a732a56ce",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152567915305
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "6cf197c669d6a0d9c8d6414ba9e966dac76afb1dc254b3db8267faa4b32aa716",
+          "Attributes": {
+            "com.docker.compose.config-hash": "150d4aeb311a7575b93844344dd937e3b10d4b8b81c5283118d40dadcd600898",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152624730374
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "c576316bf5320b4c4548dd2f9f15d9eafc785a2ae5b511d02d52671a14397a7c",
+          "Attributes": {
+            "com.docker.compose.config-hash": "899dd88be9996a88402c0420cf68ae613929ffd33a04f9e81fca39a6f4f85f65",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "media-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-media-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152654946881
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "2ac390448909e7d51bdec65e9c0ca9b342aee012d23e11cf5c25bd7eef1435a0",
+          "Attributes": {
+            "com.docker.compose.config-hash": "95f7687f444af83a29d6d23071ce6d13914343174800d02f39cce7cc065e120b",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:51e736c67df8491acf63045188615a9f9b5f31c9a06fb30f79fefee7280b746e",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-memcached",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-memcached-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152655051737
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "9f72160f7c084238a48a95cb96b7c1cefe71a6ef08e4eb1fa6ac23c465c9631c",
+          "Attributes": {
+            "com.docker.compose.config-hash": "b257e858c100e385167fbd0bbab5f20c9b8fb9dc3d2f8bb6087bd51a43e56e2d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "social-graph-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-social-graph-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152662337840
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "945365ae320974337e781183f00242b16e6b5635c8e35b5f9eb873c4a600fe68",
+          "Attributes": {
+            "com.docker.compose.config-hash": "9f2198556d2b8b672dc8a4ac9b4df4b7293d68f02f194f240b94da1d203efbed",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:51e736c67df8491acf63045188615a9f9b5f31c9a06fb30f79fefee7280b746e",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "post-storage-memcached",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+            "name": "dtrem-event-05619855-1001-redis_stop-post-storage-memcached-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152675684541
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "a45bc692a02c43ba8517cbf29602cd1210a172ea04d24da8b426fec8c90d6c1a",
+          "Attributes": {
+            "com.docker.compose.config-hash": "7aeb4a72540245549aa4285bb51594127fd3e9b47b2e1b48f3ffe13812203534",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "url-shorten-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-url-shorten-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152700834338
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "f86cbc2f57d9dd74d9450708ef6a261cdc0621393b1211d03f599085ecb72b44",
+          "Attributes": {
+            "com.docker.compose.config-hash": "25a73ee7f0985bf8682a795c87777af87e186c4d38a97027d4ab7675f2d75478",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:bafcf486c4c72c8dd5f9008cb97d482cb2f8f553f02fff2086e9f1c0f366d394",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "jaeger-agent",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/16686/tcp": "127.0.0.1:19986",
+            "image": "jaegertracing/all-in-one@sha256:f4044964505c81bf12131c2dfd1f4ddf1d1421bbbd9d79f691221cac077599a8",
+            "name": "dtrem-event-05619855-1001-redis_stop-jaeger-agent-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152727709252
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "bb4a070e2dab91450539ed3181425adae2b3c5871e18bd135d83c01e71a927b5",
+          "Attributes": {
+            "com.docker.compose.config-hash": "748e12f49ef0747d689eaef8e47e11a10d93dc8f4644ce7f4e7ed34727c21bc3",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:51e736c67df8491acf63045188615a9f9b5f31c9a06fb30f79fefee7280b746e",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "url-shorten-memcached",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+            "name": "dtrem-event-05619855-1001-redis_stop-url-shorten-memcached-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152727816780
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "e870b8e51f820916016a97495f139fae9b782f0210b4e2ece9b06277af5cd16a",
+          "Attributes": {
+            "com.docker.compose.config-hash": "9fd83d04a83e16b4359b6f95264662e74d799db397f18b20191fb46e88e55615",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "post-storage-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-post-storage-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152739135574
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "906b5aaea9ab37793653d5f0cba6ad36cbcbea6d30c139fe8d41c5d39d28f4a7",
+          "Attributes": {
+            "com.docker.compose.config-hash": "24cbf0cfbd4ef890653eb8dd3ab094832676646c6948a623d66ca9436a22f436",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:51e736c67df8491acf63045188615a9f9b5f31c9a06fb30f79fefee7280b746e",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "media-memcached",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+            "name": "dtrem-event-05619855-1001-redis_stop-media-memcached-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178152,
+        "timeNano": 1791178152739186114
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "9b3c5775ad07f885a94a59657bf3ff484367bfc71290c8bbd808373e9fcd8294",
+          "Attributes": {
+            "com.docker.compose.config-hash": "d383586012ab88be61f368e897efebd94231cd9b37c093d51db821a773cf52d9",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "post-storage-mongodb:service_started:false,jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "post-storage-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-post-storage-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153539523893
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "d34db7f44a636db80fd3666553857dd93a0850ecc09bf0e6c30362f3d830c823",
+          "Attributes": {
+            "com.docker.compose.config-hash": "fa6285e526a02ea2def25db7dbd0d2d5fd5692b9b9134da30d8acbdf35a400c3",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "home-timeline-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-home-timeline-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153564689265
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "0a3068532e7ae1747a96004eb8b59e76cb3734ace9997d050eee02a9c3f07e96",
+          "Attributes": {
+            "com.docker.compose.config-hash": "1b0d4c2a917dc35d1dc395b8e6912df7e6093522c7f6efe778cf3b7639f428fb",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "user-mongodb:service_started:false,jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153663727974
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "dc55bdae269c4cda1319ad8ee9b3efd76036c121273d19406b40d6e33b80e67b",
+          "Attributes": {
+            "com.docker.compose.config-hash": "4683eb912ca37b1a138d33e54d4a1c4f9fe706fba17c0f207cb702cdff44d31d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "unique-id-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-unique-id-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153684652937
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "7c317de3ae1a04b88c135bb10ad3e067a388c1cec9b67208de1510c91fbe2582",
+          "Attributes": {
+            "com.docker.compose.config-hash": "fa8e8716df445d957d59f94d6113f1c0c0aba4c720379a2ef03bbc0a7fa54a30",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false,social-graph-mongodb:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "social-graph-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-social-graph-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153698210898
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "9a2c21838f5860de55848c14b96be1de9c1c52fd933f98da742a4721a04abe09",
+          "Attributes": {
+            "com.docker.compose.config-hash": "0425e5241d558fb42c0dc7999072ed485d8b0e063be234292bf86dd0542b0bbf",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/gen-lua",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-event-05619855-1001-redis_stop-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153700323423
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "2dda519ed7c9046da03a37f1617134b904846ad52e094b6c08929e594bd4f312",
+          "Attributes": {
+            "com.docker.compose.config-hash": "9c62fcceb76a82244f0476a89a7ada84655c163bcf5a6179612dc9ecd4f69092",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false,url-shorten-mongodb:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "url-shorten-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-url-shorten-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153704782562
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "8b8d2bb2113097688475e4760c496f3e277eeb162cda23a7fb68ed0f8e31fc32",
+          "Attributes": {
+            "com.docker.compose.config-hash": "bdb02702ae85c0b1e4484344c6f30f507d44c61755e20ea24283322eb367f0d1",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-mention-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-mention-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153707314743
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "10af8b2db364989d3f2dcbb5ae603fc116c1c36ef21b6e757d575bb54c1fff01",
+          "Attributes": {
+            "com.docker.compose.config-hash": "f5d87baee5afd52543f5fbcfac74b41ef460b86a50e502cf0212bca131213ee8",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false,media-mongodb:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "media-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-media-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153723442036
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "4a4d85f36134ff7e20da6b6ef7b7e5c0c7181a3b8d35d6f92f8e2e9b18a085bf",
+          "Attributes": {
+            "com.docker.compose.config-hash": "ec558f15e6f65e5dee4f8f131512567f72014844b492265f6001aaa894ed68ce",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "text-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-text-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153765524151
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "90fdb30c7d07f6ab6927d2f96705a761254df6800b87225d50d376bb4b944012",
+          "Attributes": {
+            "com.docker.compose.config-hash": "a42ea3cac98b9e729232e7a40282f785b163c8bde18699c424f150b3ed08e33e",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "user-timeline-mongodb:service_started:false,jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153797378104
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "891d857718c62683f77a75f75c8d6b94833e35e424f75b27556404e3a78e7ccf",
+          "Attributes": {
+            "com.docker.compose.config-hash": "3c447b3a4e1fb574c6bf5d36b3279ba5dda1e5c6833e80a6f11a209c566db320",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "compose-post-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-compose-post-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153835405193
+      },
+      {
+        "Type": "container",
+        "Action": "create",
+        "Actor": {
+          "ID": "b70a1625c90ddc2c4b3976b04a40c631b9a48f0bc9cf1819e5e54bab4ba99084",
+          "Attributes": {
+            "com.docker.compose.config-hash": "9ed39d40391ccfe630390f0b38d574514d423f96d0f67631ae800a4be5139162",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:272049995f2929435b91da34f20fc16216a7f974d1b8f9afa0ccbb529f1a9840",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "media-frontend",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\media-frontend\\lua-scripts",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\media-frontend\\conf\\nginx.conf",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "yg397/media-frontend@sha256:272049995f2929435b91da34f20fc16216a7f974d1b8f9afa0ccbb529f1a9840",
+            "maintainer": "Evan Wies <evan@neomantra.net>",
+            "name": "dtrem-event-05619855-1001-redis_stop-media-frontend-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178153,
+        "timeNano": 1791178153849123890
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "906b5aaea9ab37793653d5f0cba6ad36cbcbea6d30c139fe8d41c5d39d28f4a7",
+          "Attributes": {
+            "com.docker.compose.config-hash": "24cbf0cfbd4ef890653eb8dd3ab094832676646c6948a623d66ca9436a22f436",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:51e736c67df8491acf63045188615a9f9b5f31c9a06fb30f79fefee7280b746e",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "media-memcached",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+            "name": "dtrem-event-05619855-1001-redis_stop-media-memcached-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178154,
+        "timeNano": 1791178154631877895
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "e870b8e51f820916016a97495f139fae9b782f0210b4e2ece9b06277af5cd16a",
+          "Attributes": {
+            "com.docker.compose.config-hash": "9fd83d04a83e16b4359b6f95264662e74d799db397f18b20191fb46e88e55615",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "post-storage-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-post-storage-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178154,
+        "timeNano": 1791178154958837111
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "5943f5e014c787b1e7c55ab53c67f57bece3b37bb2a22d3f291c18aa6dfc7cdc",
+          "Attributes": {
+            "com.docker.compose.config-hash": "78e37f2ac8c0a14bfffc456efda88e39c214ec8f754cbb4e0156b7bd2209fdd8",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178155,
+        "timeNano": 1791178155320305601
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "e23c95095e2500024a8f97b9f63bfcc81e61bd6bcea01435f60e6d41721ef378",
+          "Attributes": {
+            "com.docker.compose.config-hash": "dbc6cda3529f6748e6ebecfed50753d86724f8ec0dad0f2f3af4445a732a56ce",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178155,
+        "timeNano": 1791178155739345365
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "6cf197c669d6a0d9c8d6414ba9e966dac76afb1dc254b3db8267faa4b32aa716",
+          "Attributes": {
+            "com.docker.compose.config-hash": "150d4aeb311a7575b93844344dd937e3b10d4b8b81c5283118d40dadcd600898",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178156,
+        "timeNano": 1791178156134030433
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "9f72160f7c084238a48a95cb96b7c1cefe71a6ef08e4eb1fa6ac23c465c9631c",
+          "Attributes": {
+            "com.docker.compose.config-hash": "b257e858c100e385167fbd0bbab5f20c9b8fb9dc3d2f8bb6087bd51a43e56e2d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "social-graph-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-social-graph-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178156,
+        "timeNano": 1791178156665862556
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "bb4a070e2dab91450539ed3181425adae2b3c5871e18bd135d83c01e71a927b5",
+          "Attributes": {
+            "com.docker.compose.config-hash": "748e12f49ef0747d689eaef8e47e11a10d93dc8f4644ce7f4e7ed34727c21bc3",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:51e736c67df8491acf63045188615a9f9b5f31c9a06fb30f79fefee7280b746e",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "url-shorten-memcached",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+            "name": "dtrem-event-05619855-1001-redis_stop-url-shorten-memcached-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178156,
+        "timeNano": 1791178156967468881
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "c576316bf5320b4c4548dd2f9f15d9eafc785a2ae5b511d02d52671a14397a7c",
+          "Attributes": {
+            "com.docker.compose.config-hash": "899dd88be9996a88402c0420cf68ae613929ffd33a04f9e81fca39a6f4f85f65",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "media-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-media-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178157,
+        "timeNano": 1791178157269548281
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "945365ae320974337e781183f00242b16e6b5635c8e35b5f9eb873c4a600fe68",
+          "Attributes": {
+            "com.docker.compose.config-hash": "9f2198556d2b8b672dc8a4ac9b4df4b7293d68f02f194f240b94da1d203efbed",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:51e736c67df8491acf63045188615a9f9b5f31c9a06fb30f79fefee7280b746e",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "post-storage-memcached",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+            "name": "dtrem-event-05619855-1001-redis_stop-post-storage-memcached-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178157,
+        "timeNano": 1791178157585753649
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "2ac390448909e7d51bdec65e9c0ca9b342aee012d23e11cf5c25bd7eef1435a0",
+          "Attributes": {
+            "com.docker.compose.config-hash": "95f7687f444af83a29d6d23071ce6d13914343174800d02f39cce7cc065e120b",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:51e736c67df8491acf63045188615a9f9b5f31c9a06fb30f79fefee7280b746e",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-memcached",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-memcached-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178157,
+        "timeNano": 1791178157885792621
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "a45bc692a02c43ba8517cbf29602cd1210a172ea04d24da8b426fec8c90d6c1a",
+          "Attributes": {
+            "com.docker.compose.config-hash": "7aeb4a72540245549aa4285bb51594127fd3e9b47b2e1b48f3ffe13812203534",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "url-shorten-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-url-shorten-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178158,
+        "timeNano": 1791178158164577255
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "28cca485beea4863deda0ba7777c8f3af7195f9d8570b0c93f3fbe29e2b9c120",
+          "Attributes": {
+            "com.docker.compose.config-hash": "d8aeb818876110151ad6ebbc88418c2a78ed22d5a8625344fdb392ac318c06f1",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178158,
+        "timeNano": 1791178158435962229
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "f86cbc2f57d9dd74d9450708ef6a261cdc0621393b1211d03f599085ecb72b44",
+          "Attributes": {
+            "com.docker.compose.config-hash": "25a73ee7f0985bf8682a795c87777af87e186c4d38a97027d4ab7675f2d75478",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:bafcf486c4c72c8dd5f9008cb97d482cb2f8f553f02fff2086e9f1c0f366d394",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "jaeger-agent",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/16686/tcp": "127.0.0.1:19986",
+            "image": "jaegertracing/all-in-one@sha256:f4044964505c81bf12131c2dfd1f4ddf1d1421bbbd9d79f691221cac077599a8",
+            "name": "dtrem-event-05619855-1001-redis_stop-jaeger-agent-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178158,
+        "timeNano": 1791178158928585822
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "5eeaa95483b89dad73857f1ff12b5567fb5ad72a68b1b933c1fcc4ec384f02d2",
+          "Attributes": {
+            "com.docker.compose.config-hash": "ac4a1cb8c859408bcfa6430ee2142bc04eac13fb28ecd68ae8352d41d7fe814a",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "social-graph-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-social-graph-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178159,
+        "timeNano": 1791178159240758800
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "4a4d85f36134ff7e20da6b6ef7b7e5c0c7181a3b8d35d6f92f8e2e9b18a085bf",
+          "Attributes": {
+            "com.docker.compose.config-hash": "ec558f15e6f65e5dee4f8f131512567f72014844b492265f6001aaa894ed68ce",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "text-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-text-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178159,
+        "timeNano": 1791178159536600882
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "10af8b2db364989d3f2dcbb5ae603fc116c1c36ef21b6e757d575bb54c1fff01",
+          "Attributes": {
+            "com.docker.compose.config-hash": "f5d87baee5afd52543f5fbcfac74b41ef460b86a50e502cf0212bca131213ee8",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false,media-mongodb:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "media-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-media-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178159,
+        "timeNano": 1791178159829647724
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "9a2c21838f5860de55848c14b96be1de9c1c52fd933f98da742a4721a04abe09",
+          "Attributes": {
+            "com.docker.compose.config-hash": "0425e5241d558fb42c0dc7999072ed485d8b0e063be234292bf86dd0542b0bbf",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/gen-lua",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-event-05619855-1001-redis_stop-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791178160,
+        "timeNano": 1791178160266586981
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "b70a1625c90ddc2c4b3976b04a40c631b9a48f0bc9cf1819e5e54bab4ba99084",
+          "Attributes": {
+            "com.docker.compose.config-hash": "9ed39d40391ccfe630390f0b38d574514d423f96d0f67631ae800a4be5139162",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:272049995f2929435b91da34f20fc16216a7f974d1b8f9afa0ccbb529f1a9840",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "media-frontend",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\media-frontend\\lua-scripts",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\media-frontend\\conf\\nginx.conf",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "yg397/media-frontend@sha256:272049995f2929435b91da34f20fc16216a7f974d1b8f9afa0ccbb529f1a9840",
+            "maintainer": "Evan Wies <evan@neomantra.net>",
+            "name": "dtrem-event-05619855-1001-redis_stop-media-frontend-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178160,
+        "timeNano": 1791178160567093479
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "2dda519ed7c9046da03a37f1617134b904846ad52e094b6c08929e594bd4f312",
+          "Attributes": {
+            "com.docker.compose.config-hash": "9c62fcceb76a82244f0476a89a7ada84655c163bcf5a6179612dc9ecd4f69092",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false,url-shorten-mongodb:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "url-shorten-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-url-shorten-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178160,
+        "timeNano": 1791178160861665724
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "891d857718c62683f77a75f75c8d6b94833e35e424f75b27556404e3a78e7ccf",
+          "Attributes": {
+            "com.docker.compose.config-hash": "3c447b3a4e1fb574c6bf5d36b3279ba5dda1e5c6833e80a6f11a209c566db320",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "compose-post-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-compose-post-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178161,
+        "timeNano": 1791178161263162003
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "dc55bdae269c4cda1319ad8ee9b3efd76036c121273d19406b40d6e33b80e67b",
+          "Attributes": {
+            "com.docker.compose.config-hash": "4683eb912ca37b1a138d33e54d4a1c4f9fe706fba17c0f207cb702cdff44d31d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "unique-id-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-unique-id-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178161,
+        "timeNano": 1791178161561931822
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "d34db7f44a636db80fd3666553857dd93a0850ecc09bf0e6c30362f3d830c823",
+          "Attributes": {
+            "com.docker.compose.config-hash": "fa6285e526a02ea2def25db7dbd0d2d5fd5692b9b9134da30d8acbdf35a400c3",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "home-timeline-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-home-timeline-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178161,
+        "timeNano": 1791178161833808452
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "90fdb30c7d07f6ab6927d2f96705a761254df6800b87225d50d376bb4b944012",
+          "Attributes": {
+            "com.docker.compose.config-hash": "a42ea3cac98b9e729232e7a40282f785b163c8bde18699c424f150b3ed08e33e",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "user-timeline-mongodb:service_started:false,jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178162,
+        "timeNano": 1791178162110737080
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "8b8d2bb2113097688475e4760c496f3e277eeb162cda23a7fb68ed0f8e31fc32",
+          "Attributes": {
+            "com.docker.compose.config-hash": "bdb02702ae85c0b1e4484344c6f30f507d44c61755e20ea24283322eb367f0d1",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-mention-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-mention-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178162,
+        "timeNano": 1791178162418395463
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "0a3068532e7ae1747a96004eb8b59e76cb3734ace9997d050eee02a9c3f07e96",
+          "Attributes": {
+            "com.docker.compose.config-hash": "1b0d4c2a917dc35d1dc395b8e6912df7e6093522c7f6efe778cf3b7639f428fb",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "user-mongodb:service_started:false,jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178162,
+        "timeNano": 1791178162703779892
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "9b3c5775ad07f885a94a59657bf3ff484367bfc71290c8bbd808373e9fcd8294",
+          "Attributes": {
+            "com.docker.compose.config-hash": "d383586012ab88be61f368e897efebd94231cd9b37c093d51db821a773cf52d9",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "post-storage-mongodb:service_started:false,jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "post-storage-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-post-storage-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178163,
+        "timeNano": 1791178163000223239
+      },
+      {
+        "Type": "container",
+        "Action": "start",
+        "Actor": {
+          "ID": "7c317de3ae1a04b88c135bb10ad3e067a388c1cec9b67208de1510c91fbe2582",
+          "Attributes": {
+            "com.docker.compose.config-hash": "fa8e8716df445d957d59f94d6113f1c0c0aba4c720379a2ef03bbc0a7fa54a30",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false,social-graph-mongodb:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "social-graph-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-social-graph-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178163,
+        "timeNano": 1791178163306698261
+      },
+      {
+        "Type": "container",
+        "Action": "kill",
+        "Actor": {
+          "ID": "90fdb30c7d07f6ab6927d2f96705a761254df6800b87225d50d376bb4b944012",
+          "Attributes": {
+            "com.docker.compose.config-hash": "a42ea3cac98b9e729232e7a40282f785b163c8bde18699c424f150b3ed08e33e",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "user-timeline-mongodb:service_started:false,jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "signal": "15"
+          }
+        },
+        "scope": "local",
+        "time": 1791178165,
+        "timeNano": 1791178165152111272
+      },
+      {
+        "Type": "container",
+        "Action": "kill",
+        "Actor": {
+          "ID": "90fdb30c7d07f6ab6927d2f96705a761254df6800b87225d50d376bb4b944012",
+          "Attributes": {
+            "com.docker.compose.config-hash": "a42ea3cac98b9e729232e7a40282f785b163c8bde18699c424f150b3ed08e33e",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "user-timeline-mongodb:service_started:false,jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "signal": "9"
+          }
+        },
+        "scope": "local",
+        "time": 1791178167,
+        "timeNano": 1791178167174916828
+      },
+      {
+        "Type": "container",
+        "Action": "stop",
+        "Actor": {
+          "ID": "90fdb30c7d07f6ab6927d2f96705a761254df6800b87225d50d376bb4b944012",
+          "Attributes": {
+            "com.docker.compose.config-hash": "a42ea3cac98b9e729232e7a40282f785b163c8bde18699c424f150b3ed08e33e",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "user-timeline-mongodb:service_started:false,jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178167,
+        "timeNano": 1791178167412029263
+      },
+      {
+        "Type": "container",
+        "Action": "die",
+        "Actor": {
+          "ID": "90fdb30c7d07f6ab6927d2f96705a761254df6800b87225d50d376bb4b944012",
+          "Attributes": {
+            "com.docker.compose.config-hash": "a42ea3cac98b9e729232e7a40282f785b163c8bde18699c424f150b3ed08e33e",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "user-timeline-mongodb:service_started:false,jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execDuration": "5",
+            "exitCode": "137",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178167,
+        "timeNano": 1791178167425128372
+      },
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 2s redis-cli -h user-timeline-redis --raw ZREVRANGE 8002002 0 99",
+        "Actor": {
+          "ID": "e23c95095e2500024a8f97b9f63bfcc81e61bd6bcea01435f60e6d41721ef378",
+          "Attributes": {
+            "com.docker.compose.config-hash": "dbc6cda3529f6748e6ebecfed50753d86724f8ec0dad0f2f3af4445a732a56ce",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "180fddf3c3e6b2ee1a7008922d68ec922806c349564f2ebb02474d0fbc8377e3",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178169,
+        "timeNano": 1791178169020827201
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 2s redis-cli -h user-timeline-redis --raw ZREVRANGE 8002002 0 99",
+        "Actor": {
+          "ID": "e23c95095e2500024a8f97b9f63bfcc81e61bd6bcea01435f60e6d41721ef378",
+          "Attributes": {
+            "com.docker.compose.config-hash": "dbc6cda3529f6748e6ebecfed50753d86724f8ec0dad0f2f3af4445a732a56ce",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "180fddf3c3e6b2ee1a7008922d68ec922806c349564f2ebb02474d0fbc8377e3",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178169,
+        "timeNano": 1791178169023629886
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "e23c95095e2500024a8f97b9f63bfcc81e61bd6bcea01435f60e6d41721ef378",
+          "Attributes": {
+            "com.docker.compose.config-hash": "dbc6cda3529f6748e6ebecfed50753d86724f8ec0dad0f2f3af4445a732a56ce",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "180fddf3c3e6b2ee1a7008922d68ec922806c349564f2ebb02474d0fbc8377e3",
+            "exitCode": "0",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178169,
+        "timeNano": 1791178169075408378
+      },
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 2s mongo --quiet --host user-timeline-mongodb --eval var d=db.getSiblingDB('user-timeline').getCollection('user-timeline').findOne({user_id:NumberLong(\"8002002\")});print(JSON.stringify({ids:d ? d.posts.map(function(p){return p.post_id.toString();}) : []}));",
+        "Actor": {
+          "ID": "28cca485beea4863deda0ba7777c8f3af7195f9d8570b0c93f3fbe29e2b9c120",
+          "Attributes": {
+            "com.docker.compose.config-hash": "d8aeb818876110151ad6ebbc88418c2a78ed22d5a8625344fdb392ac318c06f1",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "2d8463f788e22426c12afb50adcb0a4215932deacbe1cd09da196d06e10b8408",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178169,
+        "timeNano": 1791178169301426281
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 2s mongo --quiet --host user-timeline-mongodb --eval var d=db.getSiblingDB('user-timeline').getCollection('user-timeline').findOne({user_id:NumberLong(\"8002002\")});print(JSON.stringify({ids:d ? d.posts.map(function(p){return p.post_id.toString();}) : []}));",
+        "Actor": {
+          "ID": "28cca485beea4863deda0ba7777c8f3af7195f9d8570b0c93f3fbe29e2b9c120",
+          "Attributes": {
+            "com.docker.compose.config-hash": "d8aeb818876110151ad6ebbc88418c2a78ed22d5a8625344fdb392ac318c06f1",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "2d8463f788e22426c12afb50adcb0a4215932deacbe1cd09da196d06e10b8408",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178169,
+        "timeNano": 1791178169305549312
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "28cca485beea4863deda0ba7777c8f3af7195f9d8570b0c93f3fbe29e2b9c120",
+          "Attributes": {
+            "com.docker.compose.config-hash": "d8aeb818876110151ad6ebbc88418c2a78ed22d5a8625344fdb392ac318c06f1",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "2d8463f788e22426c12afb50adcb0a4215932deacbe1cd09da196d06e10b8408",
+            "exitCode": "0",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178169,
+        "timeNano": 1791178169459138035
+      },
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 3s /usr/local/openresty/bin/resty --errlog-level error --ns 127.0.0.11 -e local th=require 'Thrift'; for k,v in pairs(th) do _G[k]=v end; local ty=require 'social_network_ttypes'; for k,v in pairs(ty) do _G[k]=v end; require 'social_network_PostStorageService'; local f=require 'RpcClientFactory'; local l=require 'liblualongnumber'; local j=require 'cjson'; local c=f:createClient(PostStorageServiceClient,'post-storage-service',9090,1000,false); local rows=c:ReadPosts(1,{l.new(\"8589496678537601024\")},{}); local result={}; for _,p in ipairs(rows) do result[#result+1]={post_id=tostring(p.post_id),text=p.text,creator=tostring(p.creator.user_id)} end; print(j.encode(result))",
+        "Actor": {
+          "ID": "9a2c21838f5860de55848c14b96be1de9c1c52fd933f98da742a4721a04abe09",
+          "Attributes": {
+            "com.docker.compose.config-hash": "0425e5241d558fb42c0dc7999072ed485d8b0e063be234292bf86dd0542b0bbf",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/gen-lua",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "4927c081197b48d2629712e1abe8052fbce0deb642c7d7c8084fa93a6f30b841",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-event-05619855-1001-redis_stop-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791178169,
+        "timeNano": 1791178169670546018
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 3s /usr/local/openresty/bin/resty --errlog-level error --ns 127.0.0.11 -e local th=require 'Thrift'; for k,v in pairs(th) do _G[k]=v end; local ty=require 'social_network_ttypes'; for k,v in pairs(ty) do _G[k]=v end; require 'social_network_PostStorageService'; local f=require 'RpcClientFactory'; local l=require 'liblualongnumber'; local j=require 'cjson'; local c=f:createClient(PostStorageServiceClient,'post-storage-service',9090,1000,false); local rows=c:ReadPosts(1,{l.new(\"8589496678537601024\")},{}); local result={}; for _,p in ipairs(rows) do result[#result+1]={post_id=tostring(p.post_id),text=p.text,creator=tostring(p.creator.user_id)} end; print(j.encode(result))",
+        "Actor": {
+          "ID": "9a2c21838f5860de55848c14b96be1de9c1c52fd933f98da742a4721a04abe09",
+          "Attributes": {
+            "com.docker.compose.config-hash": "0425e5241d558fb42c0dc7999072ed485d8b0e063be234292bf86dd0542b0bbf",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/gen-lua",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "4927c081197b48d2629712e1abe8052fbce0deb642c7d7c8084fa93a6f30b841",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-event-05619855-1001-redis_stop-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791178169,
+        "timeNano": 1791178169674159332
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "9a2c21838f5860de55848c14b96be1de9c1c52fd933f98da742a4721a04abe09",
+          "Attributes": {
+            "com.docker.compose.config-hash": "0425e5241d558fb42c0dc7999072ed485d8b0e063be234292bf86dd0542b0bbf",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/gen-lua",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "4927c081197b48d2629712e1abe8052fbce0deb642c7d7c8084fa93a6f30b841",
+            "exitCode": "0",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-event-05619855-1001-redis_stop-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791178169,
+        "timeNano": 1791178169877365617
+      },
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 2s redis-cli -h user-timeline-redis --raw ZREVRANGE 8002002 0 99",
+        "Actor": {
+          "ID": "e23c95095e2500024a8f97b9f63bfcc81e61bd6bcea01435f60e6d41721ef378",
+          "Attributes": {
+            "com.docker.compose.config-hash": "dbc6cda3529f6748e6ebecfed50753d86724f8ec0dad0f2f3af4445a732a56ce",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "1052c683cb993540b566094cec51fb91c42caf194a3c89188df6ed08471ed869",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178170,
+        "timeNano": 1791178170276588639
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 2s redis-cli -h user-timeline-redis --raw ZREVRANGE 8002002 0 99",
+        "Actor": {
+          "ID": "e23c95095e2500024a8f97b9f63bfcc81e61bd6bcea01435f60e6d41721ef378",
+          "Attributes": {
+            "com.docker.compose.config-hash": "dbc6cda3529f6748e6ebecfed50753d86724f8ec0dad0f2f3af4445a732a56ce",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "1052c683cb993540b566094cec51fb91c42caf194a3c89188df6ed08471ed869",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178170,
+        "timeNano": 1791178170282022367
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "e23c95095e2500024a8f97b9f63bfcc81e61bd6bcea01435f60e6d41721ef378",
+          "Attributes": {
+            "com.docker.compose.config-hash": "dbc6cda3529f6748e6ebecfed50753d86724f8ec0dad0f2f3af4445a732a56ce",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "1052c683cb993540b566094cec51fb91c42caf194a3c89188df6ed08471ed869",
+            "exitCode": "0",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178170,
+        "timeNano": 1791178170324416841
+      },
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 2s mongo --quiet --host user-timeline-mongodb --eval var d=db.getSiblingDB('user-timeline').getCollection('user-timeline').findOne({user_id:NumberLong(\"8002002\")});print(JSON.stringify({ids:d ? d.posts.map(function(p){return p.post_id.toString();}) : []}));",
+        "Actor": {
+          "ID": "28cca485beea4863deda0ba7777c8f3af7195f9d8570b0c93f3fbe29e2b9c120",
+          "Attributes": {
+            "com.docker.compose.config-hash": "d8aeb818876110151ad6ebbc88418c2a78ed22d5a8625344fdb392ac318c06f1",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "ba87436c140cbbfbe01e3853b9ba3669d2ea993b90b30f68da6cf6382d90644b",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178170,
+        "timeNano": 1791178170527901780
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 2s mongo --quiet --host user-timeline-mongodb --eval var d=db.getSiblingDB('user-timeline').getCollection('user-timeline').findOne({user_id:NumberLong(\"8002002\")});print(JSON.stringify({ids:d ? d.posts.map(function(p){return p.post_id.toString();}) : []}));",
+        "Actor": {
+          "ID": "28cca485beea4863deda0ba7777c8f3af7195f9d8570b0c93f3fbe29e2b9c120",
+          "Attributes": {
+            "com.docker.compose.config-hash": "d8aeb818876110151ad6ebbc88418c2a78ed22d5a8625344fdb392ac318c06f1",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "ba87436c140cbbfbe01e3853b9ba3669d2ea993b90b30f68da6cf6382d90644b",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178170,
+        "timeNano": 1791178170532318054
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "28cca485beea4863deda0ba7777c8f3af7195f9d8570b0c93f3fbe29e2b9c120",
+          "Attributes": {
+            "com.docker.compose.config-hash": "d8aeb818876110151ad6ebbc88418c2a78ed22d5a8625344fdb392ac318c06f1",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "ba87436c140cbbfbe01e3853b9ba3669d2ea993b90b30f68da6cf6382d90644b",
+            "exitCode": "0",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178170,
+        "timeNano": 1791178170630848236
+      },
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 3s /usr/local/openresty/bin/resty --errlog-level error --ns 127.0.0.11 -e local th=require 'Thrift'; for k,v in pairs(th) do _G[k]=v end; local ty=require 'social_network_ttypes'; for k,v in pairs(ty) do _G[k]=v end; require 'social_network_PostStorageService'; local f=require 'RpcClientFactory'; local l=require 'liblualongnumber'; local j=require 'cjson'; local c=f:createClient(PostStorageServiceClient,'post-storage-service',9090,1000,false); local rows=c:ReadPosts(1,{l.new(\"8589496678537601024\")},{}); local result={}; for _,p in ipairs(rows) do result[#result+1]={post_id=tostring(p.post_id),text=p.text,creator=tostring(p.creator.user_id)} end; print(j.encode(result))",
+        "Actor": {
+          "ID": "9a2c21838f5860de55848c14b96be1de9c1c52fd933f98da742a4721a04abe09",
+          "Attributes": {
+            "com.docker.compose.config-hash": "0425e5241d558fb42c0dc7999072ed485d8b0e063be234292bf86dd0542b0bbf",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/gen-lua",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "495968324cf59477ba76a2c188dd1dc4dbcbe9c185b89acde4297271a9ff92ac",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-event-05619855-1001-redis_stop-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791178170,
+        "timeNano": 1791178170819646203
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 3s /usr/local/openresty/bin/resty --errlog-level error --ns 127.0.0.11 -e local th=require 'Thrift'; for k,v in pairs(th) do _G[k]=v end; local ty=require 'social_network_ttypes'; for k,v in pairs(ty) do _G[k]=v end; require 'social_network_PostStorageService'; local f=require 'RpcClientFactory'; local l=require 'liblualongnumber'; local j=require 'cjson'; local c=f:createClient(PostStorageServiceClient,'post-storage-service',9090,1000,false); local rows=c:ReadPosts(1,{l.new(\"8589496678537601024\")},{}); local result={}; for _,p in ipairs(rows) do result[#result+1]={post_id=tostring(p.post_id),text=p.text,creator=tostring(p.creator.user_id)} end; print(j.encode(result))",
+        "Actor": {
+          "ID": "9a2c21838f5860de55848c14b96be1de9c1c52fd933f98da742a4721a04abe09",
+          "Attributes": {
+            "com.docker.compose.config-hash": "0425e5241d558fb42c0dc7999072ed485d8b0e063be234292bf86dd0542b0bbf",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/gen-lua",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "495968324cf59477ba76a2c188dd1dc4dbcbe9c185b89acde4297271a9ff92ac",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-event-05619855-1001-redis_stop-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791178170,
+        "timeNano": 1791178170822660754
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "9a2c21838f5860de55848c14b96be1de9c1c52fd933f98da742a4721a04abe09",
+          "Attributes": {
+            "com.docker.compose.config-hash": "0425e5241d558fb42c0dc7999072ed485d8b0e063be234292bf86dd0542b0bbf",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/gen-lua",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "495968324cf59477ba76a2c188dd1dc4dbcbe9c185b89acde4297271a9ff92ac",
+            "exitCode": "0",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-event-05619855-1001-redis_stop-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791178171,
+        "timeNano": 1791178171019044976
+      },
+      {
+        "Type": "container",
+        "Action": "kill",
+        "Actor": {
+          "ID": "5943f5e014c787b1e7c55ab53c67f57bece3b37bb2a22d3f291c18aa6dfc7cdc",
+          "Attributes": {
+            "com.docker.compose.config-hash": "78e37f2ac8c0a14bfffc456efda88e39c214ec8f754cbb4e0156b7bd2209fdd8",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "signal": "15"
+          }
+        },
+        "scope": "local",
+        "time": 1791178171,
+        "timeNano": 1791178171588701242
+      },
+      {
+        "Type": "container",
+        "Action": "stop",
+        "Actor": {
+          "ID": "5943f5e014c787b1e7c55ab53c67f57bece3b37bb2a22d3f291c18aa6dfc7cdc",
+          "Attributes": {
+            "com.docker.compose.config-hash": "78e37f2ac8c0a14bfffc456efda88e39c214ec8f754cbb4e0156b7bd2209fdd8",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178171,
+        "timeNano": 1791178171879646852
+      },
+      {
+        "Type": "container",
+        "Action": "die",
+        "Actor": {
+          "ID": "5943f5e014c787b1e7c55ab53c67f57bece3b37bb2a22d3f291c18aa6dfc7cdc",
+          "Attributes": {
+            "com.docker.compose.config-hash": "78e37f2ac8c0a14bfffc456efda88e39c214ec8f754cbb4e0156b7bd2209fdd8",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execDuration": "16",
+            "exitCode": "0",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178171,
+        "timeNano": 1791178171896290218
+      }
+    ],
+    "cursor": 1791178169877365617,
+    "dependency_ids": [
+      "5943f5e014c787b1e7c55ab53c67f57bece3b37bb2a22d3f291c18aa6dfc7cdc",
+      "6cf197c669d6a0d9c8d6414ba9e966dac76afb1dc254b3db8267faa4b32aa716",
+      "9b3c5775ad07f885a94a59657bf3ff484367bfc71290c8bbd808373e9fcd8294"
+    ],
+    "running": {
+      "5943f5e014c787b1e7c55ab53c67f57bece3b37bb2a22d3f291c18aa6dfc7cdc": false,
+      "6cf197c669d6a0d9c8d6414ba9e966dac76afb1dc254b3db8267faa4b32aa716": true,
+      "9b3c5775ad07f885a94a59657bf3ff484367bfc71290c8bbd808373e9fcd8294": true
+    },
+    "delayed_available_at": 87685.0641528,
+    "decision_time": 87675.3212559,
+    "query_duration_s": 0.20715780000318773,
+    "anchor_duration_s": 0.2050732999923639,
+    "matched_changes": [
+      {
+        "Type": "container",
+        "Action": "kill",
+        "Actor": {
+          "ID": "5943f5e014c787b1e7c55ab53c67f57bece3b37bb2a22d3f291c18aa6dfc7cdc",
+          "Attributes": {
+            "com.docker.compose.config-hash": "78e37f2ac8c0a14bfffc456efda88e39c214ec8f754cbb4e0156b7bd2209fdd8",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation",
+            "signal": "15"
+          }
+        },
+        "scope": "local",
+        "time": 1791178171,
+        "timeNano": 1791178171588701242
+      },
+      {
+        "Type": "container",
+        "Action": "stop",
+        "Actor": {
+          "ID": "5943f5e014c787b1e7c55ab53c67f57bece3b37bb2a22d3f291c18aa6dfc7cdc",
+          "Attributes": {
+            "com.docker.compose.config-hash": "78e37f2ac8c0a14bfffc456efda88e39c214ec8f754cbb4e0156b7bd2209fdd8",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178171,
+        "timeNano": 1791178171879646852
+      },
+      {
+        "Type": "container",
+        "Action": "die",
+        "Actor": {
+          "ID": "5943f5e014c787b1e7c55ab53c67f57bece3b37bb2a22d3f291c18aa6dfc7cdc",
+          "Attributes": {
+            "com.docker.compose.config-hash": "78e37f2ac8c0a14bfffc456efda88e39c214ec8f754cbb4e0156b7bd2209fdd8",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-event-05619855-1001-redis_stop",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\event-runs\\0561985519f64e5999746c0006960374\\1001-redis_stop",
+            "com.docker.compose.service": "user-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execDuration": "16",
+            "exitCode": "0",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-event-05619855-1001-redis_stop-user-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-invalidation"
+          }
+        },
+        "scope": "local",
+        "time": 1791178171,
+        "timeNano": 1791178171896290218
+      }
+    ]
+  },
+  "post_action_states": {
+    "compose-post-service": true,
+    "home-timeline-redis": true,
+    "home-timeline-service": true,
+    "jaeger-agent": true,
+    "media-frontend": true,
+    "media-memcached": true,
+    "media-mongodb": true,
+    "media-service": true,
+    "nginx-thrift": true,
+    "post-storage-memcached": true,
+    "post-storage-mongodb": true,
+    "post-storage-service": true,
+    "social-graph-mongodb": true,
+    "social-graph-redis": true,
+    "social-graph-service": true,
+    "text-service": true,
+    "unique-id-service": true,
+    "url-shorten-memcached": true,
+    "url-shorten-mongodb": true,
+    "url-shorten-service": true,
+    "user-memcached": true,
+    "user-mention-service": true,
+    "user-mongodb": true,
+    "user-service": true,
+    "user-timeline-mongodb": true,
+    "user-timeline-redis": false,
+    "user-timeline-service": true
+  },
+  "recovered_by_8s": false,
+  "first_verified_read_from_decision_s": null,
+  "outcome_observations": [
+    {
+      "elapsed_s": 1.0370858999958728,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 1.0661403999984032,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 1.5566008999885526,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 3.071587099999306,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 3.096381899988046,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 3.589794699990307,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 4.100580699989223,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 4.605075099985697,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 5.095524399992428,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 5.593527099990752,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 6.08537429998978,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 6.5894615999859525,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 7.0895133999874815,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 7.59256339998683,
+      "classification": "unresolved_read_error"
+    }
+  ],
+  "contract_met": false,
+  "note": "Development-only false-recovery-approval diagnostic; predictions shadow-scored, actions not gated",
+  "cleanup_returncode": 0,
+  "ledger_sha256": "58e66364049faeb81c1c2952fe35b4d1927b841094ee3be6cbd2f3e09a807837"
+}

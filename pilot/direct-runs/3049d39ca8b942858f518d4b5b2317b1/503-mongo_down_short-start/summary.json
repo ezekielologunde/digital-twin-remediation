@@ -1,0 +1,176 @@
+{
+  "project": "dtrem-direct-3049d39c-503-mongo_down_short-start",
+  "seed": 503,
+  "arm": "start",
+  "backend_condition": "mongo_down_short",
+  "status": "COMPLETE",
+  "scenario_sha256": "8bbfc46a04ffaf26e17ae823b5cdb1f2f3bf279e43371f335c27d9238760ae50",
+  "compose_sha256": "182a41b963d1ba28a7ddbb4f953ddddbf66decc00357ec0d67cbdead4c3cdd97",
+  "volume_names": [
+    "0a131fb8efd52f8c3ef6cbbb05d6fc83cdee25394b1517b52427c73620c320b8",
+    "35286a5dd0fdd73277905733bd750dffd4ff9d36e3a05d5ecdb277976f9e826a",
+    "5dbd885321d835e17c3e84fbc6fa4d3cfadec20ac17c7c53f13b495359b87f12",
+    "8a65577368ec9a94e33a6eeef3c9e6c693906fba619115896c2816572d1c6dd8",
+    "92f9360889206c23b25cfdca4abb5ae5c1e8bc2da4b09841538f93454063643f",
+    "abe8e09982e23501644f2cee82fd307e5b4791393ef34dbf18fac61863c8fb9c",
+    "b852bfb02451eccb652fc35b54a766db2f9355f19a767c8016dab45ca308eed2",
+    "be90fe346e28abf72d2c0d4746017f18aee13d0bdaf28ffb131b5e84f73707ae",
+    "c1a5402948350e39b2dd2d857443c8c1b92f74973c5c0061e79c99e6d3ed826f",
+    "d3a1d1856f31d0bb2bf8ff9f31d3c5d2357ef74aea869c714137cc1e83ca2aa3",
+    "d5de02896b7a44a519ba066a2d92d10b74bb3719ced222f335858e5bff97caa8",
+    "d972796c3566cc7f62c427ec384b0532cde17bacbe1f8ec24d270a06deac5e88",
+    "e98fdb28357d618e4fa9fb462c2ae878656d64aa8cc98eabc7ba9143098bee39"
+  ],
+  "fresh_volume_ids": true,
+  "empty_before_initialization": true,
+  "baseline_markers_verified": 3,
+  "fault_detected": true,
+  "target_container_id": "cc6c0685fa700bd22a245b09ede5e4e328232ecdc2b99ee363eecbfad5dd7a93",
+  "functional_baseline_verified": true,
+  "direct_baseline": {
+    "timeline_redis": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 264.7720999957528
+    },
+    "timeline_mongo": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 329.8103999986779
+    },
+    "post_storage": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 360.80790001142304
+    }
+  },
+  "functional_probe": {
+    "classification": "verified_readback",
+    "elapsed_ms": 20.1322
+  },
+  "direct_probes": {
+    "timeline_redis": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 272.3276999895461
+    },
+    "timeline_mongo": {
+      "verified": false,
+      "returncode": 1,
+      "elapsed_ms": 296.5546000050381
+    },
+    "post_storage": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 358.470799998031
+    }
+  },
+  "predictions": {
+    "alternate_route": {
+      "decision": "approve"
+    },
+    "alternate_plus_redis": {
+      "decision": "approve"
+    },
+    "direct_dependencies": {
+      "decision": "abstain"
+    }
+  },
+  "post_action_states": {
+    "compose-post-service": true,
+    "home-timeline-redis": true,
+    "home-timeline-service": true,
+    "jaeger-agent": true,
+    "media-frontend": true,
+    "media-memcached": true,
+    "media-mongodb": true,
+    "media-service": true,
+    "nginx-thrift": true,
+    "post-storage-memcached": true,
+    "post-storage-mongodb": true,
+    "post-storage-service": true,
+    "social-graph-mongodb": true,
+    "social-graph-redis": true,
+    "social-graph-service": true,
+    "text-service": true,
+    "unique-id-service": true,
+    "url-shorten-memcached": true,
+    "url-shorten-mongodb": true,
+    "url-shorten-service": true,
+    "user-memcached": true,
+    "user-mention-service": true,
+    "user-mongodb": true,
+    "user-service": true,
+    "user-timeline-mongodb": false,
+    "user-timeline-redis": true,
+    "user-timeline-service": true
+  },
+  "recovered_by_8s": false,
+  "first_verified_read_from_decision_s": null,
+  "outcome_observations": [
+    {
+      "elapsed_s": 1.0233406999905128,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 1.0422165999916615,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 1.544940099993255,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 2.036219000001438,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 2.5356990000000224,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 3.0490682999952696,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 3.52944889999344,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 4.063006600001245,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 4.554640099988319,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 5.03303569999116,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 5.548591999991913,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 6.0374119999905815,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 6.560011800000211,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 7.041508900001645,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 7.529711399998632,
+      "classification": "unresolved_read_error"
+    }
+  ],
+  "contract_met": false,
+  "note": "Development-only false-recovery-approval diagnostic; predictions shadow-scored, actions not gated",
+  "cleanup_returncode": 0,
+  "ledger_sha256": "8858438b21f93a8227353d63ec89462bc396697d0c9c9a42f3eb2cd968603b30"
+}

@@ -1,0 +1,289 @@
+{
+  "batch": "fc54dc7bbf804c07b54d357033a60c70",
+  "live_trials": 8,
+  "integrity_verified": true,
+  "distinct_volume_ids": 104,
+  "metrics": [
+    {
+      "policy": "final_checks",
+      "approvals": 8,
+      "incorrect_approvals": 4,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "fresh_running_state",
+      "approvals": 6,
+      "incorrect_approvals": 2,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "events_available",
+      "approvals": 4,
+      "incorrect_approvals": 0,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "events_delayed",
+      "approvals": 8,
+      "incorrect_approvals": 4,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "events_silently_dropped",
+      "approvals": 8,
+      "incorrect_approvals": 4,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "late_functional_recheck",
+      "approvals": 4,
+      "incorrect_approvals": 0,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    }
+  ],
+  "details": [
+    {
+      "seed": 1102,
+      "condition": "unrelated_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "late_probe_ms": 957.8230000042822,
+      "event_query_ms": 215.49810000578873
+    },
+    {
+      "seed": 1102,
+      "condition": "redis_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill",
+        "stop",
+        "die"
+      ],
+      "late_probe_ms": 954.9341000092681,
+      "event_query_ms": 200.50969999283552
+    },
+    {
+      "seed": 1101,
+      "condition": "none",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "late_probe_ms": 938.937500002794,
+      "event_query_ms": 201.26319999690168
+    },
+    {
+      "seed": 1101,
+      "condition": "storage_suspend",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill"
+      ],
+      "late_probe_ms": 1954.8991000046954,
+      "event_query_ms": 209.67569999629632
+    },
+    {
+      "seed": 1101,
+      "condition": "redis_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill",
+        "stop",
+        "die"
+      ],
+      "late_probe_ms": 895.498600002611,
+      "event_query_ms": 239.09509999793954
+    },
+    {
+      "seed": 1102,
+      "condition": "none",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "late_probe_ms": 948.4717999876011,
+      "event_query_ms": 202.57770000898745
+    },
+    {
+      "seed": 1101,
+      "condition": "unrelated_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "late_probe_ms": 974.0990999998758,
+      "event_query_ms": 202.17080001020804
+    },
+    {
+      "seed": 1102,
+      "condition": "storage_suspend",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill"
+      ],
+      "late_probe_ms": 2198.1486000004224,
+      "event_query_ms": 296.17260000668466
+    }
+  ],
+  "limits": "Actual daemon history, simulated channel delay/drop, shared outcomes and interventions, no reliable live event stream or natural loss estimate. Known post-verification faults, two account blocks, no deployed gate or held-out evaluation."
+}

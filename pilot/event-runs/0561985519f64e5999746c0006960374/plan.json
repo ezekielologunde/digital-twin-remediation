@@ -1,0 +1,46 @@
+{
+  "arms": [
+    [
+      1001,
+      "unrelated_stop"
+    ],
+    [
+      1001,
+      "storage_suspend"
+    ],
+    [
+      1001,
+      "redis_stop"
+    ],
+    [
+      1002,
+      "none"
+    ],
+    [
+      1002,
+      "unrelated_stop"
+    ],
+    [
+      1002,
+      "storage_suspend"
+    ],
+    [
+      1001,
+      "none"
+    ],
+    [
+      1002,
+      "redis_stop"
+    ]
+  ],
+  "development_only": true,
+  "horizon_s": 8,
+  "policies": [
+    "final_checks",
+    "fresh_running_state",
+    "events_available",
+    "events_delayed",
+    "events_silently_dropped"
+  ],
+  "design": "Eight fresh instances. Actual Docker event history with controlled ten-second delayed and silently dropped shadow delivery. No policy-specific cost experiment, deployment or held-out claim."
+}

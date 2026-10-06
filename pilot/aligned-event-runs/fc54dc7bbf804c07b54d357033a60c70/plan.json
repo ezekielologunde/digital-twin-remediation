@@ -1,0 +1,47 @@
+{
+  "arms": [
+    [
+      1102,
+      "unrelated_stop"
+    ],
+    [
+      1102,
+      "redis_stop"
+    ],
+    [
+      1101,
+      "none"
+    ],
+    [
+      1101,
+      "storage_suspend"
+    ],
+    [
+      1101,
+      "redis_stop"
+    ],
+    [
+      1102,
+      "none"
+    ],
+    [
+      1101,
+      "unrelated_stop"
+    ],
+    [
+      1102,
+      "storage_suspend"
+    ]
+  ],
+  "development_only": true,
+  "horizon_s": 8,
+  "policies": [
+    "final_checks",
+    "fresh_running_state",
+    "events_available",
+    "events_delayed",
+    "events_silently_dropped",
+    "late_functional_recheck"
+  ],
+  "design": "Eight new fresh instances add functional rechecking after the fault, alongside event observations. Event query precedes late probes; all decisions are shadow-scored on shared outcomes. No policy latency advantage or held-out claim."
+}

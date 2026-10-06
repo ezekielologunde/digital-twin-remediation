@@ -1,0 +1,8 @@
+{
+  "compiler": "Codex built-in LaTeX compiler",
+  "status": "environment_error",
+  "message": "Unable to find standard directories for platform",
+  "compiled_pdf_verified": false,
+  "visual_qa_complete": false,
+  "date": "2026-10-05"
+}

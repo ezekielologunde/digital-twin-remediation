@@ -1,0 +1,148 @@
+{
+  "project": "dtrem-direct-3049d39c-502-process_suspended-start",
+  "seed": 502,
+  "arm": "start",
+  "backend_condition": "process_suspended",
+  "status": "COMPLETE",
+  "scenario_sha256": "51a10d33719d8fc71864ada4ab0bb2e5ea8977db7639aa76cb12a548bb868dc8",
+  "compose_sha256": "aa1d6d0f32527e5cf5f9774a2577a6f0a44f1f99072abf16e18f55bae556af7f",
+  "volume_names": [
+    "08c62371ae916cc35820fe0e8760ffb468b07f59e38545698b8c960763b3d89a",
+    "111020d8ecf95d3db75b6546fb38ec7be37cd8f236e93fdc0e27feae05a36d3d",
+    "22fc20f7b685d8c5ef67febfbe871e99ea85ff8ea616f5671fc391aebebb15e0",
+    "2d0d40de78d17e3bde47fb41a34e98acd943a6c40523559dc7e20325c9cd1136",
+    "413ae0566da64e9878b6b13faf15dab7f077f166c30a709472478598cab2d994",
+    "53ac6c75bba2bf0815e1c478bc7ffcc2ccd47a278d049a2a9099cd4068fa174b",
+    "766f8487b047a4c1ab861868c8a950e62f6c01e772e71030d7bcc1ce61fb3fa6",
+    "7ae41de2885262dd81fee83f9e66017a0176bf36d6229498199e401b50ebad84",
+    "a6008457efae2229f4d51703b4c59e550bbab7ad84b9b74b687b63387406de7a",
+    "d1029291f05c4eb71ea9af2686641ed083bb54d6a767c5f88b701010268f5da4",
+    "eff3953d4b5248a0b002a9248466f0e1e5dfd4af9e2e06703db04e7c465a3197",
+    "f9dcd8fc20617384ab79f3e959e51add179bee8958c1b9ff53af8bd8fcd9f120",
+    "ffd3a22aac3f81de749c17158fc0c721afd7858687b30c319b7d057b7c915cdb"
+  ],
+  "fresh_volume_ids": true,
+  "empty_before_initialization": true,
+  "baseline_markers_verified": 3,
+  "fault_detected": true,
+  "target_container_id": "746276929a347eeed3e5e674be4e262bc61432c6a5b83fb75444d6690025b3b1",
+  "functional_baseline_verified": true,
+  "direct_baseline": {
+    "timeline_redis": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 235.94270000467077
+    },
+    "timeline_mongo": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 302.2829000110505
+    },
+    "post_storage": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 333.0566000076942
+    }
+  },
+  "functional_probe": {
+    "classification": "unresolved_read_error",
+    "elapsed_ms": 1029.9319
+  },
+  "direct_probes": {
+    "timeline_redis": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 255.75799999933224
+    },
+    "timeline_mongo": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 340.986499999417
+    },
+    "post_storage": {
+      "verified": false,
+      "returncode": 1,
+      "elapsed_ms": 1357.444300010684
+    }
+  },
+  "predictions": {
+    "alternate_route": {
+      "decision": "abstain"
+    },
+    "alternate_plus_redis": {
+      "decision": "abstain"
+    },
+    "direct_dependencies": {
+      "decision": "abstain"
+    }
+  },
+  "post_action_states": {
+    "compose-post-service": true,
+    "home-timeline-redis": true,
+    "home-timeline-service": true,
+    "jaeger-agent": true,
+    "media-frontend": true,
+    "media-memcached": true,
+    "media-mongodb": true,
+    "media-service": true,
+    "nginx-thrift": true,
+    "post-storage-memcached": true,
+    "post-storage-mongodb": true,
+    "post-storage-service": true,
+    "social-graph-mongodb": true,
+    "social-graph-redis": true,
+    "social-graph-service": true,
+    "text-service": true,
+    "unique-id-service": true,
+    "url-shorten-memcached": true,
+    "url-shorten-mongodb": true,
+    "url-shorten-service": true,
+    "user-memcached": true,
+    "user-mention-service": true,
+    "user-mongodb": true,
+    "user-service": true,
+    "user-timeline-mongodb": true,
+    "user-timeline-redis": true,
+    "user-timeline-service": true
+  },
+  "recovered_by_8s": false,
+  "first_verified_read_from_decision_s": null,
+  "outcome_observations": [
+    {
+      "elapsed_s": 1.024124599993229,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 2.031618199995137,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 3.0369358000025386,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 4.066967499995371,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 5.09256039999309,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 6.1226312999933725,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 7.144630399998277,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 8.028909000000567,
+      "classification": "unresolved_read_error"
+    }
+  ],
+  "contract_met": false,
+  "note": "Development-only false-recovery-approval diagnostic; predictions shadow-scored, actions not gated",
+  "cleanup_returncode": 0,
+  "ledger_sha256": "1b8e2e9bc3ded959697428f793ad55d3007c771e9d00d31f5285efd778f746c5"
+}

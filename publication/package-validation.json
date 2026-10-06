@@ -1,0 +1,18 @@
+{
+  "overleaf": {
+    "path": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\Overleaf-case-study-v0.1.zip",
+    "files": 12,
+    "bytes": 20748,
+    "sha256": "51dbd8b7979ae52c8e190f82c7f53f85938014ea265d8b5b2853149ef3e13cda"
+  },
+  "evidence": {
+    "path": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\Research-evidence-v0.1.zip",
+    "files": 1090,
+    "bytes": 8169259,
+    "sha256": "a1a4b7fbe7fa3533f5c2a583b13f9505266f75e23815c2455c048a3b0c14371d"
+  },
+  "all_five_analyses_replayed_identically": true,
+  "manuscript_regenerated_identically": true,
+  "compiled_pdf_verified": false,
+  "replay_directory": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\archive-replay\\article-68950093f387469a8c5b3613cb07bc22"
+}

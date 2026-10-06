@@ -1,0 +1,12 @@
+{
+  "status": "ABORTED_ACTION_SCOPE_DEVIATION",
+  "complete_arms": 4,
+  "reason": "Compose start also started declared MongoDB dependency. Not the intended target-container-only intervention.",
+  "affected_examples": [
+    "501-mongo_down_short-start",
+    "502-mongo_down_short-start"
+  ],
+  "interrupted_arm": "502-process_suspended-start",
+  "cleanup": "Verified project resources cleaned; see interruption-cleanup.json.",
+  "correction": "New batch uses docker start on verified target container ID and records MongoDB/Redis state after action. All old data retained, excluded from target-only comparison."
+}

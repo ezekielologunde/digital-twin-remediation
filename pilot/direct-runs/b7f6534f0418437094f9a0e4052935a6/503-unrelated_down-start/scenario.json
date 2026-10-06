@@ -1,0 +1,15 @@
+{
+  "seed": 503,
+  "user_id": 8001006,
+  "username": "paired_503",
+  "markers": [
+    "paired_seed_503_post_0",
+    "paired_seed_503_post_1",
+    "paired_seed_503_post_2"
+  ],
+  "fault": "stop user-timeline-service",
+  "horizon_s": 8,
+  "poll_interval_s": 0.5,
+  "backend_condition": "unrelated_down",
+  "read_stop": 100
+}

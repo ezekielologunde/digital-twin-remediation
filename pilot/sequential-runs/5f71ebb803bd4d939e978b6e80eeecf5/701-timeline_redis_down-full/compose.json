@@ -1,0 +1,730 @@
+{
+  "name": "dtrem-seq-5f71ebb8-701-timeline_redis_down-full",
+  "networks": {
+    "default": {
+      "name": "dtrem-seq-5f71ebb8-701-timeline_redis_down-full-default",
+      "internal": true
+    },
+    "ingress": {
+      "name": "dtrem-seq-5f71ebb8-701-timeline_redis_down-full-ingress"
+    }
+  },
+  "services": {
+    "compose-post-service": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "ComposePostService"
+      ],
+      "hostname": "compose-post-service",
+      "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+          "target": "/social-network-microservices/config",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "home-timeline-redis": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "home-timeline-redis",
+      "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "home-timeline-service": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "HomeTimelineService"
+      ],
+      "hostname": "home-timeline-service",
+      "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+          "target": "/social-network-microservices/config",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "jaeger-agent": {
+      "command": null,
+      "entrypoint": null,
+      "environment": {
+        "COLLECTOR_ZIPKIN_HTTP_PORT": "9411"
+      },
+      "image": "jaegertracing/all-in-one@sha256:f4044964505c81bf12131c2dfd1f4ddf1d1421bbbd9d79f691221cac077599a8",
+      "networks": {
+        "default": null,
+        "ingress": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      },
+      "ports": [
+        {
+          "target": 16686,
+          "published": "19986",
+          "host_ip": "127.0.0.1",
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "media-frontend": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": null,
+      "hostname": "media-frontend",
+      "image": "yg397/media-frontend@sha256:272049995f2929435b91da34f20fc16216a7f974d1b8f9afa0ccbb529f1a9840",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\media-frontend\\lua-scripts",
+          "target": "/usr/local/openresty/nginx/lua-scripts",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\media-frontend\\conf\\nginx.conf",
+          "target": "/usr/local/openresty/nginx/conf/nginx.conf",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "media-memcached": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "media-memcached",
+      "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "media-mongodb": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "media-mongodb",
+      "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "media-service": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        },
+        "media-mongodb": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "MediaService"
+      ],
+      "hostname": "media-service",
+      "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+          "target": "/social-network-microservices/config",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "nginx-thrift": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": null,
+      "hostname": "nginx-thrift",
+      "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+      "networks": {
+        "default": null,
+        "ingress": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+          "target": "/usr/local/openresty/nginx/lua-scripts",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+          "target": "/usr/local/openresty/nginx/pages",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+          "target": "/usr/local/openresty/nginx/conf/nginx.conf",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+          "target": "/usr/local/openresty/nginx/jaeger-config.json",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+          "target": "/gen-lua",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+          "target": "/usr/local/openresty/lualib/thrift",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      },
+      "ports": [
+        {
+          "target": 8080,
+          "published": "19980",
+          "host_ip": "127.0.0.1",
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "post-storage-memcached": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "post-storage-memcached",
+      "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "post-storage-mongodb": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "post-storage-mongodb",
+      "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "post-storage-service": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        },
+        "post-storage-mongodb": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "PostStorageService"
+      ],
+      "hostname": "post-storage-service",
+      "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+          "target": "/social-network-microservices/config",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "social-graph-mongodb": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "social-graph-mongodb",
+      "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "social-graph-redis": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "social-graph-redis",
+      "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "social-graph-service": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        },
+        "social-graph-mongodb": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "SocialGraphService"
+      ],
+      "hostname": "social-graph-service",
+      "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+          "target": "/social-network-microservices/config",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "text-service": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "TextService"
+      ],
+      "hostname": "text-service",
+      "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+          "target": "/social-network-microservices/config",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "unique-id-service": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "UniqueIdService"
+      ],
+      "hostname": "unique-id-service",
+      "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+          "target": "/social-network-microservices/config",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "url-shorten-memcached": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "url-shorten-memcached",
+      "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "url-shorten-mongodb": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "url-shorten-mongodb",
+      "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "url-shorten-service": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        },
+        "url-shorten-mongodb": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "UrlShortenService"
+      ],
+      "hostname": "url-shorten-service",
+      "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+          "target": "/social-network-microservices/config",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "user-memcached": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "user-memcached",
+      "image": "memcached@sha256:405a445c7c81bca205850426288baa5655c72859ae31d3de3fa823e6482be4ad",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "user-mention-service": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "UserMentionService"
+      ],
+      "hostname": "user-mention-service",
+      "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+          "target": "/social-network-microservices/config",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "user-mongodb": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "user-mongodb",
+      "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "user-service": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        },
+        "user-mongodb": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "UserService"
+      ],
+      "hostname": "user-service",
+      "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+          "target": "/social-network-microservices/config",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "user-timeline-mongodb": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "user-timeline-mongodb",
+      "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "user-timeline-redis": {
+      "command": null,
+      "entrypoint": null,
+      "hostname": "user-timeline-redis",
+      "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    },
+    "user-timeline-service": {
+      "command": null,
+      "depends_on": {
+        "jaeger-agent": {
+          "condition": "service_started",
+          "required": true
+        },
+        "user-timeline-mongodb": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "UserTimelineService"
+      ],
+      "hostname": "user-timeline-service",
+      "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+      "networks": {
+        "default": null
+      },
+      "restart": "no",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+          "target": "/social-network-microservices/config",
+          "read_only": true
+        }
+      ],
+      "cpus": 1.0,
+      "mem_limit": "512m",
+      "labels": {
+        "research.project": "digital-twin-remediation",
+        "research.stage": "sequential-dependency-probes"
+      }
+    }
+  }
+}

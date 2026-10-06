@@ -1,0 +1,153 @@
+{
+  "batch": "294bab8ce4274cb7b50c52b48b59c78b",
+  "live_trials": 6,
+  "independent_policy_trials": false,
+  "integrity_verified": true,
+  "distinct_volume_ids": 78,
+  "metrics": [
+    {
+      "policy": "cached",
+      "approvals": 6,
+      "false_approvals": 4,
+      "true_approvals": 2,
+      "expected_false_at_two_approvals": 1.3333333333333333
+    },
+    {
+      "policy": "refresh_before_wait",
+      "approvals": 4,
+      "false_approvals": 2,
+      "true_approvals": 2,
+      "expected_false_at_two_approvals": 1.0
+    },
+    {
+      "policy": "last_moment_refresh",
+      "approvals": 2,
+      "false_approvals": 0,
+      "true_approvals": 2,
+      "expected_false_at_two_approvals": 0.0
+    }
+  ],
+  "details": [
+    {
+      "condition": "before_refresh",
+      "assigned_wait_s": 8,
+      "actual_wait_s": 8.000685100007104,
+      "cached_group_age_at_action_s": 10.750718199997209,
+      "middle_group_age_at_action_s": 8.842779099999461,
+      "last_group_age_at_action_s": 0.007981699993251823,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "abstain"
+        },
+        "last_moment_refresh": {
+          "decision": "abstain"
+        }
+      },
+      "contract_met": false
+    },
+    {
+      "condition": "after_refresh",
+      "assigned_wait_s": 4,
+      "actual_wait_s": 4.000512099999469,
+      "cached_group_age_at_action_s": 5.6771531000122195,
+      "middle_group_age_at_action_s": 4.828475900008925,
+      "last_group_age_at_action_s": 0.007699000008869916,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "approve"
+        },
+        "last_moment_refresh": {
+          "decision": "abstain"
+        }
+      },
+      "contract_met": false
+    },
+    {
+      "condition": "after_refresh",
+      "assigned_wait_s": 8,
+      "actual_wait_s": 8.000313600001391,
+      "cached_group_age_at_action_s": 9.66683839999314,
+      "middle_group_age_at_action_s": 8.821299699993688,
+      "last_group_age_at_action_s": 0.009711499995319173,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "approve"
+        },
+        "last_moment_refresh": {
+          "decision": "abstain"
+        }
+      },
+      "contract_met": false
+    },
+    {
+      "condition": "none",
+      "assigned_wait_s": 4,
+      "actual_wait_s": 4.000426300000981,
+      "cached_group_age_at_action_s": 5.659091099994839,
+      "middle_group_age_at_action_s": 4.791290799999842,
+      "last_group_age_at_action_s": 0.011138599991681986,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "approve"
+        },
+        "last_moment_refresh": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true
+    },
+    {
+      "condition": "none",
+      "assigned_wait_s": 8,
+      "actual_wait_s": 8.000449099999969,
+      "cached_group_age_at_action_s": 10.253842799997074,
+      "middle_group_age_at_action_s": 9.189026299995021,
+      "last_group_age_at_action_s": 0.012171599999419414,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "approve"
+        },
+        "last_moment_refresh": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true
+    },
+    {
+      "condition": "before_refresh",
+      "assigned_wait_s": 4,
+      "actual_wait_s": 4.000526899995748,
+      "cached_group_age_at_action_s": 6.614844700001413,
+      "middle_group_age_at_action_s": 4.838110199998482,
+      "last_group_age_at_action_s": 0.008065000001806766,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "abstain"
+        },
+        "last_moment_refresh": {
+          "decision": "abstain"
+        }
+      },
+      "contract_met": false
+    }
+  ],
+  "limits": "One trial per delay/placement cell. Shared probes and outcomes. Collection-end ages underestimate the age of earlier individual probes. No fault occurs after final verification; no atomicity or general reliability claim."
+}

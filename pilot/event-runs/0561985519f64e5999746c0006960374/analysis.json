@@ -1,0 +1,250 @@
+{
+  "batch": "0561985519f64e5999746c0006960374",
+  "live_trials": 8,
+  "integrity_verified": true,
+  "distinct_volume_ids": 104,
+  "metrics": [
+    {
+      "policy": "final_checks",
+      "approvals": 8,
+      "incorrect_approvals": 4,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "fresh_running_state",
+      "approvals": 6,
+      "incorrect_approvals": 2,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "events_available",
+      "approvals": 4,
+      "incorrect_approvals": 0,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "events_delayed",
+      "approvals": 8,
+      "incorrect_approvals": 4,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "events_silently_dropped",
+      "approvals": 8,
+      "incorrect_approvals": 4,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    }
+  ],
+  "details": [
+    {
+      "seed": 1001,
+      "condition": "unrelated_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "event_query_ms": 207.848499994725
+    },
+    {
+      "seed": 1001,
+      "condition": "storage_suspend",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill"
+      ],
+      "event_query_ms": 190.86450000759214
+    },
+    {
+      "seed": 1001,
+      "condition": "redis_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill",
+        "stop",
+        "die"
+      ],
+      "event_query_ms": 207.15780000318773
+    },
+    {
+      "seed": 1002,
+      "condition": "none",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "event_query_ms": 202.78720000351314
+    },
+    {
+      "seed": 1002,
+      "condition": "unrelated_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "event_query_ms": 204.18980000249576
+    },
+    {
+      "seed": 1002,
+      "condition": "storage_suspend",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill"
+      ],
+      "event_query_ms": 233.24840000714175
+    },
+    {
+      "seed": 1001,
+      "condition": "none",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "event_query_ms": 241.81000000680797
+    },
+    {
+      "seed": 1002,
+      "condition": "redis_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill",
+        "stop",
+        "die"
+      ],
+      "event_query_ms": 268.27280000725295
+    }
+  ],
+  "limits": "Actual daemon history, simulated channel delay/drop, shared outcomes and interventions, no reliable live event stream or natural loss estimate. Known post-verification faults, two account blocks, no deployed gate or held-out evaluation."
+}

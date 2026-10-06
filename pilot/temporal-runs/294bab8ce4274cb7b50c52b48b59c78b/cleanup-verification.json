@@ -1,0 +1,44 @@
+{
+  "checked_utc": "2026-10-05T04:59:06.222576+00:00",
+  "projects": [
+    {
+      "project": "dtrem-time-294bab8c-801-before_refresh-8",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    },
+    {
+      "project": "dtrem-time-294bab8c-801-after_refresh-4",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    },
+    {
+      "project": "dtrem-time-294bab8c-801-after_refresh-8",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    },
+    {
+      "project": "dtrem-time-294bab8c-801-none-4",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    },
+    {
+      "project": "dtrem-time-294bab8c-801-none-8",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    },
+    {
+      "project": "dtrem-time-294bab8c-801-before_refresh-4",
+      "remaining_containers": [],
+      "remaining_networks": [],
+      "remaining_volumes": []
+    }
+  ],
+  "original_pilot_running_containers": 27,
+  "distinct_new_volumes": 78,
+  "disjoint_from_prior_direct_and_sequential_batches": true
+}

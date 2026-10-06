@@ -1,0 +1,33 @@
+{
+  "arms": [
+    [
+      901,
+      "none"
+    ],
+    [
+      902,
+      "during_final"
+    ],
+    [
+      901,
+      "during_final"
+    ],
+    [
+      902,
+      "after_final"
+    ],
+    [
+      901,
+      "after_final"
+    ],
+    [
+      902,
+      "none"
+    ]
+  ],
+  "development_only": true,
+  "horizon_s": 8,
+  "design": "Two synthetic account blocks, three controlled fault placements, six fresh instances. During-final injection blocks the collector after the successful Redis check and before MongoDB. After-final injection occurs after every check completes.",
+  "policy": "Approve iff all three final recorded checks verified. No injection labels, current container state or outcome enter the policy.",
+  "limits": "Deterministically scheduled counterexamples, not naturally sampled races or fault incidence estimates. No concurrency-control treatment tested."
+}

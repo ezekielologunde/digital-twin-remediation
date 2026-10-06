@@ -1,0 +1,84 @@
+{
+  "predictions": {
+    "cached": {
+      "decision": "approve"
+    },
+    "refresh_before_wait": {
+      "decision": "abstain"
+    },
+    "last_moment_refresh": {
+      "decision": "abstain"
+    }
+  },
+  "evidence": {
+    "cached": {
+      "timeline_redis": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 250.6948999944143,
+        "executed": true
+      },
+      "timeline_mongo": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 272.85500000289176,
+        "executed": true
+      },
+      "post_storage": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 308.7383999954909,
+        "executed": true
+      }
+    },
+    "refresh": {
+      "timeline_redis": {
+        "verified": false,
+        "returncode": 1,
+        "elapsed_ms": 217.84770001249854,
+        "executed": true
+      },
+      "timeline_mongo": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 265.35880001029,
+        "executed": true
+      },
+      "post_storage": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 424.8251999961212,
+        "executed": true
+      }
+    },
+    "last": {
+      "timeline_redis": {
+        "verified": false,
+        "returncode": 1,
+        "elapsed_ms": 219.56800000043586,
+        "executed": true
+      },
+      "timeline_mongo": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 270.4406000120798,
+        "executed": true
+      },
+      "post_storage": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 344.0083000023151,
+        "executed": true
+      }
+    }
+  },
+  "timings": {
+    "cached_end": 85615.6111581,
+    "fault_command_start": 85615.6111604,
+    "fault_verified_stopped": 85616.6107177,
+    "refresh_start": 85616.6110182,
+    "refresh_end": 85617.5190972,
+    "last_check_start": 85625.5197823,
+    "last_check_end": 85626.3538946
+  }
+}

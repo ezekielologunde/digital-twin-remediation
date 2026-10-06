@@ -1,0 +1,37 @@
+{
+  "prediction": {
+    "decision": "approve"
+  },
+  "evidence": {
+    "timeline_redis": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 229.104300000472,
+      "executed": true,
+      "started_monotonic": 86925.9692665,
+      "completed_monotonic": 86926.1983714
+    },
+    "timeline_mongo": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 269.9173000000883,
+      "executed": true,
+      "started_monotonic": 86927.1190318,
+      "completed_monotonic": 86927.3889498
+    },
+    "post_storage": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 325.58350000181235,
+      "executed": true,
+      "started_monotonic": 86927.3893668,
+      "completed_monotonic": 86927.7149507
+    }
+  },
+  "timings": {
+    "final_start": 86925.9692581,
+    "fault_start": 86926.1986462,
+    "fault_confirmed": 86927.1184244,
+    "final_end": 86927.7153163
+  }
+}

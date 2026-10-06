@@ -1,0 +1,14 @@
+Draft only. Not sent. Author details and destination require confirmation.
+
+Dear Editor,
+
+We would like to submit "When Successful Checks Outlive Their Evidence: A Reproducible Case Study of Remediation Approval in Microservices" for consideration as an empirical systems-management case study.
+
+The manuscript reports five successive development stages containing 50 fresh-instance action trials in an open microservice benchmark. It distinguishes verification coverage, individual observation age, and lifecycle-event visibility. It reports negative results, two excluded implementation attempts, and reproducible analysis from raw command and request evidence. The work does not claim a new race class, a calibrated digital twin, or production safety. The stages are descriptive and are not pooled into a confirmatory effectiveness estimate.
+
+The accompanying artifact records stage designs, source and image provenance, sealed decisions, independently recomputed recovery labels, and replayable analyses. The final public deposit identifier will be supplied after author review and release approval.
+
+Before sending this letter, the authors must provide the corresponding-author details, confirm originality and any overlapping publications/submissions, confirm author approval, and finalize funding, competing-interest and contribution declarations. These statements have not been assumed in this draft.
+
+Sincerely,
+[Corresponding author to be confirmed]
