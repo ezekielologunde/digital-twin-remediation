@@ -46,6 +46,8 @@ python scripts/verify_release.py
 
 This checks every original artifact against MANIFEST.json, runs 40 unit tests, and replays the five analyses plus manuscript generation in a temporary copy. It verifies byte-for-byte output equality and leaves the committed evidence untouched. It does not start containers or contact external systems.
 
+An optional GitHub Actions definition is included at `docs/verify-workflow.yml.example`. It is not enabled because the publishing token lacks workflow scope.
+
 ## Repository layout
 
 | Path | Contents |
