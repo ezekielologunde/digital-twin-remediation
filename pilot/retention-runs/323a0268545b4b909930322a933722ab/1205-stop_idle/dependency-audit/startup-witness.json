@@ -1,0 +1,8 @@
+{
+  "commit": "6ecb09706140f8730b5385c08f1386c654c3c526",
+  "path": "socialNetwork/src/UserTimelineService/UserTimelineService.cpp",
+  "git_blob": "460512395ba4dc049bd02684d59f51ad4fd90cd1",
+  "sha256": "6c788462d4e64e465e8232e91ddf302da36e1a899f4503a21fddbf2902eb2ec9",
+  "claim": "CreateIndex retries until success before server.serve; MongoDB is a startup dependency even when a later read range fits the Redis cache.",
+  "source_binary_match_verified": false
+}

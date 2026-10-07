@@ -1,0 +1,1017 @@
+{
+  "project": "dtrem-retention-323a0268-1203-healthy_idle",
+  "seed": 1203,
+  "arm": "start",
+  "backend_condition": "healthy_idle",
+  "status": "COMPLETE",
+  "scenario_sha256": "b7ba80b6efb2f75c073583127a6b7bbddd80b4cf688a863a470ae2e0fc9713e2",
+  "compose_sha256": "445cb93e2a671d1f1b3948418ad8603b53dcf0e2c75317a1a87c6107fa80289d",
+  "volume_names": [
+    "05e151b3877712f9ccacd8d04d001e6b08f77c7aaf3bd2d96be6c499de2ba1a3",
+    "066f6934b11e4c3bc0cc8600f6ae1272803c7d7cf042b17c09bc4bcce0051222",
+    "0d0de71915df49f982b486499a4e93ce7477ab7ecd602a3c58fb839d3e4cd5e3",
+    "12e6c95204848955dbed67f6beb7e8adab419bff5338fd3f0bfc621e717fe71e",
+    "1eb68a86d69a4ffaba6172b07b33189eaa1455689768296fc46b1e33e947b84b",
+    "38c596f3217cb41b1686e6747e46b2fa0621a037de417921f42894dc3d02219d",
+    "5a6f971667ca6ee0e7dc7d9d6e317f66ed0cfa64a73050a2924938dac7a2ec48",
+    "84b60d819009bacf1c1b4641873727ba2460bb46122ab6f5f07207a6c1d9e57e",
+    "9473843c57da9fe9427c48e5f25a8e69c53d6b11ad932653b631a762727df8d7",
+    "b4677b1a2ddedc66560c11df5b8c91d435f9d5159269bf062f944e7eddf3b98f",
+    "ba2dd2ae3af20f5b104c9bd14bfe43f881118372fb6b9414fdf343d728fdd350",
+    "c4215c32d9ec72e7ddb6fe2aa0f11b9f8c085c400248e54a389fac44619ea0ae",
+    "eaa15449c2c97893934705e3f96d64d7ecac5df537ac07b400c3d5d2d94bc2e9"
+  ],
+  "fresh_volume_ids": true,
+  "empty_before_initialization": true,
+  "baseline_markers_verified": 3,
+  "fault_detected": true,
+  "target_container_id": "e3369590075d46367c0b88c2c41f58daee4e2f8e4134112e35bdf1226e126250",
+  "functional_baseline_verified": true,
+  "direct_baseline": {
+    "timeline_redis": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 273.7770000094315,
+      "executed": true,
+      "started_monotonic": 100485.7662953,
+      "completed_monotonic": 100486.0400744
+    },
+    "timeline_mongo": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 334.7539000096731,
+      "executed": true,
+      "started_monotonic": 100486.0400802,
+      "completed_monotonic": 100486.3748349
+    },
+    "post_storage": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 386.9154999993043,
+      "executed": true,
+      "started_monotonic": 100486.3748367,
+      "completed_monotonic": 100486.7617559
+    }
+  },
+  "retention": {
+    "faulted": false,
+    "churn": false,
+    "churn_exec_calls": 0,
+    "order": "events_first",
+    "stop_witness": null,
+    "stop_retained": false,
+    "query_records": 20,
+    "eviction_verified": false,
+    "history_start": 1791345293
+  },
+  "final_evidence": {
+    "timeline_redis": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 276.4181000093231,
+      "executed": true,
+      "started_monotonic": 100486.9797592,
+      "completed_monotonic": 100487.2561801
+    },
+    "timeline_mongo": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 337.9620000050636,
+      "executed": true,
+      "started_monotonic": 100487.2561892,
+      "completed_monotonic": 100487.5941536
+    },
+    "post_storage": {
+      "verified": true,
+      "returncode": 0,
+      "elapsed_ms": 419.95090000273194,
+      "executed": true,
+      "started_monotonic": 100487.594157,
+      "completed_monotonic": 100488.0141089
+    }
+  },
+  "timings": {
+    "final_start": 100486.9797358,
+    "final_end": 100488.0141153,
+    "intervention_start": 100488.7843635,
+    "intervention_end": 100489.0167184,
+    "query_start": 100489.0167234,
+    "query_end": 100489.2176372,
+    "late_start": 100489.2176483,
+    "late_end": 100490.2317328,
+    "state_start": 100490.2317541,
+    "state_end": 100490.4586659,
+    "action_decision": 100490.4770062
+  },
+  "predictions": {
+    "final_checks": {
+      "decision": "approve"
+    },
+    "late_functional_recheck": {
+      "decision": "approve"
+    },
+    "fresh_running_state": {
+      "decision": "approve"
+    },
+    "events_available": {
+      "decision": "approve"
+    }
+  },
+  "event_inputs": {
+    "events": [
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 2s redis-cli -h user-timeline-redis --raw ZREVRANGE 8002406 0 99",
+        "Actor": {
+          "ID": "83ffde87541816ba816d246c459b3eaa4d96a65e941ce91146d0a4af9383530d",
+          "Attributes": {
+            "com.docker.compose.config-hash": "f8d3c7938ded984874bb344d2e50d8b480373f379c07c897f3e062b5502d2e34",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "654006fdf83eb29e5f09071985f3ebfa2ffe7ae7bdce2c3c83249b886124c00e",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345293,
+        "timeNano": 1791345293387440733
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 2s redis-cli -h user-timeline-redis --raw ZREVRANGE 8002406 0 99",
+        "Actor": {
+          "ID": "83ffde87541816ba816d246c459b3eaa4d96a65e941ce91146d0a4af9383530d",
+          "Attributes": {
+            "com.docker.compose.config-hash": "f8d3c7938ded984874bb344d2e50d8b480373f379c07c897f3e062b5502d2e34",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "654006fdf83eb29e5f09071985f3ebfa2ffe7ae7bdce2c3c83249b886124c00e",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345293,
+        "timeNano": 1791345293392307101
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "83ffde87541816ba816d246c459b3eaa4d96a65e941ce91146d0a4af9383530d",
+          "Attributes": {
+            "com.docker.compose.config-hash": "f8d3c7938ded984874bb344d2e50d8b480373f379c07c897f3e062b5502d2e34",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "654006fdf83eb29e5f09071985f3ebfa2ffe7ae7bdce2c3c83249b886124c00e",
+            "exitCode": "0",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345293,
+        "timeNano": 1791345293437773636
+      },
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 2s mongo --quiet --host user-timeline-mongodb --eval var d=db.getSiblingDB('user-timeline').getCollection('user-timeline').findOne({user_id:NumberLong(\"8002406\")});print(JSON.stringify({ids:d ? d.posts.map(function(p){return p.post_id.toString();}) : []}));",
+        "Actor": {
+          "ID": "cdebbbcd6866c3c9f7065a8909efdb2e13646e5b2106682eee5ac13f5774ad28",
+          "Attributes": {
+            "com.docker.compose.config-hash": "514e93cba7db57b10942818cfbe8677475ccc0cc73e987809a4985417d7de66d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "0463b52da12d9fd821947c89e1d6d8f4ffbd9d5f135057f73107c1640ccbae80",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345293,
+        "timeNano": 1791345293656501234
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 2s mongo --quiet --host user-timeline-mongodb --eval var d=db.getSiblingDB('user-timeline').getCollection('user-timeline').findOne({user_id:NumberLong(\"8002406\")});print(JSON.stringify({ids:d ? d.posts.map(function(p){return p.post_id.toString();}) : []}));",
+        "Actor": {
+          "ID": "cdebbbcd6866c3c9f7065a8909efdb2e13646e5b2106682eee5ac13f5774ad28",
+          "Attributes": {
+            "com.docker.compose.config-hash": "514e93cba7db57b10942818cfbe8677475ccc0cc73e987809a4985417d7de66d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "0463b52da12d9fd821947c89e1d6d8f4ffbd9d5f135057f73107c1640ccbae80",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345293,
+        "timeNano": 1791345293660711687
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "cdebbbcd6866c3c9f7065a8909efdb2e13646e5b2106682eee5ac13f5774ad28",
+          "Attributes": {
+            "com.docker.compose.config-hash": "514e93cba7db57b10942818cfbe8677475ccc0cc73e987809a4985417d7de66d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "0463b52da12d9fd821947c89e1d6d8f4ffbd9d5f135057f73107c1640ccbae80",
+            "exitCode": "0",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345293,
+        "timeNano": 1791345293772783738
+      },
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 3s /usr/local/openresty/bin/resty --errlog-level error --ns 127.0.0.11 -e local th=require 'Thrift'; for k,v in pairs(th) do _G[k]=v end; local ty=require 'social_network_ttypes'; for k,v in pairs(ty) do _G[k]=v end; require 'social_network_PostStorageService'; local f=require 'RpcClientFactory'; local l=require 'liblualongnumber'; local j=require 'cjson'; local c=f:createClient(PostStorageServiceClient,'post-storage-service',9090,1000,false); local rows=c:ReadPosts(1,{l.new(\"7666259439467913216\")},{}); local result={}; for _,p in ipairs(rows) do result[#result+1]={post_id=tostring(p.post_id),text=p.text,creator=tostring(p.creator.user_id)} end; print(j.encode(result))",
+        "Actor": {
+          "ID": "ebf42a857f3dd04dd62a69ff73a8b5b81f993964678e3691a1a4436ac4788f94",
+          "Attributes": {
+            "com.docker.compose.config-hash": "2a51c26289a1b6227e18df1085da030e59602e8d788436aa2d37260157765152",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/gen-lua",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "aa61146d23215e2e217d1405f6dd565a896bdd73719cd890f444923aa2ab4d9c",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791345293,
+        "timeNano": 1791345293987802289
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 3s /usr/local/openresty/bin/resty --errlog-level error --ns 127.0.0.11 -e local th=require 'Thrift'; for k,v in pairs(th) do _G[k]=v end; local ty=require 'social_network_ttypes'; for k,v in pairs(ty) do _G[k]=v end; require 'social_network_PostStorageService'; local f=require 'RpcClientFactory'; local l=require 'liblualongnumber'; local j=require 'cjson'; local c=f:createClient(PostStorageServiceClient,'post-storage-service',9090,1000,false); local rows=c:ReadPosts(1,{l.new(\"7666259439467913216\")},{}); local result={}; for _,p in ipairs(rows) do result[#result+1]={post_id=tostring(p.post_id),text=p.text,creator=tostring(p.creator.user_id)} end; print(j.encode(result))",
+        "Actor": {
+          "ID": "ebf42a857f3dd04dd62a69ff73a8b5b81f993964678e3691a1a4436ac4788f94",
+          "Attributes": {
+            "com.docker.compose.config-hash": "2a51c26289a1b6227e18df1085da030e59602e8d788436aa2d37260157765152",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/gen-lua",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "aa61146d23215e2e217d1405f6dd565a896bdd73719cd890f444923aa2ab4d9c",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791345293,
+        "timeNano": 1791345293994087486
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "ebf42a857f3dd04dd62a69ff73a8b5b81f993964678e3691a1a4436ac4788f94",
+          "Attributes": {
+            "com.docker.compose.config-hash": "2a51c26289a1b6227e18df1085da030e59602e8d788436aa2d37260157765152",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/gen-lua",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "aa61146d23215e2e217d1405f6dd565a896bdd73719cd890f444923aa2ab4d9c",
+            "exitCode": "0",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791345294,
+        "timeNano": 1791345294157591879
+      },
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 2s redis-cli -h user-timeline-redis --raw ZREVRANGE 8002406 0 99",
+        "Actor": {
+          "ID": "83ffde87541816ba816d246c459b3eaa4d96a65e941ce91146d0a4af9383530d",
+          "Attributes": {
+            "com.docker.compose.config-hash": "f8d3c7938ded984874bb344d2e50d8b480373f379c07c897f3e062b5502d2e34",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "49bc66e5080b03df253e8ddde71d9b252c32c631825378488a8e9407de4a5f43",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345294,
+        "timeNano": 1791345294593415891
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 2s redis-cli -h user-timeline-redis --raw ZREVRANGE 8002406 0 99",
+        "Actor": {
+          "ID": "83ffde87541816ba816d246c459b3eaa4d96a65e941ce91146d0a4af9383530d",
+          "Attributes": {
+            "com.docker.compose.config-hash": "f8d3c7938ded984874bb344d2e50d8b480373f379c07c897f3e062b5502d2e34",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "49bc66e5080b03df253e8ddde71d9b252c32c631825378488a8e9407de4a5f43",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345294,
+        "timeNano": 1791345294597160060
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "83ffde87541816ba816d246c459b3eaa4d96a65e941ce91146d0a4af9383530d",
+          "Attributes": {
+            "com.docker.compose.config-hash": "f8d3c7938ded984874bb344d2e50d8b480373f379c07c897f3e062b5502d2e34",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:7ef5b5cec96495a04ca7feff88a9492efeab8053fb284d24bdd73344c9245a48",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "home-timeline-redis",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "49bc66e5080b03df253e8ddde71d9b252c32c631825378488a8e9407de4a5f43",
+            "exitCode": "0",
+            "image": "redis@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-home-timeline-redis-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345294,
+        "timeNano": 1791345294651998194
+      },
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 2s mongo --quiet --host user-timeline-mongodb --eval var d=db.getSiblingDB('user-timeline').getCollection('user-timeline').findOne({user_id:NumberLong(\"8002406\")});print(JSON.stringify({ids:d ? d.posts.map(function(p){return p.post_id.toString();}) : []}));",
+        "Actor": {
+          "ID": "cdebbbcd6866c3c9f7065a8909efdb2e13646e5b2106682eee5ac13f5774ad28",
+          "Attributes": {
+            "com.docker.compose.config-hash": "514e93cba7db57b10942818cfbe8677475ccc0cc73e987809a4985417d7de66d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "129767175ad47fa571ad14fdc7091b93e876ec1f1dc10767cfc395aa47449eff",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345294,
+        "timeNano": 1791345294876847997
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 2s mongo --quiet --host user-timeline-mongodb --eval var d=db.getSiblingDB('user-timeline').getCollection('user-timeline').findOne({user_id:NumberLong(\"8002406\")});print(JSON.stringify({ids:d ? d.posts.map(function(p){return p.post_id.toString();}) : []}));",
+        "Actor": {
+          "ID": "cdebbbcd6866c3c9f7065a8909efdb2e13646e5b2106682eee5ac13f5774ad28",
+          "Attributes": {
+            "com.docker.compose.config-hash": "514e93cba7db57b10942818cfbe8677475ccc0cc73e987809a4985417d7de66d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "129767175ad47fa571ad14fdc7091b93e876ec1f1dc10767cfc395aa47449eff",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345294,
+        "timeNano": 1791345294880375357
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "cdebbbcd6866c3c9f7065a8909efdb2e13646e5b2106682eee5ac13f5774ad28",
+          "Attributes": {
+            "com.docker.compose.config-hash": "514e93cba7db57b10942818cfbe8677475ccc0cc73e987809a4985417d7de66d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "",
+            "com.docker.compose.image": "sha256:d9ddf3df31941d30ee486ad5d2337283f0a02f68dbc5092319e24d3a541dbddd",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "user-mongodb",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/ports.scheme": "v2",
+            "execID": "129767175ad47fa571ad14fdc7091b93e876ec1f1dc10767cfc395aa47449eff",
+            "exitCode": "0",
+            "image": "mongo@sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-user-mongodb-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345294,
+        "timeNano": 1791345294994259820
+      },
+      {
+        "Type": "container",
+        "Action": "exec_create: timeout 3s /usr/local/openresty/bin/resty --errlog-level error --ns 127.0.0.11 -e local th=require 'Thrift'; for k,v in pairs(th) do _G[k]=v end; local ty=require 'social_network_ttypes'; for k,v in pairs(ty) do _G[k]=v end; require 'social_network_PostStorageService'; local f=require 'RpcClientFactory'; local l=require 'liblualongnumber'; local j=require 'cjson'; local c=f:createClient(PostStorageServiceClient,'post-storage-service',9090,1000,false); local rows=c:ReadPosts(1,{l.new(\"7666259439467913216\")},{}); local result={}; for _,p in ipairs(rows) do result[#result+1]={post_id=tostring(p.post_id),text=p.text,creator=tostring(p.creator.user_id)} end; print(j.encode(result))",
+        "Actor": {
+          "ID": "ebf42a857f3dd04dd62a69ff73a8b5b81f993964678e3691a1a4436ac4788f94",
+          "Attributes": {
+            "com.docker.compose.config-hash": "2a51c26289a1b6227e18df1085da030e59602e8d788436aa2d37260157765152",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/gen-lua",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "9ad0fe8809a08b8ad92c699278b884f7e8d9656805c0c4e5600f3b2e4d274784",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791345295,
+        "timeNano": 1791345295211682690
+      },
+      {
+        "Type": "container",
+        "Action": "exec_start: timeout 3s /usr/local/openresty/bin/resty --errlog-level error --ns 127.0.0.11 -e local th=require 'Thrift'; for k,v in pairs(th) do _G[k]=v end; local ty=require 'social_network_ttypes'; for k,v in pairs(ty) do _G[k]=v end; require 'social_network_PostStorageService'; local f=require 'RpcClientFactory'; local l=require 'liblualongnumber'; local j=require 'cjson'; local c=f:createClient(PostStorageServiceClient,'post-storage-service',9090,1000,false); local rows=c:ReadPosts(1,{l.new(\"7666259439467913216\")},{}); local result={}; for _,p in ipairs(rows) do result[#result+1]={post_id=tostring(p.post_id),text=p.text,creator=tostring(p.creator.user_id)} end; print(j.encode(result))",
+        "Actor": {
+          "ID": "ebf42a857f3dd04dd62a69ff73a8b5b81f993964678e3691a1a4436ac4788f94",
+          "Attributes": {
+            "com.docker.compose.config-hash": "2a51c26289a1b6227e18df1085da030e59602e8d788436aa2d37260157765152",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/gen-lua",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "9ad0fe8809a08b8ad92c699278b884f7e8d9656805c0c4e5600f3b2e4d274784",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791345295,
+        "timeNano": 1791345295215937025
+      },
+      {
+        "Type": "container",
+        "Action": "exec_die",
+        "Actor": {
+          "ID": "ebf42a857f3dd04dd62a69ff73a8b5b81f993964678e3691a1a4436ac4788f94",
+          "Attributes": {
+            "com.docker.compose.config-hash": "2a51c26289a1b6227e18df1085da030e59602e8d788436aa2d37260157765152",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false",
+            "com.docker.compose.image": "sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "nginx-thrift",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\docker\\openresty-thrift\\lua-thrift",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/usr/local/openresty/lualib/thrift",
+            "desktop.docker.io/binds/1/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\lua-scripts",
+            "desktop.docker.io/binds/1/SourceKind": "hostFile",
+            "desktop.docker.io/binds/1/Target": "/usr/local/openresty/nginx/lua-scripts",
+            "desktop.docker.io/binds/2/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\pages",
+            "desktop.docker.io/binds/2/SourceKind": "hostFile",
+            "desktop.docker.io/binds/2/Target": "/usr/local/openresty/nginx/pages",
+            "desktop.docker.io/binds/3/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\conf\\nginx.conf",
+            "desktop.docker.io/binds/3/SourceKind": "hostFile",
+            "desktop.docker.io/binds/3/Target": "/usr/local/openresty/nginx/conf/nginx.conf",
+            "desktop.docker.io/binds/4/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\nginx-web-server\\jaeger-config.json",
+            "desktop.docker.io/binds/4/SourceKind": "hostFile",
+            "desktop.docker.io/binds/4/Target": "/usr/local/openresty/nginx/jaeger-config.json",
+            "desktop.docker.io/binds/5/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\gen-lua",
+            "desktop.docker.io/binds/5/SourceKind": "hostFile",
+            "desktop.docker.io/binds/5/Target": "/gen-lua",
+            "desktop.docker.io/ports.scheme": "v2",
+            "desktop.docker.io/ports/8080/tcp": "127.0.0.1:19980",
+            "execID": "9ad0fe8809a08b8ad92c699278b884f7e8d9656805c0c4e5600f3b2e4d274784",
+            "exitCode": "0",
+            "image": "yg397/openresty-thrift@sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef",
+            "maintainer": "Yu Gan <yg397@cornell.edu>",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-nginx-thrift-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention",
+            "resty_add_package_builddeps": "",
+            "resty_add_package_rundeps": "",
+            "resty_config_options": "    --with-file-aio     --with-http_addition_module     --with-http_auth_request_module     --with-http_dav_module     --with-http_flv_module     --with-http_geoip_module=dynamic     --with-http_gunzip_module     --with-http_gzip_static_module     --with-http_image_filter_module=dynamic     --with-http_mp4_module     --with-http_random_index_module     --with-http_realip_module     --with-http_secure_link_module     --with-http_slice_module     --with-http_ssl_module     --with-http_stub_status_module     --with-http_sub_module     --with-http_v2_module     --with-http_xslt_module=dynamic     --with-ipv6     --with-mail     --with-mail_ssl_module     --with-md5-asm     --with-pcre-jit     --with-sha1-asm     --with-stream     --with-stream_ssl_module     --with-threads     --add-dynamic-module=/usr/local/nginx-opentracing-0.8.0/opentracing     ",
+            "resty_config_options_more": "",
+            "resty_eval_post_make": "",
+            "resty_eval_pre_configure": "",
+            "resty_luarocks_version": "3.5.0",
+            "resty_openssl_version": "1.1.0j",
+            "resty_pcre_version": "8.42",
+            "resty_version": "1.15.8.1rc1"
+          }
+        },
+        "scope": "local",
+        "time": 1791345295,
+        "timeNano": 1791345295405574721
+      },
+      {
+        "Type": "container",
+        "Action": "rename",
+        "Actor": {
+          "ID": "0444a9554f80856d794fe28fec312cd8472ba43b0adbba35311a39b958426524",
+          "Attributes": {
+            "com.docker.compose.config-hash": "393a60fbdfed02e2e660b2364cd9834bdea3426d46fa0584b2e4a3739c51d76d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false,media-mongodb:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "media-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-witness-ready",
+            "oldName": "/dtrem-retention-323a0268-1203-healthy_idle-media-service-1",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345296,
+        "timeNano": 1791345296185383658
+      },
+      {
+        "Type": "container",
+        "Action": "rename",
+        "Actor": {
+          "ID": "0444a9554f80856d794fe28fec312cd8472ba43b0adbba35311a39b958426524",
+          "Attributes": {
+            "com.docker.compose.config-hash": "393a60fbdfed02e2e660b2364cd9834bdea3426d46fa0584b2e4a3739c51d76d",
+            "com.docker.compose.container-number": "1",
+            "com.docker.compose.depends_on": "jaeger-agent:service_started:false,media-mongodb:service_started:false",
+            "com.docker.compose.image": "sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "com.docker.compose.oneoff": "False",
+            "com.docker.compose.project": "dtrem-retention-323a0268-1203-healthy_idle",
+            "com.docker.compose.project.config_files": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle\\compose.json",
+            "com.docker.compose.project.working_dir": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\pilot\\retention-runs\\323a0268545b4b909930322a933722ab\\1203-healthy_idle",
+            "com.docker.compose.service": "media-service",
+            "com.docker.compose.version": "5.5.1",
+            "desktop.docker.io/binds/0/Source": "C:\\Users\\WT8\\Documents\\ChatGPT\\Research\\digital-twin-remediation\\testbed\\DeathStarBench\\socialNetwork\\config",
+            "desktop.docker.io/binds/0/SourceKind": "hostFile",
+            "desktop.docker.io/binds/0/Target": "/social-network-microservices/config",
+            "desktop.docker.io/ports.scheme": "v2",
+            "image": "deathstarbench/social-network-microservices@sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6",
+            "name": "dtrem-retention-323a0268-1203-healthy_idle-witness-finished",
+            "oldName": "/dtrem-retention-323a0268-1203-healthy_idle-witness-ready",
+            "research.project": "digital-twin-remediation",
+            "research.stage": "event-retention"
+          }
+        },
+        "scope": "local",
+        "time": 1791345296,
+        "timeNano": 1791345296418107968
+      }
+    ],
+    "cursor": 1791345294157591879,
+    "dependency_ids": [
+      "1ac50a6f9b597daa10bea8e1be684a6a8eb59425e8fb6f27c0131def193b2baf",
+      "7e4590e784862540cc7fa366fbc3992c12b2326f4405cfe23e23c1cf28ce1261",
+      "e125c65934e18b526925f93a33f3992f0c97cdd2502b76ddcf100d0bf8789f4c"
+    ],
+    "running": {
+      "1ac50a6f9b597daa10bea8e1be684a6a8eb59425e8fb6f27c0131def193b2baf": true,
+      "7e4590e784862540cc7fa366fbc3992c12b2326f4405cfe23e23c1cf28ce1261": true,
+      "e125c65934e18b526925f93a33f3992f0c97cdd2502b76ddcf100d0bf8789f4c": true
+    },
+    "delayed_available_at": 100499.2176372,
+    "decision_time": 100490.4586976,
+    "late_evidence": {
+      "timeline_redis": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 259.109399994486,
+        "executed": true,
+        "started_monotonic": 100489.2176724,
+        "completed_monotonic": 100489.4767847
+      },
+      "timeline_mongo": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 350.9407000092324,
+        "executed": true,
+        "started_monotonic": 100489.4767912,
+        "completed_monotonic": 100489.8277331
+      },
+      "post_storage": {
+        "verified": true,
+        "returncode": 0,
+        "elapsed_ms": 403.9903999946546,
+        "executed": true,
+        "started_monotonic": 100489.8277349,
+        "completed_monotonic": 100490.2317266
+      }
+    },
+    "late_duration_s": 1.0140845000132686,
+    "query_duration_s": 0.20089359999110457,
+    "anchor_duration_s": 0.21790319999854546,
+    "matched_changes": []
+  },
+  "post_action_states": {
+    "compose-post-service": true,
+    "home-timeline-redis": true,
+    "home-timeline-service": true,
+    "jaeger-agent": true,
+    "media-frontend": true,
+    "media-memcached": true,
+    "media-mongodb": true,
+    "media-service": true,
+    "nginx-thrift": true,
+    "post-storage-memcached": true,
+    "post-storage-mongodb": true,
+    "post-storage-service": true,
+    "social-graph-mongodb": true,
+    "social-graph-redis": true,
+    "social-graph-service": true,
+    "text-service": true,
+    "unique-id-service": true,
+    "url-shorten-memcached": true,
+    "url-shorten-mongodb": true,
+    "url-shorten-service": true,
+    "user-memcached": true,
+    "user-mention-service": true,
+    "user-mongodb": true,
+    "user-service": true,
+    "user-timeline-mongodb": true,
+    "user-timeline-redis": true,
+    "user-timeline-service": true
+  },
+  "recovered_by_8s": true,
+  "first_verified_read_from_decision_s": 1.04523540000082,
+  "outcome_observations": [
+    {
+      "elapsed_s": 1.0252217999950517,
+      "classification": "unresolved_read_error"
+    },
+    {
+      "elapsed_s": 1.04523540000082,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 1.5385211999964667,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 2.0601484999933746,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 2.536532600002829,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 3.044670799994492,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 3.5351877999928547,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 4.042590999990352,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 4.535153699995135,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 5.045663199998671,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 5.534814899991034,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 6.044226800004253,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 6.5368872999970336,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 7.035439899991616,
+      "classification": "verified_readback"
+    },
+    {
+      "elapsed_s": 7.534429799998179,
+      "classification": "verified_readback"
+    }
+  ],
+  "contract_met": true,
+  "note": "Development-only false-recovery-approval diagnostic; predictions shadow-scored, actions not gated",
+  "witness_sha256": "8f464f383f88b322a082673c5b790333b17dbf87eb16d01122499b22a0fea289",
+  "cleanup_returncode": 0,
+  "ledger_sha256": "c3265910d67fd0d761793f6b41285239ab353e405898462e6b7108c7961bc5bb"
+}

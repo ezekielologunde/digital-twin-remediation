@@ -1,0 +1,690 @@
+{
+  "integrity_verified": true,
+  "trials": 24,
+  "independent_volumes": 312,
+  "metrics": [
+    {
+      "condition": "healthy_churn",
+      "policy": "final_checks",
+      "trials": 6,
+      "approvals": 6,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "healthy_churn",
+      "policy": "fresh_running_state",
+      "trials": 6,
+      "approvals": 6,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "healthy_churn",
+      "policy": "events_available",
+      "trials": 6,
+      "approvals": 6,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "healthy_churn",
+      "policy": "late_functional_recheck",
+      "trials": 6,
+      "approvals": 6,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "healthy_idle",
+      "policy": "final_checks",
+      "trials": 6,
+      "approvals": 6,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "healthy_idle",
+      "policy": "fresh_running_state",
+      "trials": 6,
+      "approvals": 6,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "healthy_idle",
+      "policy": "events_available",
+      "trials": 6,
+      "approvals": 6,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "healthy_idle",
+      "policy": "late_functional_recheck",
+      "trials": 6,
+      "approvals": 6,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "stop_churn",
+      "policy": "final_checks",
+      "trials": 6,
+      "approvals": 6,
+      "incorrect_approvals": 6,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "stop_churn",
+      "policy": "fresh_running_state",
+      "trials": 6,
+      "approvals": 0,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "stop_churn",
+      "policy": "events_available",
+      "trials": 6,
+      "approvals": 6,
+      "incorrect_approvals": 6,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "stop_churn",
+      "policy": "late_functional_recheck",
+      "trials": 6,
+      "approvals": 0,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "stop_idle",
+      "policy": "final_checks",
+      "trials": 6,
+      "approvals": 6,
+      "incorrect_approvals": 6,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "stop_idle",
+      "policy": "fresh_running_state",
+      "trials": 6,
+      "approvals": 0,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "stop_idle",
+      "policy": "events_available",
+      "trials": 6,
+      "approvals": 0,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "stop_idle",
+      "policy": "late_functional_recheck",
+      "trials": 6,
+      "approvals": 0,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    }
+  ],
+  "details": [
+    {
+      "seed": 1203,
+      "condition": "healthy_idle",
+      "order": "events_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 20
+    },
+    {
+      "seed": 1202,
+      "condition": "healthy_churn",
+      "order": "functional_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 192
+    },
+    {
+      "seed": 1204,
+      "condition": "healthy_idle",
+      "order": "functional_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 29
+    },
+    {
+      "seed": 1205,
+      "condition": "stop_churn",
+      "order": "events_first",
+      "recovered": false,
+      "eviction_verified": true,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 205
+    },
+    {
+      "seed": 1204,
+      "condition": "healthy_churn",
+      "order": "functional_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 211
+    },
+    {
+      "seed": 1203,
+      "condition": "stop_idle",
+      "order": "events_first",
+      "recovered": false,
+      "eviction_verified": false,
+      "stop_retained": true,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        }
+      },
+      "query_records": 23
+    },
+    {
+      "seed": 1206,
+      "condition": "stop_idle",
+      "order": "functional_first",
+      "recovered": false,
+      "eviction_verified": false,
+      "stop_retained": true,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        }
+      },
+      "query_records": 32
+    },
+    {
+      "seed": 1205,
+      "condition": "healthy_churn",
+      "order": "events_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 205
+    },
+    {
+      "seed": 1205,
+      "condition": "stop_idle",
+      "order": "events_first",
+      "recovered": false,
+      "eviction_verified": false,
+      "stop_retained": true,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        }
+      },
+      "query_records": 23
+    },
+    {
+      "seed": 1202,
+      "condition": "healthy_idle",
+      "order": "functional_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 29
+    },
+    {
+      "seed": 1203,
+      "condition": "stop_churn",
+      "order": "events_first",
+      "recovered": false,
+      "eviction_verified": true,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 197
+    },
+    {
+      "seed": 1204,
+      "condition": "stop_idle",
+      "order": "functional_first",
+      "recovered": false,
+      "eviction_verified": false,
+      "stop_retained": true,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        }
+      },
+      "query_records": 32
+    },
+    {
+      "seed": 1201,
+      "condition": "stop_churn",
+      "order": "events_first",
+      "recovered": false,
+      "eviction_verified": true,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 193
+    },
+    {
+      "seed": 1201,
+      "condition": "healthy_idle",
+      "order": "events_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 20
+    },
+    {
+      "seed": 1206,
+      "condition": "stop_churn",
+      "order": "functional_first",
+      "recovered": false,
+      "eviction_verified": true,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 193
+    },
+    {
+      "seed": 1201,
+      "condition": "healthy_churn",
+      "order": "events_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 220
+    },
+    {
+      "seed": 1202,
+      "condition": "stop_churn",
+      "order": "functional_first",
+      "recovered": false,
+      "eviction_verified": true,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 190
+    },
+    {
+      "seed": 1202,
+      "condition": "stop_idle",
+      "order": "functional_first",
+      "recovered": false,
+      "eviction_verified": false,
+      "stop_retained": true,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        }
+      },
+      "query_records": 32
+    },
+    {
+      "seed": 1205,
+      "condition": "healthy_idle",
+      "order": "events_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 20
+    },
+    {
+      "seed": 1206,
+      "condition": "healthy_idle",
+      "order": "functional_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 29
+    },
+    {
+      "seed": 1203,
+      "condition": "healthy_churn",
+      "order": "events_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 202
+    },
+    {
+      "seed": 1206,
+      "condition": "healthy_churn",
+      "order": "functional_first",
+      "recovered": true,
+      "eviction_verified": false,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 190
+    },
+    {
+      "seed": 1201,
+      "condition": "stop_idle",
+      "order": "events_first",
+      "recovered": false,
+      "eviction_verified": false,
+      "stop_retained": true,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        }
+      },
+      "query_records": 23
+    },
+    {
+      "seed": 1204,
+      "condition": "stop_churn",
+      "order": "functional_first",
+      "recovered": false,
+      "eviction_verified": true,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 193
+    }
+  ],
+  "limits": "Known fault boundary, shadow decisions, fixed action, single host; no deployed-gate or generalization claim."
+}

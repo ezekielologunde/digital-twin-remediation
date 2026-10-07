@@ -6,13 +6,19 @@ A research project investigating when evidence used to approve a recovery action
 
 **Status:** public research artifact and manuscript draft, not a peer-reviewed publication. The study reports 50 action trials across five successive development stages. Analysis replay is verified; the manuscript PDF build and visual review remain unverified. This project is independent of coursework and doctoral Praxis.
 
-## Latest working paper
+## Event-retention study completed
+
+**24 new trials completed**, under a plan committed before collection. [Results and replay instructions](pilot/retention-runs/323a0268545b4b909930322a933722ab/Results.md). Verified history omission caused six incorrect event-policy approvals in six stopped-Redis-plus-churn cases. Fresh Running-state and functional checks abstained. All 12 healthy controls recovered. No exclusions or replacement trials; 312 unique trial volumes and cleanup were verified. This is a controlled known boundary, not a general effectiveness or safety claim.
+
+Latest paper: [ACM v0.4 source](overleaf/acm-v0.4.tex), [Overleaf ZIP](downloads/Overleaf-case-study-v0.4-acm.zip). Eight tables and two vector diagrams. PDF compilation remains unverified. Earlier v0.2 and v0.3 sources remain versioned. Rebuild v0.4 with `python publication/build_acm_v0_4.py` after replaying the archived analyses.
+
+## Previous working paper (v0.3)
 
 [ACM manuscript v0.3](overleaf/acm-v0.3.tex) adds two vector diagrams, seven formatted tables, and a post-hoc endpoint sensitivity analysis of the same 50 trials. [Overleaf source ZIP](downloads/Overleaf-case-study-v0.3-acm.zip). Author: **Ezekiel Ologunde, Independent Researcher**. No institutional affiliation. Corresponding email and journal choice remain pending. ACM is the intended publication route, not an acceptance claim. PDF compilation remains unverified because of a compiler environment error.
 
 At 4, 6, and 8 seconds, all original outcome labels persist across one, two, and three required final reads. Two-second results include changed labels and insufficient observations. These are dependent reanalyses, not new experiments. Reproduce using `python pilot/analyze_sensitivity.py` then `python publication/build_acm_manuscript.py`. The original v0.2 manifest and manuscript are preserved unchanged; the new source uses a separate versioned filename.
 
-The proposed 24-trial event-retention experiment is documented but has not run. Future code, eligible data, results and author-permitted final manuscripts will be versioned in this repository. Original work remains unlicensed.
+The v0.3 draft predates the now-completed 24-trial event-retention experiment; see the v0.4 results above. Future code, eligible data, results and author-permitted final manuscripts will be versioned in this repository. Original work remains unlicensed.
 
 ## Research question
 

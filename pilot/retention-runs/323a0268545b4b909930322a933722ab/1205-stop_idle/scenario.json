@@ -1,0 +1,16 @@
+{
+  "seed": 1205,
+  "user_id": 8002410,
+  "username": "paired_1205",
+  "markers": [
+    "paired_seed_1205_post_0",
+    "paired_seed_1205_post_1",
+    "paired_seed_1205_post_2"
+  ],
+  "fault": "stop user-timeline-service",
+  "horizon_s": 8,
+  "poll_interval_s": 0.5,
+  "backend_condition": "stop_idle",
+  "read_stop": 100,
+  "candidate_action": "docker start verified target container ID only; no Compose dependency startup"
+}

@@ -1,0 +1,15 @@
+{
+  "batch": "323a0268545b4b909930322a933722ab",
+  "trials": 24,
+  "exclusions": 0,
+  "replacements": 0,
+  "integrity_verified": true,
+  "cleanup_verified": true,
+  "volume_ids": 312,
+  "sensitivity_unchanged": true,
+  "compiled_pdf_verified": false,
+  "compiler_error": "Unable to find standard directories for platform",
+  "main_tex_sha256": "b2ed98f0155202b27fed7ecdcbb909ee178c25d3f75566ee481314fed72e156e",
+  "tables": 8,
+  "figures": 2
+}
