@@ -1,0 +1,27 @@
+{
+  "direct": {
+    "path": "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/analysis.json",
+    "sha256": "75b9810e51df1d09138ac576349b7e64710139ab10dcefbb96775ec7aa91ab2a"
+  },
+  "sequential": {
+    "path": "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/analysis.json",
+    "sha256": "952d1c3e578cd35f08bcd825a7b31a8334e77e56d837afbec9847e5fc4934fb3"
+  },
+  "temporal": {
+    "path": "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/analysis.json",
+    "sha256": "90e2b69b5bbe248e859c21f73a8144de5b1200a507e701885a96082eefcf7c9a"
+  },
+  "race": {
+    "path": "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/analysis.json",
+    "sha256": "a82c8602d87a5ed56616ee962f57b7e308b19a86d229473c710cdc7b2de71a97"
+  },
+  "event": {
+    "path": "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/analysis.json",
+    "sha256": "0087c6ff805505d4c22c8cf07d3760063e7998f767c486df4afe9e0e8a8b68ab"
+  },
+  "sensitivity": {
+    "path": "publication/sensitivity/analysis.json",
+    "sha256": "9ec5b75af6afc9aa6f42a38cda904b5210d186e3413496ce0b9a1a46a7400038"
+  },
+  "main_tex_sha256": "d90f29586a8bdfcef59483f9f5523560d5dde288d4eadf482d11a362c6408fb3"
+}

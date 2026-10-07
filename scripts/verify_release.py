@@ -41,7 +41,7 @@ def main():
         for name, expected in before.items():
             if (dest / name).read_bytes() != expected:
                 raise RuntimeError("Replay changed output: " + name)
-    print("PASS: 40 tests, five analyses and manuscript reproduced exactly. PDF compilation not checked.")
+    print("PASS: unit tests, five analyses and manuscript reproduced exactly. PDF compilation not checked.")
 
 if __name__ == "__main__":
     main()

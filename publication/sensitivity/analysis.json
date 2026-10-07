@@ -1,0 +1,1535 @@
+{
+  "analysis": "post-hoc endpoint sensitivity",
+  "date": "2026-10-06",
+  "raw_classifications_recomputed": true,
+  "stages": {
+    "direct": {
+      "trials": 18,
+      "original_recovered": 6,
+      "cells": [
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 1,
+          "recovered": 5,
+          "failed": 13,
+          "insufficient_observations": 0,
+          "changed_labels": 1
+        },
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 2,
+          "recovered": 5,
+          "failed": 8,
+          "insufficient_observations": 5,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 3,
+          "recovered": 0,
+          "failed": 12,
+          "insufficient_observations": 6,
+          "changed_labels": 5
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 1,
+          "recovered": 6,
+          "failed": 12,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 2,
+          "recovered": 6,
+          "failed": 12,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 3,
+          "recovered": 6,
+          "failed": 12,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 1,
+          "recovered": 6,
+          "failed": 12,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 2,
+          "recovered": 6,
+          "failed": 12,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 3,
+          "recovered": 6,
+          "failed": 12,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 1,
+          "recovered": 6,
+          "failed": 12,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 2,
+          "recovered": 6,
+          "failed": 12,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 3,
+          "recovered": 6,
+          "failed": 12,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        }
+      ],
+      "trial_labels": [
+        {
+          "project": "dtrem-direct-3049d39c-501-mongo_down_short-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-503-unrelated_down-start",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-502-mongo_down_short-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": null,
+            "2s_3reads": null,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-502-unrelated_down-start",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-502-process_suspended-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": null,
+            "2s_3reads": null,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-503-mongo_down_short-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-501-up-start",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-502-up-start",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-502-timeline_mongo_down-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-503-up-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": null,
+            "2s_3reads": null,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-503-timeline_redis_down-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-503-timeline_mongo_down-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-501-timeline_mongo_down-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-501-process_suspended-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": null,
+            "2s_3reads": null,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-501-timeline_redis_down-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-503-process_suspended-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": null,
+            "2s_3reads": null,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-501-unrelated_down-start",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-direct-3049d39c-502-timeline_redis_down-start",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": null,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        }
+      ]
+    },
+    "sequential": {
+      "trials": 12,
+      "original_recovered": 4,
+      "cells": [
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 1,
+          "recovered": 3,
+          "failed": 9,
+          "insufficient_observations": 0,
+          "changed_labels": 1
+        },
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 2,
+          "recovered": 3,
+          "failed": 6,
+          "insufficient_observations": 3,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 3,
+          "recovered": 0,
+          "failed": 9,
+          "insufficient_observations": 3,
+          "changed_labels": 3
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 1,
+          "recovered": 4,
+          "failed": 8,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 2,
+          "recovered": 4,
+          "failed": 8,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 3,
+          "recovered": 4,
+          "failed": 8,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 1,
+          "recovered": 4,
+          "failed": 8,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 2,
+          "recovered": 4,
+          "failed": 8,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 3,
+          "recovered": 4,
+          "failed": 8,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 1,
+          "recovered": 4,
+          "failed": 8,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 2,
+          "recovered": 4,
+          "failed": 8,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 3,
+          "recovered": 4,
+          "failed": 8,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        }
+      ],
+      "trial_labels": [
+        {
+          "project": "dtrem-seq-5f71ebb8-701-timeline_mongo_down-early_stop",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-seq-5f71ebb8-701-timeline_mongo_down-full",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-seq-5f71ebb8-701-timeline_redis_down-full",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-seq-5f71ebb8-701-mongo_down_short-early_stop",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-seq-5f71ebb8-701-process_suspended-full",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": null,
+            "2s_3reads": null,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-seq-5f71ebb8-701-up-early_stop",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-seq-5f71ebb8-701-up-full",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": null,
+            "2s_3reads": null,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-seq-5f71ebb8-701-process_suspended-early_stop",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": null,
+            "2s_3reads": null,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-seq-5f71ebb8-701-unrelated_down-full",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-seq-5f71ebb8-701-timeline_redis_down-early_stop",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-seq-5f71ebb8-701-unrelated_down-early_stop",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-seq-5f71ebb8-701-mongo_down_short-full",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        }
+      ]
+    },
+    "temporal": {
+      "trials": 6,
+      "original_recovered": 2,
+      "cells": [
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 1,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 2,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 3,
+          "recovered": 0,
+          "failed": 6,
+          "insufficient_observations": 0,
+          "changed_labels": 2
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 1,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 2,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 3,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 1,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 2,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 3,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 1,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 2,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 3,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        }
+      ],
+      "trial_labels": [
+        {
+          "project": "dtrem-time-294bab8c-801-before_refresh-8",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-time-294bab8c-801-after_refresh-4",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-time-294bab8c-801-after_refresh-8",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-time-294bab8c-801-none-4",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-time-294bab8c-801-none-8",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-time-294bab8c-801-before_refresh-4",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        }
+      ]
+    },
+    "race": {
+      "trials": 6,
+      "original_recovered": 2,
+      "cells": [
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 1,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 2,
+          "recovered": 2,
+          "failed": 3,
+          "insufficient_observations": 1,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 3,
+          "recovered": 0,
+          "failed": 5,
+          "insufficient_observations": 1,
+          "changed_labels": 2
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 1,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 2,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 3,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 1,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 2,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 3,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 1,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 2,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 3,
+          "recovered": 2,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        }
+      ],
+      "trial_labels": [
+        {
+          "project": "dtrem-race-94942509-901-none",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-race-94942509-902-during_final",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-race-94942509-901-during_final",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-race-94942509-902-after_final",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-race-94942509-901-after_final",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": null,
+            "2s_3reads": null,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-race-94942509-902-none",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        }
+      ]
+    },
+    "aligned_event": {
+      "trials": 8,
+      "original_recovered": 4,
+      "cells": [
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 1,
+          "recovered": 4,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 2,
+          "recovered": 4,
+          "failed": 2,
+          "insufficient_observations": 2,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 2,
+          "consecutive_final_reads": 3,
+          "recovered": 0,
+          "failed": 6,
+          "insufficient_observations": 2,
+          "changed_labels": 4
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 1,
+          "recovered": 4,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 2,
+          "recovered": 4,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 4,
+          "consecutive_final_reads": 3,
+          "recovered": 4,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 1,
+          "recovered": 4,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 2,
+          "recovered": 4,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 6,
+          "consecutive_final_reads": 3,
+          "recovered": 4,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 1,
+          "recovered": 4,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 2,
+          "recovered": 4,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        },
+        {
+          "horizon_s": 8,
+          "consecutive_final_reads": 3,
+          "recovered": 4,
+          "failed": 4,
+          "insufficient_observations": 0,
+          "changed_labels": 0
+        }
+      ],
+      "trial_labels": [
+        {
+          "project": "dtrem-aligned-fc54dc7b-1102-unrelated_stop",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-aligned-fc54dc7b-1102-redis_stop",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-aligned-fc54dc7b-1101-none",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-aligned-fc54dc7b-1101-storage_suspend",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": null,
+            "2s_3reads": null,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-aligned-fc54dc7b-1101-redis_stop",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": false,
+            "2s_3reads": false,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        },
+        {
+          "project": "dtrem-aligned-fc54dc7b-1102-none",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-aligned-fc54dc7b-1101-unrelated_stop",
+          "labels": {
+            "2s_1reads": true,
+            "2s_2reads": true,
+            "2s_3reads": false,
+            "4s_1reads": true,
+            "4s_2reads": true,
+            "4s_3reads": true,
+            "6s_1reads": true,
+            "6s_2reads": true,
+            "6s_3reads": true,
+            "8s_1reads": true,
+            "8s_2reads": true,
+            "8s_3reads": true
+          }
+        },
+        {
+          "project": "dtrem-aligned-fc54dc7b-1102-storage_suspend",
+          "labels": {
+            "2s_1reads": false,
+            "2s_2reads": null,
+            "2s_3reads": null,
+            "4s_1reads": false,
+            "4s_2reads": false,
+            "4s_3reads": false,
+            "6s_1reads": false,
+            "6s_2reads": false,
+            "6s_3reads": false,
+            "8s_1reads": false,
+            "8s_2reads": false,
+            "8s_3reads": false
+          }
+        }
+      ]
+    }
+  },
+  "input_sha256": {
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/summary.json": "c3947b256edd4d82bf6dd7f548b4c739543e5c50df674bce47d6a02e7a32717c",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-mongo_down_short-start/summary.json": "d72bac4319bada7e5dd587cde8ab79f44acb0cc57344203f923dc26e4f9b9394",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-mongo_down_short-start/ledger.jsonl": "d1d76e0fdfc7f94a93288f865dd3da263a2e66412eb0fd5666460ce562710c8f",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-mongo_down_short-start/scenario.json": "5b96d369d89fdf0564bff0cfcddafd07828fda07693feeaff74f473ab90e725b",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-unrelated_down-start/summary.json": "2437573e1d3821197aba5237ac52d93abf1cb229f5e9bf8f7bb8c104cda6485e",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-unrelated_down-start/ledger.jsonl": "c787ae1210504e5eff681cd46f5c8e15bef2f2106bdd8c6f8a95337e412deb2b",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-unrelated_down-start/scenario.json": "9449deadebb2a7fb5a1a5202da141875f12e405bdd367f49c4d1a50d3940d1d0",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-mongo_down_short-start/summary.json": "da4d0df004f7c45b7c3affa9582418df172b4df46830955639fc5cccc8efe57a",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-mongo_down_short-start/ledger.jsonl": "504f39ede3dd8ef2f5a2afbb0733527864e00d5112297955754d3f9810f74d0b",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-mongo_down_short-start/scenario.json": "c310d279c93d423acded932bd4d7c85b6f8ad803b8e09c22d965dad96330930a",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-unrelated_down-start/summary.json": "820bc9c9afd69cbe232d075ae83ba462e4aab8328e1a2945ca0d174835ca0b1a",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-unrelated_down-start/ledger.jsonl": "2e20f39057628beae8b68bc0490da361abf5fd958baedc8c4256e31b9e05666f",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-unrelated_down-start/scenario.json": "20bea45475bd32ab0dbd5fc4fae1ae5e71ba469293c9b36b9b20c2a6b9b359d6",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-process_suspended-start/summary.json": "7d404f8dd56f44858b1a42b023eb112428a05fdd1e478283c17fcf73a3c44b7f",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-process_suspended-start/ledger.jsonl": "1b8e2e9bc3ded959697428f793ad55d3007c771e9d00d31f5285efd778f746c5",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-process_suspended-start/scenario.json": "51a10d33719d8fc71864ada4ab0bb2e5ea8977db7639aa76cb12a548bb868dc8",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-mongo_down_short-start/summary.json": "6ff24b2881cf23f879b8385261d82bcd9c78063f081a7eebdcbb19f982081b2f",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-mongo_down_short-start/ledger.jsonl": "8858438b21f93a8227353d63ec89462bc396697d0c9c9a42f3eb2cd968603b30",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-mongo_down_short-start/scenario.json": "8bbfc46a04ffaf26e17ae823b5cdb1f2f3bf279e43371f335c27d9238760ae50",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-up-start/summary.json": "a73a16a1c631686f1678be3f6c5b31d578ca4a0cf1258e8a2207f727e4b233ed",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-up-start/ledger.jsonl": "ab1c3307ea93267d1056add83ecab5e53f6e5bf90e310a8859332af1a1bd713f",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-up-start/scenario.json": "63b970904f71e0b0ff4003eab491ea760b4587bda378bdad2e7fc982b8fefa82",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-up-start/summary.json": "f44e37f9bfa60039e9cf0e9ff1d22f59f985bade4f413d7e7e4ebc4c3d6c9ac4",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-up-start/ledger.jsonl": "7389e38201d8a45ac79eeca027b48e8dd5f8404b13d2d9d369a6bf0b2819577c",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-up-start/scenario.json": "d3e45f81f7b5ef80b7499b6af75a2c194f973de83a047e20c21d8b38966c7787",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-timeline_mongo_down-start/summary.json": "a138b0de60361f852a9b33aef8893b759d5592245ba1947a12c8e8a2da0371f4",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-timeline_mongo_down-start/ledger.jsonl": "21bc2c9d67cb6dac2b9ee37f9f2618c91677ce6f0818cce3c187b54cbeaeb0d4",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-timeline_mongo_down-start/scenario.json": "149d367fafa501d0d28049ced9b91ee283a6ea55af9dd14db80760336c6f14df",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-up-start/summary.json": "2d67d8cd2feb7de0bfd6d2dd72d42d45eb95da3ef2bbf6b914696d9e41736699",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-up-start/ledger.jsonl": "e16eb1b318b9d0dcc880f6ff35d03afef9928f56da66675cc2ac7bc8e94e996b",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-up-start/scenario.json": "f206c3fa5b7a9c6ccdca99b85f8995a3cba07df616b7a245014ee805ea5005f8",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-timeline_redis_down-start/summary.json": "6b37b9992b00f4b0f95723ea5917bd292153834b06359ec7664b0ccf15710baf",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-timeline_redis_down-start/ledger.jsonl": "64f3ce3065fe4b5534f319743da97134daf7aa897bfce36cfbb44b6ea38e70b9",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-timeline_redis_down-start/scenario.json": "d2db535a3fc4a2cfeab8682df0efea69d3d597c259cd4393617b1404c941e6f9",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-timeline_mongo_down-start/summary.json": "c52e3a7ae146121043a4f644d6b67d321a6c9365f263995a23b640c9145373e6",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-timeline_mongo_down-start/ledger.jsonl": "2f0a80726ea718119880e7245a4d144a6114be5ba7aadf73ba635f5bed288b0e",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-timeline_mongo_down-start/scenario.json": "56b290577e5e2246ab5f298c3f1c9ec3de9bad34f099081b91d4e8146bd44d76",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-timeline_mongo_down-start/summary.json": "5cc8d71000c4b6e800d5ee05bd619ed0f393f6c5e32e0b6e8d770d092dc1f3d7",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-timeline_mongo_down-start/ledger.jsonl": "341778c6af22f480d5f5a6d89a39332cd9b17108b5116198c0561c27244203e3",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-timeline_mongo_down-start/scenario.json": "fb55a1a1558d46bbcb4f663af2feef2937efe2b9a3b74fb35ff5a27e807c7bdb",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-process_suspended-start/summary.json": "8eca78a73b67fdac2ec71d95b17ef99d6f902677d228b66e818cc1effabf2d3c",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-process_suspended-start/ledger.jsonl": "733e7aaaf1813209eefb00f15409987785b03cbaa0c8debe8e4b3154854eb226",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-process_suspended-start/scenario.json": "bc045d12ce0b536f1cc9d9ee199b83b8cf53245a2c89864e4c1063ac01d4b1f8",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-timeline_redis_down-start/summary.json": "3fae1b1616cb7a48ce22cb199d75f32893780dbb82a29f9b9770b32399977904",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-timeline_redis_down-start/ledger.jsonl": "f09e94386e622790bde9b9dc28b971b33b9fdca8569f27d5bab6d515158a4cab",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-timeline_redis_down-start/scenario.json": "e42023fa79f7eca081d9540e2ee98d959dcbce6fdb681638c9e7114c36469d99",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-process_suspended-start/summary.json": "4b545aae6337936c8019bdf1cb334f514b0c8d735747736e5bc063e2f25df9cf",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-process_suspended-start/ledger.jsonl": "d834c1dff67258ecf7707f32b67caabc291adfdb48753d7e50ddbfb950cc0d82",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/503-process_suspended-start/scenario.json": "8327bfb0873d504dde8c8f7054687c78d9c62f9abf6a8ba631c9bd15e4875199",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-unrelated_down-start/summary.json": "78651b39bfc8f6febc0763c213db5668be298e9c533a5891cc903cda0956132c",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-unrelated_down-start/ledger.jsonl": "7b86ff88a1c313fb8dbb3b516e5cc6fa486ad19c7e8a4d5728821c5a3b0cb301",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/501-unrelated_down-start/scenario.json": "ee2b5f73082cef3e3f318dc61542d0fa1dd2d0418d59e1f3aa2268151e94f719",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-timeline_redis_down-start/summary.json": "c13ccb036678ad86e5c638d79b8db6566fe9aee7831200a3d024663ed418724a",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-timeline_redis_down-start/ledger.jsonl": "7153c60b23f76221591ecba2b52ec17492cf9a86acfa49feb58f8f47322b3ed3",
+    "pilot/direct-runs/3049d39ca8b942858f518d4b5b2317b1/502-timeline_redis_down-start/scenario.json": "f261ed7e9669b645fe336f1aba4c916baa5806e42fec497db12903308935d528",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/summary.json": "a8c01a33506cb012f9e9610119636f6f1355c984d3245d0f01748e3b41639e32",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_mongo_down-early_stop/summary.json": "bfb5fac7bd9430a990a0820b282c086f6dcae85e47ee5bc35886d4b3dbbf4c6f",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_mongo_down-early_stop/ledger.jsonl": "6a3f78b0091995b6f459c168f9eb39efea02b622da9d08e2b2731f174c478558",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_mongo_down-early_stop/scenario.json": "c496e44262ea8af7510fd17fb2b87d264f76e1c900d7d0aa4b152164a0a97718",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_mongo_down-full/summary.json": "3dc522e76aea89c1438a7e1b813ca4e1908d59d5fe3815b1bfe276ad5417bade",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_mongo_down-full/ledger.jsonl": "ffe745b725d216a9ac0e9b45d7e34021ad40eec11ffe95451acbf262caa12409",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_mongo_down-full/scenario.json": "265f24f0baf5d8b85039a8750f701c66385155568b98aa88a6059d916a6af765",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_redis_down-full/summary.json": "cbeafc378aef7da743fad0ad8cbd6bda7d96105bfee1830cc5bcaef31f332e70",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_redis_down-full/ledger.jsonl": "3917a7592b16e74fabdd91da6cf32aca5f323c918916bea4e44efb289fa4dd21",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_redis_down-full/scenario.json": "c197d82b8fc029b3720df57f62ac0e43353168b081100c8d1ff4364c2e898464",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-mongo_down_short-early_stop/summary.json": "2dc4c8dc49724fbab683d0343fcbb31f99857998e84d03038980225d3209c28c",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-mongo_down_short-early_stop/ledger.jsonl": "0f6bccbf8177bed1605bc5c190a1c6f96314d2e0bdab4799019e5ada1be38f8e",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-mongo_down_short-early_stop/scenario.json": "bcd1ee5ea5ed1368fd5bb504fce9e629579938c705f25e99b94dc62a5f194440",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-process_suspended-full/summary.json": "c33ea51b5b7d55c47ed4970f8fc5429cf166792ce6cd5ec8bec317d8a7069e42",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-process_suspended-full/ledger.jsonl": "a71d5696580922c26254f6c1b1934e92a3ab205a13b7aa9e2594138e140509eb",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-process_suspended-full/scenario.json": "ac663e9ce8a3c198683f11b61f0f1ed1f0b21e0edc45da6e4e79738807a6a776",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-up-early_stop/summary.json": "5765972683db516ec02be086458b29a6182aa9ca73c63785bcfa965ec47b9483",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-up-early_stop/ledger.jsonl": "8414d0e801ac90cfc311addea7b56f5ee6b448655e9e0b32fa041f6e1064aead",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-up-early_stop/scenario.json": "2c09129476c745af2b6dcae35b62df0c96ea9069df7f7f095ced925ab258efc8",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-up-full/summary.json": "ec7c72234f0bda451eebe278c02ee5c59c0cbf73b8be6e32fa4b172c18abb649",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-up-full/ledger.jsonl": "1c86195fc3bddf3ded5f61079c81ce4380183309e25614cba06bbd8989c77402",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-up-full/scenario.json": "f4898b1d27a858d2fbf22097c5e12fa9382aea0d36a1ff2afd44f0d016eb2309",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-process_suspended-early_stop/summary.json": "b0296471e0ecd512ed43f7bdb3a509a5b37433a9b98aec7af5fcbb9e9cfa7662",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-process_suspended-early_stop/ledger.jsonl": "93183b61356fdf9d0c7758b5bd4136539b89d4c86fc14871bd624466334f2924",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-process_suspended-early_stop/scenario.json": "bc459a8600809f817d1d6edfef456dbe34f6f4cda148c6dde91efdc42d035909",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-unrelated_down-full/summary.json": "1a61fa5b4d7b545733f848b982cd23482c416ef274f96f20f97ed5d0b2959b19",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-unrelated_down-full/ledger.jsonl": "9781530ec895d525cf6173dbeeecb94d73900b95dacc02736eab4414dea31146",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-unrelated_down-full/scenario.json": "7b53dda24800a47ea8cc573a4d31bf431ef2bb43eaf064464ccb2ffd3ba634bd",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_redis_down-early_stop/summary.json": "12d8194886f0a8f571d002f4e73ce602a6783e963a69fc55e352e468ec6fdb9c",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_redis_down-early_stop/ledger.jsonl": "fa7b6ec48bc904125b8454368a01e5d2a773b3b97499346381ebf48039633029",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-timeline_redis_down-early_stop/scenario.json": "1b0d9312be4d23d3df13701e544cd5b8fc358ff7eede019143d8df26c25c9085",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-unrelated_down-early_stop/summary.json": "a4ca0072c9c02d2633e57468264c667a60bfd6af27768a6d1e1ff8e11934272f",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-unrelated_down-early_stop/ledger.jsonl": "a791257339813feb3ba5833938d83f7238a735e76159fe42f7ae693051e1eee8",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-unrelated_down-early_stop/scenario.json": "3ea47621024d544b77b6b9caa5fc3053760f7a6e7033d6b034ca29dc8cebcf89",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-mongo_down_short-full/summary.json": "f130c9520b1149ee5a140ad9a93403f0eaa819bdcde5d0f7be4e2f793fc14e2b",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-mongo_down_short-full/ledger.jsonl": "61cdce1a50e6ff4ca8532f7742aea8a4b0eab5036c52350e70dc84994848f0bc",
+    "pilot/sequential-runs/5f71ebb803bd4d939e978b6e80eeecf5/701-mongo_down_short-full/scenario.json": "ec173dcb5f882d4f5d1b4a626688fd82b5dd31b10dbd177870888d319c244260",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/summary.json": "3c5d4514afc2b17dbfb880ac71f097cee4812e6671a1ef1cebec0750d0255703",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-before_refresh-8/summary.json": "0215b19ee129b2ffe2d1a05a06af0c529d90a6eb22fb75f975d4b9b0930522e9",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-before_refresh-8/ledger.jsonl": "8d0d06b78d3e4a0403dfdb99c5748c7bcf228025c7b6b54b58ecedd0dbaeba4b",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-before_refresh-8/scenario.json": "4e735b11b9bd5dac5b347bc6d9a8daa0397f81d18108fb65224afdef8ee3eb19",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-after_refresh-4/summary.json": "ab9f8f07f4a7651b07ae017c9cc3bdc882ac6b3b36adf859b088586ee5b0236b",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-after_refresh-4/ledger.jsonl": "43f940c0c1522fd3d824a53bb555a7d2f7b1f701659274e0a2215bff9d933e81",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-after_refresh-4/scenario.json": "5757ce7e7098fdd0cf4f066aeef51539b17013de320f1aed305bd834a852e608",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-after_refresh-8/summary.json": "a9c4cf385bfe21e8de065e91bfd2991b869dbc5cab1880f222bba1500d539da5",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-after_refresh-8/ledger.jsonl": "1d95018e47728c6ae81d103c3edcce58206b810096531805c4c28e337de6e59f",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-after_refresh-8/scenario.json": "0232f7fedf8ff061d6f3a782d223375fc3b0e50c6bb7977363905d6bb61084bc",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-none-4/summary.json": "b26ff877cc409047cd167a1da19895aebac1973aa17e388df1fe7bd322aa92c4",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-none-4/ledger.jsonl": "1251cd5d5665b38b3f8380db96f515876367f85d572df3d314a97ea413beacd4",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-none-4/scenario.json": "b983dde1e46bd8bedab837589416effd1ea0803b9ef0909b4bf470854b9447fe",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-none-8/summary.json": "ca6e66f193b0dc43957fd0ad1c8cc9ee46f1869db610010e478cdd9df931f108",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-none-8/ledger.jsonl": "e691606a099a2c815168248ee540781df3f3375dfc73c557d52f1d4d82a5599d",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-none-8/scenario.json": "856f9d4a318c5452de9b8a33a45a26844dc9dc49ac366bd4be54c495ca345a82",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-before_refresh-4/summary.json": "972af0a785d5dc9c9b88ef5bbeb00320b45298c1bdf33eec2a3b5a753a9047d9",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-before_refresh-4/ledger.jsonl": "ed788e63eb73e97f4bd9d83c90865dfdd9722a5efd09e1c4cc286d298a4459d0",
+    "pilot/temporal-runs/294bab8ce4274cb7b50c52b48b59c78b/801-before_refresh-4/scenario.json": "7598aefdb037acd3a75ccc3773aade6d8b2dc2a75c199609aac9360464386cd4",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/summary.json": "ebda3142e89b2243fd155f114d486791273e048f411a19aca1a2e7cbd3beee87",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/901-none/summary.json": "64b7df2e44260bf3ac331ea7aedda5204240ce9b4e1219eaceaee402ed24f469",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/901-none/ledger.jsonl": "0a5a29645bd3758146c31318f275d66961169f7b485567073e5c64948cc7e660",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/901-none/scenario.json": "50bb0f77042b209707c51285372110a36f3f0c290e43e487e3ded8b94d42af53",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/902-during_final/summary.json": "4ddc6450bb337ee6b17d690dcf7464d0db5fd19ce4c1e625d99755fe3f9f1d65",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/902-during_final/ledger.jsonl": "04e8d6cc2e224d518d518b0de9abbe9244893212fc28437ede2bb0a8595a78c5",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/902-during_final/scenario.json": "fe8ca5efac788ed2cc21d97396ae8908448dc3db0afc67eee38fb1f8aad42664",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/901-during_final/summary.json": "4a0cd24b685604b3f84295e81bfbfbe231f2496490384822ac23b97c5fb685f2",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/901-during_final/ledger.jsonl": "17c4a3da0aa876f1e274eb8518f76fdbbff286688f6e7d8027f0b38e22657cdf",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/901-during_final/scenario.json": "1c7aab48267edc7509dcdf9b8cd456f3f54aba02b2f172a5c5f6ead08b227eda",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/902-after_final/summary.json": "ee8f4754198b4953507c250d264a6594546d7c8eb8e9042ac14ab8a58cc6445a",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/902-after_final/ledger.jsonl": "e2df7aaf4aac42a8e312947b52b5bfc750243a29b366887220c3b0bdf465f43c",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/902-after_final/scenario.json": "30c83a6e5790a57c2f5256c4d97cd0454a75a1081c069583ba6aae287d4107f7",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/901-after_final/summary.json": "d30f272cdc2aabe5df6bd2214a0bc18f0067ecbc8ff592c39a10555d0c84045c",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/901-after_final/ledger.jsonl": "310bd2a8f8b7bd1d282a5517cb2d08e5c655979d12e779bd523f55ec7df498f4",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/901-after_final/scenario.json": "55eb05ccac4cc32793c09124d100aad4f89734faea1052ae75a6d98edbb9545a",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/902-none/summary.json": "a863c55bbf30815a067190a90f205deb3903f828c00df345e7f601862d5a8320",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/902-none/ledger.jsonl": "e4f3fa589b485c3c57dd7a66f9afeac0bcd851d8ba6bf841f7a8534c460b24cc",
+    "pilot/race-runs/9494250949eb49d5a9bb33a82bc00d5d/902-none/scenario.json": "99e30bfe1087d870ad2b4b6e77f84e9a1a49001746b152ca4ef6a77f15a122e1",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/summary.json": "844b6c34eaa8fd0c3a4c58ccbf2054a79c04cc1f184cf2e913486a2cb7dfe447",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-unrelated_stop/summary.json": "6f3912f3bb213f1f83629f9b7a05ffe0542bd5b0cc483720dd5a685cfdf6e330",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-unrelated_stop/ledger.jsonl": "af20714c745260440f5efcb30eb062e46d76cd1e4b39e78f5dad9ab42ff15756",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-unrelated_stop/scenario.json": "74667d286b9b0f03a55fed65d9bdeda68673db57a7f99af46b2ef4fe5a33a16d",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-redis_stop/summary.json": "0c94df4aa03cbf6dc7ce31ef28c287181ef4fd73657a265615aefc36ca0c0034",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-redis_stop/ledger.jsonl": "29f8923456492c33ae6e5e4903f2b39badef50bf5a8aa2f3000e730247d46b34",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-redis_stop/scenario.json": "b8cfbbc8e5691a4c7ca1a0f26006a410059454bbae66093856a9412eebc1a2cf",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-none/summary.json": "57fe60f20e95b52e136ccebe1ddb8a3cf150a9649f107d169e9fad73c7329c45",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-none/ledger.jsonl": "87b05912129128f5de0d46b3c979d3994212caa4166e8425cc0cbb0bdcd0db29",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-none/scenario.json": "ea3193e67e52ca43994371ad30ed010f21387fa3dbc0272bf89aa0dcff805601",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-storage_suspend/summary.json": "11404cd62f5b9f909d56a13356d60aac3a53149f9c0658a8353d80e3274ffc5f",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-storage_suspend/ledger.jsonl": "1cf35d73487a7f7b8dc36f7ea346cd7378920a3337999b91cd3c325a36a0d720",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-storage_suspend/scenario.json": "b118751be472bb3fee5403bcfc867f77eaae1e0905c32115b6dd8042d113b4a2",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-redis_stop/summary.json": "c1f18d3bacf45b26bdaeadad8ce13882142c1c526b144a01cd7eb91a3ed668fd",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-redis_stop/ledger.jsonl": "5a2c655a75c7291050bbb6c924ffd3fc14a2a795b62bfe8153f76b69269b8bac",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-redis_stop/scenario.json": "05a34fbfb3db6f28d45aa347a31ca4c71b76c3189ba28c4f683b7b06dc60714b",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-none/summary.json": "8da00bb044681cce255a3b0c2550cd9e37678252e57d3a3b33c62adaad684b00",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-none/ledger.jsonl": "0ab128fc3dc0ac419e671ad2800f14c0f742582cb2237a8f7d98ea3a6d1c8af7",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-none/scenario.json": "25f4758d58da88324eead0732244072ef7529f6ac83c0a1b6e1320ba2468261f",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-unrelated_stop/summary.json": "25476bb38682ddaa93790e70185df7f7e527186f1cc856f04c31de2b94497521",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-unrelated_stop/ledger.jsonl": "2c6c6c3acc15a7d391f21295cc3d8c704bdcf795adfaa4359936c09c6a714923",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1101-unrelated_stop/scenario.json": "73020ec24ffe8c9221631d4129e2f9eecfb80b1c501444a98a17b4679c046915",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-storage_suspend/summary.json": "11901fde1785370cb70eb3da561cb84a89efbf68197abcaedab30ffd446b8945",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-storage_suspend/ledger.jsonl": "eb419be4ea04059ed5a4feeb3132b7c57bd5ab8416b01f49bc83e874dc9be2e5",
+    "pilot/aligned-event-runs/fc54dc7bbf804c07b54d357033a60c70/1102-storage_suspend/scenario.json": "1bf9b582c2b83fbdd65179a178f0899c9d3e6550fd9b511586a9ee5706023dd0"
+  },
+  "limits": "Prefix analysis of existing observations, not new trials or new polling schedules. Null means insufficient observations. No observations beyond eight seconds. Different horizons can have different time since the last observed read. Neither generalization nor a prespecified confirmatory test."
+}

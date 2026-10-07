@@ -1,0 +1,13 @@
+ACM manuscript formatting, 6 October 2026
+
+The existing main.tex uses acmart in manuscript,review,nonacm mode. This is a single-column author-review draft. nonacm suppresses unassigned publication metadata; it is not a claim of ACM acceptance. Select the actual venue-specific class options and rights metadata before submission. Affiliation, email, venue and any required CCS classification remain pending.
+
+Two embedded TikZ vector diagrams describe the workflow and evidence timing. Each has an ACM Description for accessibility. Seven booktabs/tabularx tables use captions above the table, right-aligned numbers and wrapping text columns. The table generator and manuscript template preserve these changes on regeneration. No experimental counts were changed.
+
+Requires acmart and TikZ in the compilation environment. The built-in compiler failed before document processing with: Unable to find standard directories for platform. PDF rendering, overflow checks and visual layout are therefore unverified. No separate PDF or replacement editor was created.
+
+Formatting reference consulted:
+https://portalparts.acm.org/hippo/latex_templates/acmart.pdf
+https://www.acm.org/binaries/content/assets/publications/taps/latex-best_practices-06-may-2020.pdf
+
+Older ZIPs retain their original article formatting and have not been overwritten. The current editor source is the revised working draft.

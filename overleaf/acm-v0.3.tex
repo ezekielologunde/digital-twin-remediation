@@ -1,0 +1,305 @@
+% ACM review draft. Select the journal-specific format only after venue selection.
+% nonacm suppresses publication metadata that has not been assigned.
+\documentclass[manuscript,review,nonacm]{acmart}
+\usepackage{amsmath,booktabs,array,tabularx,tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\setcitestyle{numbers,sort&compress}
+\settopmatter{printacmref=false}
+\title{When Successful Checks Outlive Their Evidence: A Reproducible Case Study of Remediation Approval in Microservices}
+\author{Ezekiel Ologunde}
+\affiliation{\institution{Independent Researcher}}
+% Corresponding email requires author confirmation.
+\renewcommand{\shortauthors}{E. Ologunde}
+\begin{document}
+\begin{abstract}
+An operational check establishes a property at an observation boundary, while a remediation decision acts later. We investigate how verification coverage, sequential checking, intervening dependency changes and lifecycle-event visibility affect restart approvals in the DeathStarBench social-network application. Five successive development stages contain 50 fresh-instance action trials, analyzed separately rather than pooled as independent identically distributed observations. Direct dependency checking corrected failures missed by an alternate application route. Conventional early stopping reduced executed checks from 18 to 14 across six opportunities per mode, without changing the observed decisions. In a temporal challenge, checks could all pass before an intervening dependency stop invalidated the later action. A second challenge produced four incorrect approvals despite successful final recorded checks; collection-end ages near 9 milliseconds concealed individual Redis results over 1.5 seconds old. A lifecycle-event comparison examines actual daemon records with controlled delayed and dropped delivery. Available events gave 0 incorrect approvals among 4 approvals, and post-fault functional rechecking gave 0 incorrect approvals among 4 approvals. Delayed or dropped events each gave 4 incorrect approvals among 8 approvals. The contribution is a documented development case study and reproducibility artifact, not a new race class, safety guarantee or calibrated digital-twin algorithm. The results motivate verification records that expose obligation coverage, individual observation times and event-delivery assumptions.
+\end{abstract}
+\keywords{microservices, remediation, verification, lifecycle events, evidence freshness, reproducibility}
+\maketitle
+\noindent\textit{Author-review draft, 6 October 2026. ACM manuscript layout; venue and correspondence pending. Not submitted.}
+
+\section{Introduction}
+Automated operations increasingly separate the proposal of an intervention from permission to execute it. A proposed restart may be plausible, yet its success depends on services, data and startup obligations that an available observation does not fully cover. Even a relevant observation can become outdated before the action. We study these boundaries using a deliberately narrow action: starting a stopped timeline service while checking recovery of synthetic timeline content.
+
+Our motivating setting is verification around remediation and digital-twin decisions. We do not implement a learned or calibrated digital twin, an LLM action generator, or a security-containment system. Instead, we isolate evidence handling that such systems may rely on. The action is fixed and verification rules are hand specified. This restriction makes counterexamples interpretable, while limiting claims about more complex remediation systems.
+
+The central distinction is between \emph{a check passed}, \emph{the required obligations were covered}, and \emph{the obligations still hold when the action executes}. These are different empirical propositions. A successful read through an alternate route need not exercise the target's Redis or startup database dependency. Three sequential successes need not remain valid after the first checked dependency changes. A lifecycle-event guard can only react to changes it actually observes.
+
+This article reports a development study, including adverse findings and excluded implementation attempts. It contributes an action-specific measurement contract, a sequence of controlled verification challenges, and an auditable artifact linking raw commands and requests to sealed decisions and independently recomputed recovery labels. It does not claim priority for event invalidation, short-circuit checking or time-of-check/time-of-use failures. Publication-level novelty relative to all existing systems is not established by these experiments alone.
+
+\section{Related work and research boundary}
+\paragraph{Remediation and active verification.}
+GuardedAct combines proposed remediation, a digital-twin sandbox, blast-radius reasoning and a rollback-confidence gate; it evaluates microservice failures in DeathStarBench \cite{guarded}. Its discussion identifies incomplete dependencies and runtime nondeterminism as limitations. That motivates examining verification assumptions, but our restart-only experiments are neither a replication nor a performance comparison against GuardedAct. HAVE investigates active host-level verification to update security-twin compromise estimates \cite{have}. Its security endpoint differs from our availability contract. These works prevent presenting either gated remediation or active checks as new concepts.
+
+\paragraph{Observability and diagnostic effort.}
+Gray-failure research distinguishes observers that see a system differently \cite{gray}. This supports caution about interpreting a peer-container probe as target-specific reachability. ConfExp uses sequential tests for diagnosis and states assumptions including persistent faults, with unpredictable distributed delays outside its modeled scope \cite{confexp}. AdaMC adapts monitoring frequency to resource use \cite{adamc}; only its repository abstract was reviewed here. Signalling-health research contrasts notification and polling for microservice availability \cite{signalling}. Our event experiment does not reproduce those systems: it retrieves bounded Docker history and simulates delivery impairment.
+
+\paragraph{Temporal correctness.}
+The general possibility of a change between checking and use is established, including in CWE-367 \cite{cwe}. The controlled failures below instantiate this issue in a research verifier, not a newly discovered vulnerability in DeathStarBench. A focused literature review can motivate an empirical question, but cannot establish absence of other work. The narrow research objective is to make coverage, timing and event visibility independently inspectable in a reproducible remediation case study.
+
+\section{Research questions and study structure}
+The development questions are:
+\begin{enumerate}
+\item Which operational obligations are missed by an alternate-route read, and what do direct checks add?
+\item Can conventional early stopping reduce actual checking effort while preserving the observed decisions under stable injected conditions?
+\item Can evidence become invalid before, during or after a final sequence of checks?
+\item What happens to lifecycle-event invalidation when relevant records are available, delayed or silently absent?
+\end{enumerate}
+
+These questions were refined across stages. Each stage froze its runner and design before that batch, following earlier diagnostics. Analysis code was sometimes written while a batch ran. This is not public preregistration, a single frozen confirmatory experiment, or an unseen evaluation of a learned method. Expected mechanisms were written in each stage design, and unexpected or unfavorable results were retained.
+
+\begin{table}[t]
+\caption{Later development stages included in this article. Their fault mixes differ; counts are not pooled into a common effectiveness rate.}
+\label{tab:stages}
+\centering
+\begin{tabularx}{\linewidth}{@{}lrX@{}}
+\toprule Stage & Trials & Main manipulation \\
+\midrule
+Direct obligations & 18 & Six conditions, three account blocks \\
+Sequential effort & 12 & Six conditions, two verification modes \\
+Temporal invalidation & 6 & Three placements, two waits \\
+Final-check challenge & 6 & Three placements, two account blocks \\
+Event visibility & 8 & Four conditions, two account blocks \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The 50 trials in Table~\ref{tab:stages} are selected later stages of a longer development history. Earlier feasibility, state/graph and functional-probe studies informed them and remain in the artifact ledger. Synthetic account blocks change identifiers and use fresh instances; they do not create diverse stochastic workloads. Where several policies score the same live action, they share one outcome and are not additional independent trials.
+
+\section{Testbed and measurement}
+\subsection{Runtime and provenance}
+We use the open DeathStarBench social-network application \cite{dsb}. Each trial creates an isolated 27-container deployment with new anonymous database volumes, initializes synthetic accounts and posts, and removes only its own containers, networks and volumes afterwards. The original pilot deployment is separate. Linux containers run through Docker on a Windows host. The archived configuration pins image digests, localhost ports, resource limits and mounted runtime paths.
+
+Source witnesses were inspected at commit \texttt{6ecb09706140f8730b5385c08f1386c654c3c526}. Image digests are pinned independently; source-to-binary correspondence has not been verified. Only the required runtime files, not a full locally rebuilt source distribution, were used. The source indicates Redis and optional MongoDB access on timeline reads and database-index creation before serving at startup. These observations motivate checks but do not prove that every obligation is covered by the deployed binaries.
+
+Public telemetry samples inspected during planning do not contain the required before/after restart labels and are not used as outcome data in this article. The outcome dataset is generated by these open-testbed experiments. No student records, patient data or production accounts are used.
+
+\subsection{Scenario and action}
+A trial registers an author and follower, creates three synthetic posts, and verifies their content. It then stops the target timeline service, confirms that the expected read is interrupted, applies its designated additional condition, records evidence, seals predictions, and starts only the verified target container ID. Conditions include healthy dependencies, an unrelated stopped service, a stopped Redis or MongoDB dependency, and a suspended post-storage process.
+
+The command is \texttt{docker start <target-container-id>}. Earlier development exposed that a service-named Compose start could also start a stopped declared dependency. Four completed arms and one interrupted arm from that preliminary direct-check batch were excluded from the target-only comparison and retained. The corrected runner checks dependency states after action. Action scope is part of the experimental intervention, not an implementation detail that can be ignored.
+
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw,rounded corners=2pt,align=center,text width=3.7cm,minimum height=1.05cm,font=\small},
+  flow/.style={-{Stealth[length=2mm]},thick},node distance=8mm and 8mm]
+\node[box] (setup) {Fresh isolated instance\\Initialize synthetic content};
+\node[box,right=of setup] (fault) {Stop target service\\Apply assigned condition};
+\node[box,below=of fault] (observe) {Collect evidence\\Checks and event history};
+\node[box,left=of observe] (seal) {Seal shadow decisions\\Immutable inputs and hashes};
+\node[box,below=of seal] (action) {Start verified target ID\\Action executes for every policy};
+\node[box,right=of action] (outcome) {Read back expected content\\Record outcome; scoped cleanup};
+\draw[flow] (setup)--(fault);
+\draw[flow] (fault)--(observe);
+\draw[flow] (observe)--(seal);
+\draw[flow] (seal)--(action);
+\draw[flow] (action)--(outcome);
+\end{tikzpicture}
+\caption{Experimental workflow. Policies make shadow decisions on shared action outcomes; the decision does not gate execution. Temporal challenges place additional changes at the designated observation boundary.}
+\Description{Six boxes form a sequential workflow: create a fresh synthetic instance, stop the target and apply the condition, collect evidence, seal predictions, start the verified target container, and measure recovery before scoped cleanup. The action executes regardless of shadow-policy approval.}
+\label{fig:workflow}
+\end{figure}
+Figure~\ref{fig:workflow} separates recorded decisions from the executed intervention and its measured outcome.
+
+\subsection{Recovery contract}
+The horizon is eight seconds from the action decision, with reads scheduled at approximately 0.5-second intervals and bounded request timeouts. Recovery is recorded only if the last two scheduled observations within that horizon verify the known post text and creator, with no observed creator mismatch. An unmet contract means this bounded recovery requirement failed; it does not establish permanent data loss. Time measured from decision includes command-launch overhead and is not exact service downtime.
+
+This contract concerns availability and synthetic content integrity. It does not evaluate authentication, exploit containment, cross-tenant isolation or action-attributable collateral harm. A failed recovery after a pre-existing dependency fault is not evidence that the restart caused that fault.
+
+\subsection{Verification obligations}
+The alternate-route check reads the follower's home timeline. Direct checking verifies the known post ID in timeline Redis, the timeline MongoDB document, and a post-storage RPC response with exact content and creator. Probes run from existing peer containers. IDs are handled as exact strings to avoid floating-point corruption. Successful peer reads do not guarantee the target has equivalent network access or credentials, and a database read does not certify every startup write permission.
+
+Direct checks use Redis, MongoDB and Post RPC in a fixed order. Full checking executes all three. Early stopping abstains after the first unsuccessful result; remaining obligations are marked unknown, not measured failures. Approval always requires all three recorded results to be verified. Common initialization and functional checks can warm caches and are not a no-probe control.
+
+\section{Temporal and event interventions}
+The temporal study records cached, middle-refresh and final-refresh evidence. Redis remains unchanged, stops before the middle refresh, or stops after it. Assigned waits of four or eight seconds run from middle-collection completion to final-collection start. Actual monotonic boundaries are retained; assigned waits are not mislabeled as evidence age at action.
+
+The final-check challenge moves the Redis stop inside the final sequence, immediately after its successful check, or after the entire sequence. The inside-sequence hook blocks until the stop is confirmed before allowing later probes. This establishes an explicit ordering, not a sample of naturally occurring concurrent races. Individual probe start/completion times and action time reveal how collection-level timestamps differ from the age of each result. All dependencies are initially healthy, so these tests do not establish that there was never a simultaneous healthy state.
+
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small,>=Stealth]
+\draw[->,thick] (0,0)--(11,0) node[right] {$t$};
+\foreach \x in {0.7,2.5,4.4,6.2,8.2,10.1} {\draw (\x,-0.12)--(\x,0.12);}
+\node[align=center,above] at (0.7,0.2) {Redis\\passes};
+\node[align=center,below] at (2.5,-0.2) {Redis stops\\injected change};
+\node[align=center,above] at (4.4,0.2) {MongoDB\\passes};
+\node[align=center,below] at (6.2,-0.2) {Post storage\\passes};
+\node[align=center,above] at (8.2,0.2) {Collection\\ends};
+\node[align=center,below] at (10.1,-0.2) {Action\\decision};
+\draw[<->] (0.7,1.55)--node[above] {Age of Redis evidence at action} (10.1,1.55);
+\draw[<->] (8.2,-1.55)--node[below,align=center] {Age measured from\\collection completion} (10.1,-1.55);
+\end{tikzpicture}
+\caption{The during-check challenge, shown schematically and not to scale. A passed Redis observation becomes stale while later checks complete. The two recorded trials had Redis evidence ages of 1.53 and 1.62 seconds, although collection completion preceded action by approximately 9 milliseconds.}
+\Description{Time proceeds left to right through a successful Redis check, an injected Redis stop, successful MongoDB and post-storage checks, collection completion, and the action decision. The age of the Redis result spans almost the whole sequence; the collection-end age spans only its final interval. Distances are illustrative, not measurements.}
+\label{fig:evidence-age}
+\end{figure}
+Figure~\ref{fig:evidence-age} illustrates why a single collection timestamp cannot describe the age of each obligation's evidence.
+
+An initial eight-trial event diagnostic compared earlier functional checks with later event observations. It remains development evidence, but cannot establish superiority over rechecking after the same fault. The eight new trials reported here add that stronger comparator. The event stage uses no additional fault, an unrelated media stop, a Redis stop or post-storage PID~1 suspension. Faults follow successful initial final checks. After event collection and state inspection, a second complete functional check supplies the late-recheck baseline. These observations follow the same stable fault but are sequential, not simultaneous. A fresh Running-flag baseline inspects the three dependency containers. The event guard queries actual Docker lifecycle history before the final checks to obtain a daemon-event cursor, then queries again after the fault. A prespecified set of lifecycle transitions affecting the three dependency IDs invalidates the recorded approval. Fault labels and recovery outcomes are not policy inputs.
+
+Two shadow delivery variants withhold the retrieved records for ten seconds or silently drop them. These transformations model availability of observations; they do not measure network loss or implement a live notification transport. Docker documents a history limit of 256 events \cite{docker}. Empty results therefore cannot certify stream completeness. Events after the query can also invalidate a decision. No locking, fencing, lease, atomic authorization or deployed gate is evaluated. Every action executes regardless of the shadow decision so that its outcome can be measured.
+
+\section{Analysis and integrity}
+For each opportunity $i$, let $A_i$ indicate approval and $Y_i$ indicate that the recovery contract is met. We report approvals $\sum_i A_i$, incorrect approvals $\sum_i A_i(1-Y_i)$, correct approvals $\sum_i A_iY_i$, and recoverable cases rejected $\sum_i(1-A_i)Y_i$. Zero approvals would make conditional error undefined, not zero. Counts are primary because fault prevalence was deliberately constructed.
+
+Earlier stage reports also give exact expectations under uniform thinning to a common approval count. These are conditional subset calculations, not extra observations, population confidence intervals or randomized deployments. We do not pool cross-stage rates, report significance tests, or interpret two account blocks as a representative workload sample. The sequential stage reports actual elapsed collector duration and executed calls, while the event query duration is common overhead rather than a policy-specific speedup estimate.
+
+The audit verifies source/configuration and ledger hashes, arm order, baseline initialization, sealed predictions before action, raw command receipts, policy replay, independent recomputation of outcome labels, distinct volume identities and scoped cleanup. Each snapshot of policy input must remain identical to its sealed version. A preliminary two-arm event batch violated this invariant when a variable-name collision allowed later ledger entries to mutate the event-input list. That entire attempt was excluded, retained with a deviation report, and used to check that the corrected audit rejects the defect. Successful replay does not imply correctness of every untested assumption.
+
+\section{Results}
+\subsection{Coverage and sequential effort}
+\begin{table}[t]
+\caption{Direct-obligation comparison, 18 shared action outcomes.}
+\label{tab:policy-3-3}
+\centering
+\begin{tabularx}{\linewidth}{@{}Xrr@{}}
+\toprule
+Policy & Approvals & Incorrect \\
+\midrule
+alternate route & 15 & 9 \\
+alternate plus redis & 12 & 6 \\
+direct dependencies & 6 & 0 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+The alternate route missed failures relevant to the target path. Adding Redis reduced incorrect approvals, but MongoDB startup obligations remained material. Direct checks made no incorrect approvals in that cohort. This bounded result did not survive all later temporal challenges and must not be interpreted as universal safety.
+
+\begin{table}[t]
+\caption{Separate fresh instances for full and early-stop modes, six opportunities each.}
+\label{tab:mode-2-5}
+\centering
+\begin{tabularx}{\linewidth}{@{}Xrrrr@{}}
+\toprule
+Mode & Approvals & Incorrect & Calls & Median ms \\
+\midrule
+full & 2 & 0 & 18 & 969.6 \\
+early stop & 2 & 0 & 14 & 721.5 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+Both modes made the same condition-level decisions in the sequential study. Early stopping saved calls when Redis or MongoDB failed before the last probe. It saved no calls for the suspended post-storage condition, checked last. Timing differences include environment and Docker-client variation; one observation per condition and mode does not establish a population speedup.
+
+\subsection{Evidence invalidation and final-check failure}
+\begin{table}[t]
+\caption{Temporal-placement experiment, six shared action outcomes.}
+\label{tab:evidence-3-3}
+\centering
+\begin{tabularx}{\linewidth}{@{}Xrr@{}}
+\toprule
+Evidence & Approvals & Incorrect \\
+\midrule
+cached & 6 & 4 \\
+refresh before wait & 4 & 2 \\
+last moment refresh & 2 & 0 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+Both unchanged-system controls recovered. An intervening Redis stop invalidated cached or middle-refresh evidence, while the last refresh detected the earlier change. That experiment deliberately placed no new fault after its last check.
+
+\begin{table}[t]
+\caption{Changes during or after final verification, six fresh action trials.}
+\label{tab:placement-3-4}
+\centering
+\begin{tabularx}{\linewidth}{@{}Xrrr@{}}
+\toprule
+Placement & Trials & Approvals & Incorrect \\
+\midrule
+none & 2 & 2 & 0 \\
+during final & 2 & 2 & 2 \\
+after final & 2 & 2 & 2 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+The subsequent challenge filled that omitted boundary. All six final recorded check sequences passed. Both controls recovered, while all four injected cases failed. For the two during-check cases, collection completion preceded action by approximately 9 milliseconds, although Redis results were 1.53 and 1.62 seconds old. A timestamp attached to the completed collection obscured the age of the first obligation. The construction supports a possibility claim, not a failure-frequency estimate.
+
+\subsection{Lifecycle visibility}
+\begin{table}[t]
+\caption{Actual lifecycle history with controlled delivery transformations, eight shared action outcomes; late functional rechecking follows the fault.}
+\label{tab:policy-6-4}
+\centering
+\begin{tabularx}{\linewidth}{@{}Xrrr@{}}
+\toprule
+Policy & Approvals & Incorrect & Missed recovery \\
+\midrule
+final checks & 8 & 4 & 0 \\
+fresh running state & 6 & 2 & 0 \\
+events available & 4 & 0 & 0 \\
+events delayed & 8 & 4 & 0 \\
+events silently dropped & 8 & 4 & 0 \\
+late functional recheck & 4 & 0 & 0 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+Final functional evidence alone gave 4 incorrect approvals among 8 approvals. Adding fresh Running flags gave 2 incorrect approvals among 6 approvals. The available-event guard gave 0 incorrect approvals among 4 approvals, with 0 rejected opportunities that would have recovered. The ten-second withholding and silent-drop variants each gave 4 incorrect approvals among 8 approvals. Late functional rechecking gave 0 incorrect approvals among 4 approvals. Thus this cohort does not establish an event-guard advantage over that stronger baseline. Event-action names and the complete per-trial decisions are retained in the machine-readable supplement.
+Late functional rechecking and lifecycle observations must be compared before attributing improvements to event handling rather than to newer information. The unrelated-change controls distinguish dependency-scoped invalidation from simply rejecting after any container event. Delayed and dropped channels expose dependence on observation availability. These are common-outcome shadow comparisons, not separate deployments or estimates of naturally occurring channel loss.
+
+\subsection{Post-hoc recovery-endpoint sensitivity}
+After the development trials, we reanalyzed the recorded response prefixes at two, four, six and eight seconds, requiring one, two or three final successful reads. This is an exploratory sensitivity analysis, not a preregistered experiment or an additional set of action trials. Raw HTTP response bodies were reclassified using the original marker and creator contract; ledger hashes and agreement with the recorded observations were checked before analysis. Only responses completed by each horizon enter its prefix. Fewer observations than the required count are reported as insufficient, rather than silently classified as failed recovery. A creator mismatch within the prefix prevents recovery.
+
+\begin{table}[t]
+\caption{Post-hoc endpoint sensitivity. Two-second columns require two final successful reads. Every label is unchanged at four, six and eight seconds for each of one, two and three required reads.}
+\label{tab:stage-5-5}
+\centering
+\begin{tabularx}{\linewidth}{@{}Xrrrr@{}}
+\toprule
+Stage & Trials & 8 s recovered & 2 s recovered & 2 s unknown \\
+\midrule
+direct & 18 & 6 & 5 & 5 \\
+sequential & 12 & 4 & 3 & 3 \\
+temporal & 6 & 2 & 2 & 0 \\
+race & 6 & 2 & 2 & 1 \\
+aligned event & 8 & 4 & 4 & 2 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+At four, six and eight seconds, all three read-count rules yielded the original outcome label for every trial, with no insufficient-observation cases. This supports stability of the reported labels over those tested definitions in this corpus. Two-second prefixes produced changed labels or insufficient observations in several cells; no universal threshold insensitivity is claimed. The two-second, two-read definition retained the recoveries shown in the table but left some originally failing trials unevaluable. Requiring three reads at two seconds produced no positive recovery labels, partly because early read errors remain in that short prefix. These are endpoint and observation-density effects, not new evidence of permanent failure. The public sensitivity supplement reports all cells and per-trial labels.
+
+The analysis cannot reconstruct a different polling schedule or outcomes beyond eight seconds. The most recent completed read can precede the selected horizon by a varying interval; thus a prefix result is not a continuous-availability guarantee. Policy inputs and decisions are unchanged. Identical labels at four to eight seconds therefore preserve the corresponding approval-error counts, without providing independent replication or reducing the external-validity limitations.
+
+\section{Discussion}
+The stages identify three separable questions: whether the observation covers the action's obligations, whether the covered property still holds, and whether a relevant change has reached the verifier. Improving one does not resolve the others. Direct functional checks address some coverage failures; early stopping reduces unnecessary work on already-rejected opportunities; lifecycle records can reveal observed changes. None establishes that an unobserved change cannot occur.
+
+The appropriate interpretation of the event comparison is conditional benefit, not a general safety property. A stronger system would need an explicit treatment of stale cursors, incomplete channels, event delays, unreported application failures and the observation-to-action interval. A fail-closed transport rule would alter approval coverage and could reject healthy opportunities; that tradeoff is not quantified here. A fresh functional recheck remains an essential comparator for later systems, as do ordinary state checks and conventional coordination where enforceable.
+
+The research contribution is the case-study evidence and its auditability. We do not claim a novel event mechanism, a new theory of digital twins, or superiority over unreproduced systems. The next evaluation should freeze a candidate rule before new workloads and fault combinations, include event-buffer overflow and target-specific network failures, and compare actual executed-gate behavior. Additional experiments should be justified by a distinct hypothesis rather than by accumulating more deterministic examples of the same race.
+
+\section{Threats to validity}
+\paragraph{Construct validity.} The eight-second requirement is an engineering test contract, not a production SLO. Content verification does not imply authorization or security containment. Container Running is a narrow state, and lifecycle history may omit application-level failures. Proxy probes use peer vantage points. Source witnesses and pinned images are not a verified source-to-binary chain.
+
+\paragraph{Internal validity.} Faults are deliberately timed; the blocking hook changes the schedule. All policies in shared-outcome stages receive common probe interventions, which can alter cache state. Delayed and dropped delivery are controlled transformations. Host load, command overhead and elapsed time can differ across fresh instances. Raw evidence, ordering checks and preserved exclusions improve transparency but do not remove all confounding.
+
+\paragraph{External and statistical validity.} The study uses one microservice application, a single restart action, a fixed probe order and small scenario cells. Fresh volumes prevent state reuse but do not make scenarios representative. Shared outcomes are dependent. Known failure classes and adaptive development prevent claims of held-out generalization. Zero observed errors in a small selected cohort is not an operational risk bound.
+
+\paragraph{Reproducibility limits.} Analysis packages replay from archived evidence using the Python standard library. Live reruns additionally need pinned images, benchmark runtime files, Docker and adapted host bind paths. Images and database volumes are not redistributed. Dependency licenses are retained. The public artifact preserves local paths and synthetic identifiers and is available as a version-controlled repository. Original work remains unlicensed; third-party notices are retained. Live portability and a persistent archival deposit remain open.
+
+\section{Conclusion}
+Successful checks can support incorrect restart approvals when their obligations are incomplete or their evidence becomes outdated. In this case study, lifecycle observations were useful only under their actual visibility assumptions. The useful result is a reproducible separation of coverage, per-obligation freshness and event availability, together with clear examples of where common checks fail. The evidence supports a bounded development case study; it does not establish a novel defense or production safety.
+
+\section*{Declarations and release status}
+\textbf{Authorship:} Ezekiel Ologunde is confirmed as the sole author. Affiliation: Independent Researcher. Corresponding email remains to be supplied; final manuscript approval remains pending.
+
+\textbf{Data and code availability:} the v0.2 evidence, code, plans and raw synthetic benchmark records are publicly available at \url{https://github.com/ezekielologunde/digital-twin-remediation}, commit \texttt{731fccbb5924e92032cae4a071194b95c6ae9c17}. This draft adds a local post-hoc sensitivity supplement, which is not yet part of that public version. A persistent archival DOI has not been assigned. Original work is intentionally unlicensed pending an author decision; upstream third-party licenses remain applicable.
+
+\textbf{Funding and competing interests:} require explicit author declarations; no statement of absence is inferred.
+
+\textbf{Ethics:} this work uses locally generated synthetic application accounts and an isolated open testbed. It does not use human-participant records. Any institutional review or exemption statement must be confirmed by the authors; none is asserted here.
+
+\textbf{AI assistance:} Codex was used to help develop experimental code, execute local tests, analyze outputs and prepare this draft. Human authors must independently review the methods, references, results and final claims and take responsibility for the submission. This disclosure should be adapted to the selected venue's current policy.
+
+\begin{thebibliography}{99}
+\bibitem{guarded} W. Cai, T. Yu, S. Pi, X. Sun, and W. Ma. Can AI Remediate Backend Failures Safely? GuardedAct with Blast-Radius-Aware Sandboxing. Preprint, 2026. \url{https://arxiv.org/abs/2609.11264}.
+\bibitem{have} V. Sammartino and M. Pasquini. HAVE: Host Active Verification Engine for Closing the Contextual Reality Gap in Security Digital Twins. Preprint, submitted for possible IEEE publication, 2026. \url{https://arxiv.org/abs/2606.06968}.
+\bibitem{gray} P. Huang et al. Gray Failure: The Achilles' Heel of Cloud-Scale Systems. HotOS, 2017. \url{https://www.microsoft.com/en-us/research/publication/gray-failure-achilles-heel-cloud-scale-systems/}.
+\bibitem{confexp} N. M. Koushki, I. El-Shekeil, and K. Kant. ConfExp: Root-Cause Analysis of Service Misconfigurations in Enterprise Systems. Journal of Network and Systems Management, 33, article 27, 2025. \url{https://doi.org/10.1007/s10922-024-09886-w}.
+\bibitem{adamc} B. Fodor and B. Sonkoly. Adaptive Monitoring for Cloud-Native Microservices. NOMS, 2025. \url{https://doi.org/10.1109/NOMS57970.2025.11073663}. Repository abstract reviewed: \url{https://real.mtak.hu/225526/}.
+\bibitem{signalling} J. Roberts, B. Archibald, and P. Trinder. Signalling Health for Improved Kubernetes Microservice Availability. Preprint, 2025. \url{https://arxiv.org/abs/2507.02158}.
+\bibitem{cwe} MITRE. CWE-367: Time-of-check Time-of-use Race Condition. Accessed 5 October 2026. \url{https://cwe.mitre.org/data/definitions/367.html}.
+\bibitem{dsb} DeathStarBench maintainers. Open-source benchmark suite for cloud microservices. \url{https://github.com/delimitrou/DeathStarBench}. Source commit and separate runtime image digests are recorded in the artifact.
+\bibitem{docker} Docker. Docker system events reference. Accessed 5 October 2026. \url{https://docs.docker.com/reference/cli/docker/system/events/}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,18 @@
+Proposed prospective experiment: lifecycle-history retention
+6 October 2026. Design only, not executed or externally preregistered.
+
+Question: Can an event-invalidating shadow rule approve failed recovery when a genuine dependency-stop event is removed from the bounded history by subsequent unrelated events, while a fresh functional recheck detects the persistent failure?
+
+Hypothesis H1: Under verified eviction of the dependency-stop record, the available-history policy will make more incorrect approvals than late functional rechecking in the affected scenario. A null result or failure to achieve verified eviction must be reported. Do not claim Docker silently drops records merely because the policy fails to match them.
+
+Design: 24 new isolated instances, six account blocks crossed with four conditions: healthy/no churn, healthy/unrelated-event churn, dependency stop/no churn, dependency stop/unrelated-event churn. Each instance starts from fresh volumes and the same initialization contract. Randomize run order before execution using a fixed seed. Treat this as prospective validation of a known boundary, not unseen-class generalization. Freeze runner, policy, analysis and plan hashes before the first trial; every subsequent change requires a recorded amendment.
+
+Intervention: All initial functional checks must pass. Stop the target dependency in the two fault conditions and record its immutable ID and stop receipt. Generate unrelated lifecycle activity only inside the trial's own disposable Compose project. Capture a continuous event witness before the intervention and retain it independently of the bounded-history policy input. Verify the relevant event was observed by the witness, then absent from the later bounded-history query. Validate this capture mechanism in a separate engineering pilot, excluded from the 24 planned trials. Fix churn count after that pilot, before freezing the research plan; do not adapt it per trial after seeing outcomes.
+
+Comparators: initial functional checks, dependency Running state, available-history invalidation, and late functional rechecking. Balance the order of the event query and late functional checks within each condition, three blocks each. Record the full observation-to-action interval for each policy. All actions execute so recovery can be measured; this remains shadow-policy evaluation, not deployed gating. Do not infer policy-specific latency improvement from shared interventions.
+
+Primary endpoint: original eight-second/two-final-read recovery contract. Primary comparison: paired incorrect approval decisions in stop-plus-churn trials. Secondary outcomes: recoverable cases rejected, observed event visibility, actual collector duration, and unchanged 4/6/8-second sensitivity. Report counts by condition and block, with all raw records. No pooled population probability or unplanned significance tests.
+
+Exclusions: setup failures, invariant violations, and witness-capture failures are retained with reasons. A failed eviction intervention is recorded as an intervention failure, not relabeled as successful eviction or silently replaced. Any replacements must follow a frozen cap and rule set after the engineering pilot. Stop on isolation or cleanup failure. Never operate on the original pilot or unrelated containers.
+
+Scope: this tests event retention on the installed Docker version. It does not estimate natural event-loss prevalence, prove a superior algorithm, assess security containment, or establish atomic authorization.

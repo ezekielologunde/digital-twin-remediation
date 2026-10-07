@@ -1,0 +1,23 @@
+Journal strengthening pass, 6 October 2026
+
+Completed:
+- Reclassified raw HTTP outcomes for all 50 primary trials and checked ledger hashes.
+- Evaluated 12 endpoint definitions per trial: horizons 2/4/6/8 seconds and 1/2/3 final successful reads. These are dependent reanalyses, not 600 new trials.
+- All original labels are retained at 4/6/8 seconds under every tested read-count rule. The 2-second results contain changed labels and insufficient-observation cases; all are reported.
+- Added a generated sensitivity table and limitations to the existing manuscript, preserving v0.2 source in versions/.
+- Confirmed sole author name from the user's reply. Affiliation, email, funding, conflicts, and final approval remain pending.
+- Corrected public data availability to the existing GitHub repository and exact v0.2 commit. The new sensitivity supplement remains local.
+- 44 unit tests pass. Source citation keys and environments checked. Built-in PDF compiler still fails during environment initialization: Unable to find standard directories for platform.
+
+Literature metadata checked on 6 October 2026:
+https://arxiv.org/abs/2609.11264
+GuardedAct remains a preprint; its abstract already describes sandbox-first remediation and execution gating. This pass does not establish novelty over it or replicate its reported results.
+https://arxiv.org/abs/2606.06968
+HAVE remains identified as submitted for possible IEEE publication. Its endpoint is compromise probability, unlike the current availability case study.
+https://link.springer.com/journal/10922/submission-guidelines
+Journal of Network and Systems Management remains a candidate only. No destination or author declarations have been assumed.
+
+Next empirical priority:
+A new, fixed-plan evaluation of lifecycle-history truncation. Existing empty event results cannot distinguish no relevant change from a relevant event that was evicted. See event-retention-protocol.txt. This is planned work, not completed evidence or an externally preregistered study.
+
+Journal readiness remains incomplete: one testbed, fixed action, small designed scenario cells, no deployed gate evaluation, no source/image correspondence proof, no verified PDF, and incomplete author declarations. Sensitivity analysis addresses one specific robustness concern; it does not resolve these other limits.

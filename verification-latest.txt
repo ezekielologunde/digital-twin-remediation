@@ -1,0 +1,768 @@
+Verified 1245 original payload hashes.
+{
+  "batch": "3049d39ca8b942858f518d4b5b2317b1",
+  "arms": 18,
+  "contract_met": 6,
+  "integrity_verified": true,
+  "distinct_volume_ids": 234,
+  "metrics": [
+    {
+      "policy": "alternate_route",
+      "eligible": 15,
+      "false_approvals": 9,
+      "matched_k": 6,
+      "matched_feasible": true,
+      "expected_false_approvals": 3.6,
+      "thinning_distribution": {
+        "0": 0.0001998001998001998,
+        "1": 0.01078921078921079,
+        "2": 0.10789210789210789,
+        "3": 0.3356643356643357,
+        "4": 0.3776223776223776,
+        "5": 0.15104895104895105,
+        "6": 0.016783216783216783
+      },
+      "fixed_rank_false_approvals": 3,
+      "selected": [
+        {
+          "seed": 502,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 503,
+          "condition": "mongo_down_short"
+        },
+        {
+          "seed": 501,
+          "condition": "timeline_redis_down"
+        },
+        {
+          "seed": 501,
+          "condition": "up"
+        },
+        {
+          "seed": 503,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 502,
+          "condition": "timeline_mongo_down"
+        }
+      ]
+    },
+    {
+      "policy": "alternate_plus_redis",
+      "eligible": 12,
+      "false_approvals": 6,
+      "matched_k": 6,
+      "matched_feasible": true,
+      "expected_false_approvals": 3.0,
+      "thinning_distribution": {
+        "0": 0.0010822510822510823,
+        "1": 0.03896103896103896,
+        "2": 0.2435064935064935,
+        "3": 0.4329004329004329,
+        "4": 0.2435064935064935,
+        "5": 0.03896103896103896,
+        "6": 0.0010822510822510823
+      },
+      "fixed_rank_false_approvals": 2,
+      "selected": [
+        {
+          "seed": 502,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 503,
+          "condition": "mongo_down_short"
+        },
+        {
+          "seed": 501,
+          "condition": "up"
+        },
+        {
+          "seed": 503,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 502,
+          "condition": "timeline_mongo_down"
+        },
+        {
+          "seed": 503,
+          "condition": "up"
+        }
+      ]
+    },
+    {
+      "policy": "direct_dependencies",
+      "eligible": 6,
+      "false_approvals": 0,
+      "matched_k": 6,
+      "matched_feasible": true,
+      "expected_false_approvals": 0.0,
+      "thinning_distribution": {
+        "0": 1.0
+      },
+      "fixed_rank_false_approvals": 0,
+      "selected": [
+        {
+          "seed": 502,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 501,
+          "condition": "up"
+        },
+        {
+          "seed": 503,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 503,
+          "condition": "up"
+        },
+        {
+          "seed": 501,
+          "condition": "unrelated_down"
+        },
+        {
+          "seed": 502,
+          "condition": "up"
+        }
+      ]
+    }
+  ],
+  "boundary": "Hand-specified verification obligations; descriptive cohort comparison, not a novel method or general safety result."
+}
+{
+  "batch": "5f71ebb803bd4d939e978b6e80eeecf5",
+  "integrity_verified": true,
+  "distinct_volume_ids": 156,
+  "modes": [
+    {
+      "mode": "full",
+      "trials": 6,
+      "approvals": 2,
+      "false_approvals": 0,
+      "contract_met": 2,
+      "probe_calls": 18,
+      "median_probe_wall_ms": 969.6374000050128,
+      "sum_probe_wall_ms": 6543.514299992239
+    },
+    {
+      "mode": "early_stop",
+      "trials": 6,
+      "approvals": 2,
+      "false_approvals": 0,
+      "contract_met": 2,
+      "probe_calls": 14,
+      "median_probe_wall_ms": 721.5336999943247,
+      "sum_probe_wall_ms": 5110.840699984692
+    }
+  ],
+  "conditions": [
+    {
+      "condition": "mongo_down_short",
+      "full_ms": 939.8458000068786,
+      "early_stop_ms": 553.2540999993216,
+      "difference_ms": 386.59170000755694,
+      "same_decision": true,
+      "same_contract_outcome": true
+    },
+    {
+      "condition": "process_suspended",
+      "full_ms": 1925.494199997047,
+      "early_stop_ms": 1928.994399990188,
+      "difference_ms": -3.5001999931409955,
+      "same_decision": true,
+      "same_contract_outcome": true
+    },
+    {
+      "condition": "timeline_mongo_down",
+      "full_ms": 999.4290000031469,
+      "early_stop_ms": 587.0340999972541,
+      "difference_ms": 412.39490000589285,
+      "same_decision": true,
+      "same_contract_outcome": true
+    },
+    {
+      "condition": "timeline_redis_down",
+      "full_ms": 1031.2450999917928,
+      "early_stop_ms": 261.4040000044042,
+      "difference_ms": 769.8410999873886,
+      "same_decision": true,
+      "same_contract_outcome": true
+    },
+    {
+      "condition": "unrelated_down",
+      "full_ms": 821.8302000022959,
+      "early_stop_ms": 856.0332999913953,
+      "difference_ms": -34.20309998909943,
+      "same_decision": true,
+      "same_contract_outcome": true
+    },
+    {
+      "condition": "up",
+      "full_ms": 825.6699999910779,
+      "early_stop_ms": 924.1208000021288,
+      "difference_ms": -98.45080001105089,
+      "same_decision": true,
+      "same_contract_outcome": true
+    }
+  ],
+  "boundary": "One separately reset instance per mode and condition, descriptive timing only; known faults and fixed order. Not an adaptive method or causal population speedup estimate."
+}
+{
+  "batch": "294bab8ce4274cb7b50c52b48b59c78b",
+  "live_trials": 6,
+  "independent_policy_trials": false,
+  "integrity_verified": true,
+  "distinct_volume_ids": 78,
+  "metrics": [
+    {
+      "policy": "cached",
+      "approvals": 6,
+      "false_approvals": 4,
+      "true_approvals": 2,
+      "expected_false_at_two_approvals": 1.3333333333333333
+    },
+    {
+      "policy": "refresh_before_wait",
+      "approvals": 4,
+      "false_approvals": 2,
+      "true_approvals": 2,
+      "expected_false_at_two_approvals": 1.0
+    },
+    {
+      "policy": "last_moment_refresh",
+      "approvals": 2,
+      "false_approvals": 0,
+      "true_approvals": 2,
+      "expected_false_at_two_approvals": 0.0
+    }
+  ],
+  "details": [
+    {
+      "condition": "before_refresh",
+      "assigned_wait_s": 8,
+      "actual_wait_s": 8.000685100007104,
+      "cached_group_age_at_action_s": 10.750718199997209,
+      "middle_group_age_at_action_s": 8.842779099999461,
+      "last_group_age_at_action_s": 0.007981699993251823,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "abstain"
+        },
+        "last_moment_refresh": {
+          "decision": "abstain"
+        }
+      },
+      "contract_met": false
+    },
+    {
+      "condition": "after_refresh",
+      "assigned_wait_s": 4,
+      "actual_wait_s": 4.000512099999469,
+      "cached_group_age_at_action_s": 5.6771531000122195,
+      "middle_group_age_at_action_s": 4.828475900008925,
+      "last_group_age_at_action_s": 0.007699000008869916,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "approve"
+        },
+        "last_moment_refresh": {
+          "decision": "abstain"
+        }
+      },
+      "contract_met": false
+    },
+    {
+      "condition": "after_refresh",
+      "assigned_wait_s": 8,
+      "actual_wait_s": 8.000313600001391,
+      "cached_group_age_at_action_s": 9.66683839999314,
+      "middle_group_age_at_action_s": 8.821299699993688,
+      "last_group_age_at_action_s": 0.009711499995319173,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "approve"
+        },
+        "last_moment_refresh": {
+          "decision": "abstain"
+        }
+      },
+      "contract_met": false
+    },
+    {
+      "condition": "none",
+      "assigned_wait_s": 4,
+      "actual_wait_s": 4.000426300000981,
+      "cached_group_age_at_action_s": 5.659091099994839,
+      "middle_group_age_at_action_s": 4.791290799999842,
+      "last_group_age_at_action_s": 0.011138599991681986,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "approve"
+        },
+        "last_moment_refresh": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true
+    },
+    {
+      "condition": "none",
+      "assigned_wait_s": 8,
+      "actual_wait_s": 8.000449099999969,
+      "cached_group_age_at_action_s": 10.253842799997074,
+      "middle_group_age_at_action_s": 9.189026299995021,
+      "last_group_age_at_action_s": 0.012171599999419414,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "approve"
+        },
+        "last_moment_refresh": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true
+    },
+    {
+      "condition": "before_refresh",
+      "assigned_wait_s": 4,
+      "actual_wait_s": 4.000526899995748,
+      "cached_group_age_at_action_s": 6.614844700001413,
+      "middle_group_age_at_action_s": 4.838110199998482,
+      "last_group_age_at_action_s": 0.008065000001806766,
+      "decisions": {
+        "cached": {
+          "decision": "approve"
+        },
+        "refresh_before_wait": {
+          "decision": "abstain"
+        },
+        "last_moment_refresh": {
+          "decision": "abstain"
+        }
+      },
+      "contract_met": false
+    }
+  ],
+  "limits": "One trial per delay/placement cell. Shared probes and outcomes. Collection-end ages underestimate the age of earlier individual probes. No fault occurs after final verification; no atomicity or general reliability claim."
+}
+{
+  "batch": "9494250949eb49d5a9bb33a82bc00d5d",
+  "integrity_verified": true,
+  "distinct_volume_ids": 78,
+  "metrics": [
+    {
+      "condition": "none",
+      "trials": 2,
+      "approvals": 2,
+      "incorrect_approvals": 0,
+      "recoveries": 2
+    },
+    {
+      "condition": "during_final",
+      "trials": 2,
+      "approvals": 2,
+      "incorrect_approvals": 2,
+      "recoveries": 0
+    },
+    {
+      "condition": "after_final",
+      "trials": 2,
+      "approvals": 2,
+      "incorrect_approvals": 2,
+      "recoveries": 0
+    }
+  ],
+  "details": [
+    {
+      "seed": 901,
+      "condition": "none",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": true,
+      "probe_age_at_action_s": {
+        "timeline_redis": 0.601462899998296,
+        "timeline_mongo": 0.3416834000090603,
+        "post_storage": 0.007258700003148988
+      },
+      "collection_end_age_s": 0.006892600009450689
+    },
+    {
+      "seed": 902,
+      "condition": "during_final",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": false,
+      "probe_age_at_action_s": {
+        "timeline_redis": 1.6213977999868803,
+        "timeline_mongo": 0.43279519998759497,
+        "post_storage": 0.009158699991530739
+      },
+      "collection_end_age_s": 0.008677699996042065
+    },
+    {
+      "seed": 901,
+      "condition": "during_final",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": false,
+      "probe_age_at_action_s": {
+        "timeline_redis": 1.52587090000452,
+        "timeline_mongo": 0.3352924999926472,
+        "post_storage": 0.009291599999414757
+      },
+      "collection_end_age_s": 0.00892599999497179
+    },
+    {
+      "seed": 902,
+      "condition": "after_final",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": false,
+      "probe_age_at_action_s": {
+        "timeline_redis": 1.631799900002079,
+        "timeline_mongo": 1.3456063000048744,
+        "post_storage": 0.9947243000060553
+      },
+      "collection_end_age_s": 0.9942778999975417
+    },
+    {
+      "seed": 901,
+      "condition": "after_final",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": false,
+      "probe_age_at_action_s": {
+        "timeline_redis": 1.676540299988119,
+        "timeline_mongo": 1.3867177999927662,
+        "post_storage": 1.055994099995587
+      },
+      "collection_end_age_s": 1.0555612999887671
+    },
+    {
+      "seed": 902,
+      "condition": "none",
+      "all_checks_passed": true,
+      "decision": "approve",
+      "contract_met": true,
+      "probe_age_at_action_s": {
+        "timeline_redis": 0.600666900005308,
+        "timeline_mongo": 0.33400970000366215,
+        "post_storage": 0.007228300004499033
+      },
+      "collection_end_age_s": 0.00665169999410864
+    }
+  ],
+  "limitations": "Deterministic fault scheduling with a blocking hook, two synthetic account blocks, known Redis stop, fixed order. Not natural race incidence, a novel algorithm, a coherence proof, or a test of concurrency control."
+}
+{
+  "batch": "fc54dc7bbf804c07b54d357033a60c70",
+  "live_trials": 8,
+  "integrity_verified": true,
+  "distinct_volume_ids": 104,
+  "metrics": [
+    {
+      "policy": "final_checks",
+      "approvals": 8,
+      "incorrect_approvals": 4,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "fresh_running_state",
+      "approvals": 6,
+      "incorrect_approvals": 2,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "events_available",
+      "approvals": 4,
+      "incorrect_approvals": 0,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "events_delayed",
+      "approvals": 8,
+      "incorrect_approvals": 4,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "events_silently_dropped",
+      "approvals": 8,
+      "incorrect_approvals": 4,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    },
+    {
+      "policy": "late_functional_recheck",
+      "approvals": 4,
+      "incorrect_approvals": 0,
+      "correct_approvals": 4,
+      "unnecessary_abstentions": 0
+    }
+  ],
+  "details": [
+    {
+      "seed": 1102,
+      "condition": "unrelated_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "late_probe_ms": 957.8230000042822,
+      "event_query_ms": 215.49810000578873
+    },
+    {
+      "seed": 1102,
+      "condition": "redis_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill",
+        "stop",
+        "die"
+      ],
+      "late_probe_ms": 954.9341000092681,
+      "event_query_ms": 200.50969999283552
+    },
+    {
+      "seed": 1101,
+      "condition": "none",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "late_probe_ms": 938.937500002794,
+      "event_query_ms": 201.26319999690168
+    },
+    {
+      "seed": 1101,
+      "condition": "storage_suspend",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill"
+      ],
+      "late_probe_ms": 1954.8991000046954,
+      "event_query_ms": 209.67569999629632
+    },
+    {
+      "seed": 1101,
+      "condition": "redis_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill",
+        "stop",
+        "die"
+      ],
+      "late_probe_ms": 895.498600002611,
+      "event_query_ms": 239.09509999793954
+    },
+    {
+      "seed": 1102,
+      "condition": "none",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "late_probe_ms": 948.4717999876011,
+      "event_query_ms": 202.57770000898745
+    },
+    {
+      "seed": 1101,
+      "condition": "unrelated_stop",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "approve"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "approve"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": true,
+      "matched_events": [],
+      "late_probe_ms": 974.0990999998758,
+      "event_query_ms": 202.17080001020804
+    },
+    {
+      "seed": 1102,
+      "condition": "storage_suspend",
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "approve"
+        },
+        "events_available": {
+          "decision": "abstain"
+        },
+        "events_delayed": {
+          "decision": "approve"
+        },
+        "events_silently_dropped": {
+          "decision": "approve"
+        }
+      },
+      "contract_met": false,
+      "matched_events": [
+        "kill"
+      ],
+      "late_probe_ms": 2198.1486000004224,
+      "event_query_ms": 296.17260000668466
+    }
+  ],
+  "limits": "Actual daemon history, simulated channel delay/drop, shared outcomes and interventions, no reliable live event stream or natural loss estimate. Known post-verification faults, two account blocks, no deployed gate or held-out evaluation."
+}
+{"source": "C:\\Users\\WT8\\AppData\\Local\\Temp\\remediation-replay-47r8vj0l\\overleaf\\main.tex", "tables_generated": 5, "unresolved_template_tokens": 0}
+PASS: unit tests, five analyses and manuscript reproduced exactly. PDF compilation not checked.
