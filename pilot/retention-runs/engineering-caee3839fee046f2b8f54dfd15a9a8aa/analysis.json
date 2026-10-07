@@ -1,0 +1,65 @@
+{
+  "integrity_verified": true,
+  "trials": 1,
+  "independent_volumes": 13,
+  "metrics": [
+    {
+      "condition": "stop_churn",
+      "policy": "final_checks",
+      "trials": 1,
+      "approvals": 1,
+      "incorrect_approvals": 1,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "stop_churn",
+      "policy": "fresh_running_state",
+      "trials": 1,
+      "approvals": 0,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "stop_churn",
+      "policy": "events_available",
+      "trials": 1,
+      "approvals": 1,
+      "incorrect_approvals": 1,
+      "rejected_recovery": 0
+    },
+    {
+      "condition": "stop_churn",
+      "policy": "late_functional_recheck",
+      "trials": 1,
+      "approvals": 0,
+      "incorrect_approvals": 0,
+      "rejected_recovery": 0
+    }
+  ],
+  "details": [
+    {
+      "seed": 1199,
+      "condition": "stop_churn",
+      "order": "events_first",
+      "recovered": false,
+      "eviction_verified": true,
+      "stop_retained": false,
+      "decisions": {
+        "final_checks": {
+          "decision": "approve"
+        },
+        "late_functional_recheck": {
+          "decision": "abstain"
+        },
+        "fresh_running_state": {
+          "decision": "abstain"
+        },
+        "events_available": {
+          "decision": "approve"
+        }
+      },
+      "query_records": 186
+    }
+  ],
+  "limits": "Known fault boundary, shadow decisions, fixed action, single host; no deployed-gate or generalization claim."
+}

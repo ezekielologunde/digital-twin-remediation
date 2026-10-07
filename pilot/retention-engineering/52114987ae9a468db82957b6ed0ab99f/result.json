@@ -1,0 +1,23 @@
+{
+  "project": "dtrem-retention-pilot-52114987ae9a",
+  "status": "COMPLETE",
+  "research_trials": 0,
+  "image_id": "sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+  "docker_version": "29.8.0",
+  "churn_exec_calls": 100,
+  "stop_witnessed": true,
+  "stop_present_before": true,
+  "stop_absent_after": true,
+  "bounded_records": 186,
+  "witness_records": 306,
+  "cleanup_verified": true,
+  "hashes": {
+    "commands.jsonl": "ec282306e970d2f25751e13ae5ba2f768552d9fb911601de9d53cc8415a412f2",
+    "history-after.json": "b4dcb25ad4f773052846c8f6d2a2669484905d8db1ef416c79fb25a15e26c686",
+    "history-before.json": "c0d77e1fe11d3817964fc96caa88ff1b31d1a4d150894ec4d6af051b1957baf0",
+    "retention_engineering.py": "b53d90ed52e252c7e702b0421f4b816cd1d2bd0e6c7f5ad4e546d26824aa74c8",
+    "retention_witness.py": "eb1cea317e9a82f3b4fb61a93efe6162c6784e86688b2a94b9086904254e610e",
+    "witness.jsonl": "f109e9939cfd5958bc8c397bd53a08006be77abe0dfbff64623170314faf80f0",
+    "witness.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

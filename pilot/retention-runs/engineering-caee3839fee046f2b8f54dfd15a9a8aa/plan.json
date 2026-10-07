@@ -1,0 +1,19 @@
+{
+  "engineering_only": true,
+  "arms": [
+    [
+      1199,
+      "stop_churn"
+    ]
+  ],
+  "source_sha256": {
+    "retention_pilot.py": "30bd56872b835aaab89c5df50c4391398774a8f4c7c2704cb965057c9fe92d95",
+    "retention_witness.py": "eb1cea317e9a82f3b4fb61a93efe6162c6784e86688b2a94b9086904254e610e",
+    "aligned_event_policy.py": "2887dbfaf37fc934a9fa69e13b4ea868a00c07b4bce0b942e61f1bb1e8a5a7a9",
+    "race_probes.py": "d1b86250dcbcb1141f134099fa685a7588f953d9b8e6a49c59cbccfea9fbf0c4",
+    "probe.py": "bd80b4c798047b268a3ab36f4c2da54a5b82641cf866ace159c7985e652e56af",
+    "dependency_twin.py": "c22c31e87c75ed8a86193f148269136e1cde870fa699a7a7cedce4c18774ee31",
+    "validity_twin.py": "59a79c0d72a7e152e671def5e8d7a2c6c1b5cb47de1f315b72b83b5dc4ca3d5e",
+    "analyze_retention.py": "1bc622fed6f289080035e9ffb76835335a7c3f7f81a36a8c05e08c874e31b0e2"
+  }
+}

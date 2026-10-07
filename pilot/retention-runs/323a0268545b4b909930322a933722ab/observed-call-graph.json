@@ -1,0 +1,90 @@
+{
+  "captured_utc": "2026-10-05T02:20:54.200468+00:00",
+  "query_url": "http://127.0.0.1:18686/api/traces?service=nginx-web-server&limit=100&lookback=1h",
+  "trace_count": 4,
+  "nodes": [
+    "compose-post-service",
+    "home-timeline-service",
+    "media-service",
+    "nginx-web-server",
+    "post-storage-service",
+    "social-graph-service",
+    "text-service",
+    "unique-id-service",
+    "url-shorten-service",
+    "user-mention-service",
+    "user-service",
+    "user-timeline-service"
+  ],
+  "edges": [
+    {
+      "source": "compose-post-service",
+      "target": "home-timeline-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "compose-post-service",
+      "target": "media-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "compose-post-service",
+      "target": "post-storage-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "compose-post-service",
+      "target": "text-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "compose-post-service",
+      "target": "unique-id-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "compose-post-service",
+      "target": "user-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "compose-post-service",
+      "target": "user-timeline-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "home-timeline-service",
+      "target": "social-graph-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "nginx-web-server",
+      "target": "compose-post-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "nginx-web-server",
+      "target": "user-timeline-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "text-service",
+      "target": "url-shorten-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "text-service",
+      "target": "user-mention-service",
+      "observed_parent_links": 2
+    },
+    {
+      "source": "user-timeline-service",
+      "target": "post-storage-service",
+      "observed_parent_links": 2
+    }
+  ],
+  "missing_parent_references": 0,
+  "source_sha256": "ae0063ecb9e486126f2945f67bddd6a789c291376bbfdab459b8af537683c075",
+  "complete_graph": false,
+  "limitations": "Sampled traces and a capped query over a limited workload; absent edges are not disproven. Datastore dependencies may be uninstrumented."
+}

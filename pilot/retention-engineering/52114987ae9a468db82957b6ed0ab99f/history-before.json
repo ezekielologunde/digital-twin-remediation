@@ -1,0 +1,151 @@
+[
+  {
+    "Type": "container",
+    "Action": "create",
+    "Actor": {
+      "ID": "e678806f3731f2e7a1f3eebe1759da3574b5075f68fa1205a19dfcd6ba26f369",
+      "Attributes": {
+        "com.docker.compose.project": "dtrem-retention-pilot-52114987ae9a",
+        "desktop.docker.io/ports.scheme": "v2",
+        "image": "sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+        "name": "dtrem-retention-pilot-52114987ae9a-dependency"
+      }
+    },
+    "scope": "local",
+    "time": 1791345030,
+    "timeNano": 1791345030318558275
+  },
+  {
+    "Type": "container",
+    "Action": "start",
+    "Actor": {
+      "ID": "e678806f3731f2e7a1f3eebe1759da3574b5075f68fa1205a19dfcd6ba26f369",
+      "Attributes": {
+        "com.docker.compose.project": "dtrem-retention-pilot-52114987ae9a",
+        "desktop.docker.io/ports.scheme": "v2",
+        "image": "sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+        "name": "dtrem-retention-pilot-52114987ae9a-dependency"
+      }
+    },
+    "scope": "local",
+    "time": 1791345030,
+    "timeNano": 1791345030606766839
+  },
+  {
+    "Type": "container",
+    "Action": "create",
+    "Actor": {
+      "ID": "ef0f54c085a96224795b55a5d92acc909f609d19289f06bb3f79486467fc79d7",
+      "Attributes": {
+        "com.docker.compose.project": "dtrem-retention-pilot-52114987ae9a",
+        "desktop.docker.io/ports.scheme": "v2",
+        "image": "sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+        "name": "dtrem-retention-pilot-52114987ae9a-noise"
+      }
+    },
+    "scope": "local",
+    "time": 1791345031,
+    "timeNano": 1791345031056590379
+  },
+  {
+    "Type": "container",
+    "Action": "start",
+    "Actor": {
+      "ID": "ef0f54c085a96224795b55a5d92acc909f609d19289f06bb3f79486467fc79d7",
+      "Attributes": {
+        "com.docker.compose.project": "dtrem-retention-pilot-52114987ae9a",
+        "desktop.docker.io/ports.scheme": "v2",
+        "image": "sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+        "name": "dtrem-retention-pilot-52114987ae9a-noise"
+      }
+    },
+    "scope": "local",
+    "time": 1791345031,
+    "timeNano": 1791345031453325541
+  },
+  {
+    "Type": "container",
+    "Action": "rename",
+    "Actor": {
+      "ID": "ef0f54c085a96224795b55a5d92acc909f609d19289f06bb3f79486467fc79d7",
+      "Attributes": {
+        "com.docker.compose.project": "dtrem-retention-pilot-52114987ae9a",
+        "desktop.docker.io/ports.scheme": "v2",
+        "image": "sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+        "name": "dtrem-retention-pilot-52114987ae9a-ready",
+        "oldName": "/dtrem-retention-pilot-52114987ae9a-noise"
+      }
+    },
+    "scope": "local",
+    "time": 1791345032,
+    "timeNano": 1791345032237454512
+  },
+  {
+    "Type": "container",
+    "Action": "kill",
+    "Actor": {
+      "ID": "e678806f3731f2e7a1f3eebe1759da3574b5075f68fa1205a19dfcd6ba26f369",
+      "Attributes": {
+        "com.docker.compose.project": "dtrem-retention-pilot-52114987ae9a",
+        "desktop.docker.io/ports.scheme": "v2",
+        "image": "sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+        "name": "dtrem-retention-pilot-52114987ae9a-dependency",
+        "signal": "15"
+      }
+    },
+    "scope": "local",
+    "time": 1791345032,
+    "timeNano": 1791345032467941708
+  },
+  {
+    "Type": "container",
+    "Action": "kill",
+    "Actor": {
+      "ID": "e678806f3731f2e7a1f3eebe1759da3574b5075f68fa1205a19dfcd6ba26f369",
+      "Attributes": {
+        "com.docker.compose.project": "dtrem-retention-pilot-52114987ae9a",
+        "desktop.docker.io/ports.scheme": "v2",
+        "image": "sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+        "name": "dtrem-retention-pilot-52114987ae9a-dependency",
+        "signal": "9"
+      }
+    },
+    "scope": "local",
+    "time": 1791345033,
+    "timeNano": 1791345033492879231
+  },
+  {
+    "Type": "container",
+    "Action": "stop",
+    "Actor": {
+      "ID": "e678806f3731f2e7a1f3eebe1759da3574b5075f68fa1205a19dfcd6ba26f369",
+      "Attributes": {
+        "com.docker.compose.project": "dtrem-retention-pilot-52114987ae9a",
+        "desktop.docker.io/ports.scheme": "v2",
+        "image": "sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+        "name": "dtrem-retention-pilot-52114987ae9a-dependency"
+      }
+    },
+    "scope": "local",
+    "time": 1791345033,
+    "timeNano": 1791345033635730653
+  },
+  {
+    "Type": "container",
+    "Action": "die",
+    "Actor": {
+      "ID": "e678806f3731f2e7a1f3eebe1759da3574b5075f68fa1205a19dfcd6ba26f369",
+      "Attributes": {
+        "com.docker.compose.project": "dtrem-retention-pilot-52114987ae9a",
+        "desktop.docker.io/ports.scheme": "v2",
+        "execDuration": "3",
+        "exitCode": "137",
+        "image": "sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee",
+        "name": "dtrem-retention-pilot-52114987ae9a-dependency"
+      }
+    },
+    "scope": "local",
+    "time": 1791345033,
+    "timeNano": 1791345033650109246
+  }
+]

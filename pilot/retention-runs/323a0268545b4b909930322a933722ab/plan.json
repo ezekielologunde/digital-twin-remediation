@@ -1,0 +1,130 @@
+{
+  "study": "Prospective validation of known event-retention boundary",
+  "engineering_only": false,
+  "arms": [
+    [
+      1203,
+      "healthy_idle"
+    ],
+    [
+      1202,
+      "healthy_churn"
+    ],
+    [
+      1204,
+      "healthy_idle"
+    ],
+    [
+      1205,
+      "stop_churn"
+    ],
+    [
+      1204,
+      "healthy_churn"
+    ],
+    [
+      1203,
+      "stop_idle"
+    ],
+    [
+      1206,
+      "stop_idle"
+    ],
+    [
+      1205,
+      "healthy_churn"
+    ],
+    [
+      1205,
+      "stop_idle"
+    ],
+    [
+      1202,
+      "healthy_idle"
+    ],
+    [
+      1203,
+      "stop_churn"
+    ],
+    [
+      1204,
+      "stop_idle"
+    ],
+    [
+      1201,
+      "stop_churn"
+    ],
+    [
+      1201,
+      "healthy_idle"
+    ],
+    [
+      1206,
+      "stop_churn"
+    ],
+    [
+      1201,
+      "healthy_churn"
+    ],
+    [
+      1202,
+      "stop_churn"
+    ],
+    [
+      1202,
+      "stop_idle"
+    ],
+    [
+      1205,
+      "healthy_idle"
+    ],
+    [
+      1206,
+      "healthy_idle"
+    ],
+    [
+      1203,
+      "healthy_churn"
+    ],
+    [
+      1206,
+      "healthy_churn"
+    ],
+    [
+      1201,
+      "stop_idle"
+    ],
+    [
+      1204,
+      "stop_churn"
+    ]
+  ],
+  "shuffle_seed": 20261006,
+  "churn_exec_calls": 100,
+  "horizon_s": 8,
+  "required_final_reads": 2,
+  "replacement_rule": "No replacements. Stop on setup, integrity, or cleanup failure; retain incomplete batch. Eviction failure is reported, not excluded.",
+  "order": "Odd account blocks events first; even blocks functional first; three each per condition.",
+  "unit": "One fresh instance and one outcome per trial, shared across four shadow policies.",
+  "limitations": "Single host, known selected scenarios; no population frequency, unseen-class generalization, or deployed-gate effectiveness.",
+  "pilot": "engineering-caee3839fee046f2b8f54dfd15a9a8aa excluded",
+  "source_sha256": {
+    "retention_pilot.py": "30bd56872b835aaab89c5df50c4391398774a8f4c7c2704cb965057c9fe92d95",
+    "retention_witness.py": "eb1cea317e9a82f3b4fb61a93efe6162c6784e86688b2a94b9086904254e610e",
+    "aligned_event_policy.py": "2887dbfaf37fc934a9fa69e13b4ea868a00c07b4bce0b942e61f1bb1e8a5a7a9",
+    "race_probes.py": "d1b86250dcbcb1141f134099fa685a7588f953d9b8e6a49c59cbccfea9fbf0c4",
+    "probe.py": "bd80b4c798047b268a3ab36f4c2da54a5b82641cf866ace159c7985e652e56af",
+    "dependency_twin.py": "c22c31e87c75ed8a86193f148269136e1cde870fa699a7a7cedce4c18774ee31",
+    "validity_twin.py": "59a79c0d72a7e152e671def5e8d7a2c6c1b5cb47de1f315b72b83b5dc4ca3d5e",
+    "analyze_retention.py": "1bc622fed6f289080035e9ffb76835335a7c3f7f81a36a8c05e08c874e31b0e2",
+    "compose.locked.json": "8be37f3c039bf4342b0e594815b097505f51af75d5ca680fa139d05a99cf03b3",
+    "image-lock.json": "d74c90c19c3338e9a88ab61b7a92db16d442e09c88271a64b45035f600e4219d",
+    "observed-call-graph.json": "df1cb5fcdd88c4b30fa493e54d95c71edf4ca5468f6b2792a395e8de25cb26c4"
+  },
+  "dependency_audit_sha256": {
+    "startup-witness.json": "9930fa23c1a0738e2ab99e190eed2b15f0fb4034682b04cd391babeeea8049d4",
+    "UserTimelineHandler.h": "e703f56659bfc62c75bfced86681931e6e2ace069a6e3080138e5ea883062478",
+    "UserTimelineService.cpp": "6c788462d4e64e465e8232e91ddf302da36e1a899f4503a21fddbf2902eb2ec9",
+    "witness.json": "7a9d8cb2e4a666699dc0490ae50f9f8c1b19b9cec1cd3bd956dc7651c52645d9"
+  }
+}
